@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+lerna-debug.log
+npm-debug.log
+src/components/*/dist
+.idea
