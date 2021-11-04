@@ -1,6 +1,7 @@
 {
+  "useWorkspaces": true,
   "packages": [
-    "packages/*"
+    "src/components/*"
   ],
   "version": "independent"
 }

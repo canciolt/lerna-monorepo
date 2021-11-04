@@ -1,6 +1,9 @@
 {
   "name": "norwegian-design-system",
   "version": "0.0.0",
+  "workspaces": [
+    "src/components/*"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
