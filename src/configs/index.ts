@@ -8,9 +8,13 @@ import ComponentsConfig from './components.vite.config'
  * @param options Custom build options
  * @returns Vite build configuration
  */
-export function getComponentConfig (pkg: Record<any, any>, options: Record<string, any> = {}) {
+export function getComponentConfig (pkg: Record<any, any>, options: Record<string, any> = {}, mode: string) {
     console.log(`Building component package ${pkg.name} v.${pkg.version} ...`)
-    return getConfig(ComponentsConfig, options, pkg?.name)
+    const _customConfig = merge.recursive(options, {
+        mode: mode ? mode : 'development',
+        build: { minify: mode === 'production' }
+    });
+    return getConfig(ComponentsConfig, _customConfig, pkg?.name)
 }
 
 /**

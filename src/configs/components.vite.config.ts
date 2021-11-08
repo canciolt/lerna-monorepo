@@ -1,14 +1,21 @@
 import { defineConfig } from 'vite'
+import path from 'path';
 import vue from '@vitejs/plugin-vue'
+
+const autoprefixer = require('autoprefixer');
 
 export default defineConfig({
   plugins: [vue()],
-  mode: 'development',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '../../src')
+    }
+  },
   build: {
-    sourcemap: 'inline',
+    sourcemap: true,
     lib: {
       entry: 'index.ts',
-      name: 'logo',
+      formats: ['es']
     },
     rollupOptions: {
       external: ['vue'],
@@ -17,6 +24,17 @@ export default defineConfig({
           vue: 'Vue'
         }
       }
+    }
+  },
+  css: {
+    postcss: {
+      map: true,
+      plugins: [autoprefixer]
+    },
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "../../styles/index.scss";`
+      },
     }
   }
 })
