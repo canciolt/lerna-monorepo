@@ -12,7 +12,7 @@
     "dist"
   ],
   "scripts": {
-    "build:dev": "vite build --mode development",
-    "build:prod": "vite build --mode production"
+    "build:dev": "vue-tsc && vite build --mode development",
+    "build:prod": "vue-tsc && vite build --mode production"
   }
 }
