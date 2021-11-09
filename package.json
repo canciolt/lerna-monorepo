@@ -6,11 +6,14 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src"
+    "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src",
+    "build:dev": "lerna run build:dev",
+    "build:pro": "lerna run build:pro",
+    "bootstrap": "lerna bootstrap",
+    "publish": "build:pro && lerna publish"
   },
   "dependencies": {
     "vue": "^3.2.16"
