@@ -1,7 +1,6 @@
-import path from 'path';
-const pkg = require(path.resolve(__dirname, 'package.json'));
-import { getComponentConfig } from '../../configs';
+import packageJson from './package.json'
+import { getComponentConfig } from '../../configs'
 
 export default ({ mode }: Record<string, any>) => {
-    return getComponentConfig(pkg, {}, mode)
+    return getComponentConfig(packageJson, {}, mode)
 }
