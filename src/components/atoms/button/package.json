@@ -1,0 +1,18 @@
+{
+  "name": "button",
+  "version": "0.0.0",
+  "main": "dist/button.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:dev": "vue-tsc && vite build --mode development",
+    "build:pro": "vue-tsc && vite build --mode production"
+  }
+}

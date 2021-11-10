@@ -2,7 +2,8 @@
   "name": "norwegian-design-system",
   "version": "0.0.0",
   "workspaces": [
-    "src/components/*"
+    "src/components/global",
+    "src/components/atoms/*"
   ],
   "scripts": {
     "dev": "vite",

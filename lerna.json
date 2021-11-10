@@ -1,7 +1,8 @@
 {
   "useWorkspaces": true,
   "packages": [
-    "src/components/*"
+    "src/components/global",
+    "src/components/atoms/*"
   ],
   "version": "independent"
 }
