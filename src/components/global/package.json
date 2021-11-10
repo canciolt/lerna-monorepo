@@ -1,7 +1,7 @@
 {
-  "name": "design-system",
+  "name": "global",
   "version": "0.0.1",
-  "main": "dist/design-system.es.js",
+  "main": "dist/global.es.js",
   "publishConfig": {
     "access": "public"
   },
