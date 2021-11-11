@@ -1,5 +1,5 @@
 {
-  "name": "button",
+  "name": "@ncl-design-system/atom-button",
   "version": "0.0.0",
   "main": "dist/button.es.js",
   "publishConfig": {
@@ -12,7 +12,6 @@
     "dist"
   ],
   "scripts": {
-    "build:dev": "vue-tsc && vite build --mode development",
-    "build:pro": "vue-tsc && vite build --mode production"
+    "build": "vue-tsc && vite build"
   }
 }

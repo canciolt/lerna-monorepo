@@ -1,5 +1,5 @@
 {
-  "name": "global",
+  "name": "@ncl-design-system/global",
   "version": "0.0.1",
   "main": "dist/global.es.js",
   "publishConfig": {
@@ -12,7 +12,6 @@
     "dist"
   ],
   "scripts": {
-    "build:dev": "vue-tsc && vite build --mode development",
-    "build:pro": "vue-tsc && vite build --mode production"
+    "build": "vue-tsc && vite build"
   }
 }
