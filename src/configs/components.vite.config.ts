@@ -5,8 +5,6 @@ import autoprefixer from 'autoprefixer'
 
 const ROOT_PATH = `${__dirname }/..`
 
-console.log(lernaAliases({ mainFields:['./'] }))
-
 export default defineConfig({
     plugins: [vue()],
     resolve: {
