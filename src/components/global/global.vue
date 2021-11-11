@@ -1,1 +1,1 @@
-<style lang="scss" src="./scss/index.scss" />
+<style lang="scss" src="@ncl-design-system/global/scss/index.scss" />

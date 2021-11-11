@@ -1,1 +1,1 @@
-export { default as DS } from './global.vue'
+export { default as DS } from '@ncl-design-system/global/global.vue'

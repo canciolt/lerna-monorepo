@@ -1,20 +1,25 @@
-import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { rollup as lernaAliases } from 'lerna-alias'
 import autoprefixer from 'autoprefixer'
+
+const ROOT_PATH = `${__dirname }/..`
+
+console.log(lernaAliases({ mainFields:['./'] }))
 
 export default defineConfig({
     plugins: [vue()],
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, '../../src')
+            '@src': ROOT_PATH,
+            ...lernaAliases({ mainFields:['./'] })
         }
     },
     build: {
         sourcemap: true,
         lib: {
             entry: 'index.ts',
-            formats: ['es']
+            formats: ['es', 'cjs']
         },
         rollupOptions: {
             external: ['vue'],
@@ -32,7 +37,7 @@ export default defineConfig({
         },
         preprocessorOptions: {
             scss: {
-                additionalData: `@import "../../styles/index.scss";`
+                additionalData: `@import "${ROOT_PATH}/styles/index.scss";`
             },
         }
     }
