@@ -6,14 +6,12 @@
     "src/components/atoms/*"
   ],
   "scripts": {
-    "dev": "vite",
-    "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src",
+    "bootstrap": "lerna bootstrap",
     "build:dev": "lerna run build:dev",
     "build:pro": "lerna run build:pro",
-    "bootstrap": "lerna bootstrap",
     "publish": "build:pro && lerna publish"
   },
   "dependencies": {
