@@ -1,0 +1,7 @@
+@import "commons/configuration/functions";
+@import "commons/configuration/variables";
+
+.text {
+  font-family: $font-family-primary;
+  border-radius: $border-radius;
+}
