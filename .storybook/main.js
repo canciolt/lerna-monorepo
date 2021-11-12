@@ -6,7 +6,7 @@ const resolve = (item) => path.join(__dirname, '../', item);
 
 module.exports = {
   "stories": [
-    "../src/components/**/*.stories.@(js|jsx|ts|tsx)"
+    "../src/packages/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   core: {
     builder: "storybook-builder-vite"
@@ -14,14 +14,7 @@ module.exports = {
   viteFinal(config, { configType }) {
     config.plugins = [...config.plugins, vue()]
     // return the customized config
-    return merge.recursive(config, {
-      resolve: {
-        alias: {
-          '@sb': resolve('.storybook'),
-          '@components': resolve('src/components'),
-        }
-      }
-    });
+    return merge.recursive(config, {});
   },
   "addons": [
     "@storybook/addon-links",

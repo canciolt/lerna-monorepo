@@ -1,7 +1,7 @@
 {
-  "name": "@ncl-design-system/atom-button",
+  "name": "eButton",
   "version": "0.0.0",
-  "main": "dist/button.es.js",
+  "main": "dist/eButton.es.js",
   "publishConfig": {
     "access": "public"
   },
