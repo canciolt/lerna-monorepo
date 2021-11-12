@@ -2,16 +2,18 @@
   "name": "norwegian-design-system",
   "version": "0.0.0",
   "workspaces": [
-    "src/components/global",
-    "src/components/atoms/*"
+    "src/packages/style",
+    "src/packages/elements/*",
+    "src/packages/components/*",
+    "src/packages/modules/*"
   ],
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src",
     "bootstrap": "lerna bootstrap",
-    "build:global": "lerna run --scope @**/global build",
-    "build:components": "lerna run --scope @**/atom-* --scope @**/molecule-* --scope @**/organism-* build",
+    "build:style": "lerna run --scope style build",
+    "build:components": "lerna run --scope '{e*, c*, m*}' build",
     "publish": "build:pro && lerna publish"
   },
   "dependencies": {

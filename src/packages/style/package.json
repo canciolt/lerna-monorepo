@@ -1,7 +1,7 @@
 {
-  "name": "@ncl-design-system/global",
-  "version": "0.0.1",
-  "main": "dist/global.es.js",
+  "name": "style",
+  "version": "0.0.0",
+  "main": "dist/style.es.js",
   "publishConfig": {
     "access": "public"
   },
