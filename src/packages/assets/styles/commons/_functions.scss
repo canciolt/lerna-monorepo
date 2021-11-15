@@ -161,3 +161,10 @@ $rem-px-only: false !default;
     }
   }
 }
+
+// PX to EM
+
+$browser-context: 14;
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context};
+}
