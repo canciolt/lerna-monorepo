@@ -1,0 +1,41 @@
+//
+// Texts
+//
+
+// Alignment
+
+@include classBp(text-justify) {
+  text-align: justify !important;
+}
+@include classBp(text-nowrap) {
+  white-space: nowrap !important;
+}
+@include classBp(text-truncate) {
+  @include text-truncate;
+}
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .text#{$infix}-left   { text-align: left !important; }
+    .text#{$infix}-right  { text-align: right !important; }
+    .text#{$infix}-center { text-align: center !important; }
+  }
+}
+
+// Transformation
+
+@include classBp(text-lowercase) {
+  text-transform: lowercase !important;
+}
+@include classBp(text-uppercase) {
+  text-transform: uppercase !important;
+}
+@include classBp(text-capitalize) {
+  text-transform: capitalize !important;
+}
+@include classBp(text-underline) {
+  text-decoration: underline !important;
+}
