@@ -1,6 +1,7 @@
 //
 // Variables
 //
+@use "sass:math";
 
 // Fonts
 
@@ -321,10 +322,10 @@ $opacity-100:                       1;
 // Sections separates
 
 $padding-sections:                  rem(60px);
-$padding-sections-half:             $padding-sections / 2;
-$padding-sections-plus:             $padding-sections + $padding-sections / 2;
+$padding-sections-half:             math.div($padding-sections, 2);
+$padding-sections-plus:             $padding-sections + math.div($padding-sections, 2);
 $padding-sections-double:           $padding-sections * 2;
-$padding-sections-double-plus:      $padding-sections * 2 + $padding-sections / 2;
+$padding-sections-double-plus:      $padding-sections * 2 + math.div($padding-sections, 2);
 
 // Breakpoints map
 
