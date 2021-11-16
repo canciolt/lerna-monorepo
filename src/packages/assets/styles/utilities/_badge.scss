@@ -3,40 +3,40 @@
 //
 
 .badge {
-  @extend %link-2;
-  @extend %link-2-variant-2;
-  display: inline-block;
-  min-width: rem(19px);
-  padding: $badge-padding-y $badge-padding-x;
-  margin: -1*$badge-padding-y 0 -1*$badge-padding-y rem(5px);
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: $badge-border-radius;
-  background: $blue-90;
-  color: $white;
-  &:empty {
-    display: none;
-  }
-  html[dir="rtl"] & {
-    margin: -1*$badge-padding-y rem(5px) -1*$badge-padding-y 0;
-  }
+    @extend %link-2;
+    @extend %link-2-variant-2;
+    display: inline-block;
+    min-width: rem(19px);
+    padding: $badge-padding-y $badge-padding-x;
+    margin: -1*$badge-padding-y 0 -1*$badge-padding-y rem(5px);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: $badge-border-radius;
+    background: $blue-90;
+    color: $white;
+    &:empty {
+        display: none;
+    }
+    html[dir="rtl"] & {
+        margin: -1*$badge-padding-y rem(5px) -1*$badge-padding-y 0;
+    }
 }
 
 .btn .badge {
-  position: relative;
-  top: -1px;
+    position: relative;
+    top: -1px;
 }
 
 .badge-pill {
-  padding-right: $badge-pill-padding-x;
-  padding-left: $badge-pill-padding-x;
-  @include border-radius($badge-pill-border-radius);
+    padding-right: $badge-pill-padding-x;
+    padding-left: $badge-pill-padding-x;
+    @include border-radius($badge-pill-border-radius);
 }
 
 @each $color,
 $value in $theme-colors {
-  .badge-#{$color} {
-    @include badge-variant($value);
-  }
+    .badge-#{$color} {
+        @include badge-variant($value);
+    }
 }

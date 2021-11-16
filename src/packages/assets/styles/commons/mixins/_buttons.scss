@@ -3,47 +3,47 @@
 //
 
 @mixin button-variant($text, $border, $background, $text-hover, $border-hover, $background-hover, $text-disabled, $border-disabled, $background-disabled) {
-	color: $text;
-	border-color: $border;
-	background: $background;
+    color: $text;
+    border-color: $border;
+    background: $background;
 
-	&:focus {
-		color: $text;
-	}
+    &:focus {
+        color: $text;
+    }
 
-	.disabled &,
-	&.disabled,
-	&:disabled {
-		color: $text-disabled;
-		border-color: $border-disabled;
-		background: $background-disabled;
-	}
+    .disabled &,
+    &.disabled,
+    &:disabled {
+        color: $text-disabled;
+        border-color: $border-disabled;
+        background: $background-disabled;
+    }
 
-	@include buttonHover($text-hover, $border-hover, $background-hover);
+    @include buttonHover($text-hover, $border-hover, $background-hover);
 
-	.-touch & {
-		@include buttonHover($text, $border, $background);
-	}
+    .-touch & {
+        @include buttonHover($text, $border, $background);
+    }
 }
 
 @mixin buttonHover($text-hover, $border-hover, $background-hover) {
-	@include hover {
-		color: $text-hover;
-		border-color: $border-hover;
-		background: $background-hover;
-	}
+    @include hover {
+        color: $text-hover;
+        border-color: $border-hover;
+        background: $background-hover;
+    }
 }
 
 // Button sizes
 
 @mixin button-size($padding-y, $padding-x, $font-size, $line-height, $letter-spacing, $border-radius) {
-	padding: $padding-y $padding-x;
-	font-size: $font-size;
-	line-height: $line-height;
-	letter-spacing: $letter-spacing;
-	@if $enable-rounded {
-		border-radius: $border-radius;
-	} @else {
-		border-radius: 0;
-	}
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    @if $enable-rounded {
+        border-radius: $border-radius;
+    } @else {
+        border-radius: 0;
+    }
 }

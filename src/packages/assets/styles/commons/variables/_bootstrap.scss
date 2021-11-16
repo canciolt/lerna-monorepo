@@ -23,8 +23,7 @@ $gray-900: #212529 !default;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(
-  (
+$grays: map-merge((
     "100": $gray-100,
     "200": $gray-200,
     "300": $gray-300,
@@ -34,15 +33,12 @@ $grays: map-merge(
     "700": $gray-700,
     "800": $gray-800,
     "900": $gray-900
-  ),
-  $grays
-);
+), $grays);
 
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$colors: map-merge(
-  (
+$colors: map-merge((
     "$navy":        $navy,
     "$blue":        $blue,
     "$teal":        $teal,
@@ -53,9 +49,7 @@ $colors: map-merge(
     "orange":       $orange,
     "yellow":       $yellow,
     "magenta":     $magenta
-  ),
-  $colors
-);
+), $colors);
 
 // Color system
 
@@ -71,16 +65,16 @@ $dark:            $navy-70;
 
 $theme-colors: ();
 $theme-colors: map-merge((
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "medium":     $medium,
-  "dark":       $dark,
-  "white":      $white
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "medium":     $medium,
+    "dark":       $dark,
+    "white":      $white
 ), $theme-colors);
 
 // Set a specific jump point for requesting color jumps
@@ -116,31 +110,25 @@ $enable-print-styles:       true !default;
 $spacer: 1rem !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$spacers: map-merge(
-  (
+$spacers: map-merge((
     0: 0,
     1: ($spacer * .25),
     2: ($spacer * .5),
     3: $spacer,
     4: ($spacer * 1.5),
     5: ($spacer * 3)
-  ),
-  $spacers
-);
+), $spacers);
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$sizes: map-merge(
-  (
+$sizes: map-merge((
     25: 25%,
     50: 50%,
     75: 75%,
     100: 100%,
     auto: auto
-  ),
-  $sizes
-);
+),$sizes);
 
 // Body
 //
@@ -541,204 +529,204 @@ $btn-outline-info-border-disabled-bg-dark:      rgba($btn-outline-info-border, .
 
 $btn-colors: ();
 $btn-colors: map-merge((
-        "primary":      $btn-primary,
-        "secondary":    $btn-secondary,
-        "info":         $btn-info,
+    "primary":      $btn-primary,
+    "secondary":    $btn-secondary,
+    "info":         $btn-info,
 ), $btn-colors);
 
 $btn-colors-text: ();
 $btn-colors-text: map-merge((
-        "primary":      $btn-primary-text,
-        "secondary":    $btn-secondary-text,
-        "info":         $btn-info-text,
+    "primary":      $btn-primary-text,
+    "secondary":    $btn-secondary-text,
+    "info":         $btn-info-text,
 ), $btn-colors-text);
 
 $btn-colors-border: ();
 $btn-colors-border: map-merge((
-        "primary":      $btn-primary-border,
-        "secondary":    $btn-secondary-border,
-        "info":         $btn-info-border,
+    "primary":      $btn-primary-border,
+    "secondary":    $btn-secondary-border,
+    "info":         $btn-info-border,
 ), $btn-colors-border);
 
 $btn-colors-hover: ();
 $btn-colors-hover: map-merge((
-        "primary":      $btn-primary-hover,
-        "secondary":    $btn-secondary-hover,
-        "info":         $btn-info-hover,
+    "primary":      $btn-primary-hover,
+    "secondary":    $btn-secondary-hover,
+    "info":         $btn-info-hover,
 ), $btn-colors-hover);
 
 $btn-colors-text-hover: ();
 $btn-colors-text-hover: map-merge((
-        "primary":      $btn-primary-text-hover,
-        "secondary":    $btn-secondary-text-hover,
-        "info":         $btn-info-text-hover,
+    "primary":      $btn-primary-text-hover,
+    "secondary":    $btn-secondary-text-hover,
+    "info":         $btn-info-text-hover,
 ), $btn-colors-text-hover);
 
 $btn-colors-border-hover: ();
 $btn-colors-border-hover: map-merge((
-        "primary":      $btn-primary-border-hover,
-        "secondary":    $btn-secondary-border-hover,
-        "info":         $btn-info-border-hover,
+    "primary":      $btn-primary-border-hover,
+    "secondary":    $btn-secondary-border-hover,
+    "info":         $btn-info-border-hover,
 ), $btn-colors-border-hover);
 
 $btn-colors-disabled: ();
 $btn-colors-disabled: map-merge((
-        "primary":      $btn-primary-disabled,
-        "secondary":    $btn-secondary-disabled,
-        "info":         $btn-info-disabled,
+    "primary":      $btn-primary-disabled,
+    "secondary":    $btn-secondary-disabled,
+    "info":         $btn-info-disabled,
 ), $btn-colors-disabled);
 
 $btn-colors-text-disabled: ();
 $btn-colors-text-disabled: map-merge((
-        "primary":      $btn-primary-text-disabled,
-        "secondary":    $btn-secondary-text-disabled,
-        "info":         $btn-info-text-disabled,
+    "primary":      $btn-primary-text-disabled,
+    "secondary":    $btn-secondary-text-disabled,
+    "info":         $btn-info-text-disabled,
 ), $btn-colors-text-disabled);
 
 $btn-colors-border-disabled: ();
 $btn-colors-border-disabled: map-merge((
-        "primary":      $btn-primary-border-disabled,
-        "secondary":    $btn-secondary-border-disabled,
-        "info":         $btn-info-border-disabled,
+    "primary":      $btn-primary-border-disabled,
+    "secondary":    $btn-secondary-border-disabled,
+    "info":         $btn-info-border-disabled,
 ), $btn-colors-border-disabled);
 
 // Outline buttons maps
 
 $btn-outline-colors: ();
 $btn-outline-colors: map-merge((
-        "primary":      $btn-outline-primary,
-        "secondary":    $btn-outline-secondary,
-        "info":         $btn-outline-info,
+    "primary":      $btn-outline-primary,
+    "secondary":    $btn-outline-secondary,
+    "info":         $btn-outline-info,
 ), $btn-outline-colors);
 
 $btn-outline-colors-text: ();
 $btn-outline-colors-text: map-merge((
-        "primary":      $btn-outline-primary-text,
-        "secondary":    $btn-outline-secondary-text,
-        "info":         $btn-outline-info-text,
+    "primary":      $btn-outline-primary-text,
+    "secondary":    $btn-outline-secondary-text,
+    "info":         $btn-outline-info-text,
 ), $btn-outline-colors-text);
 
 $btn-outline-colors-border: ();
 $btn-outline-colors-border: map-merge((
-        "primary":      $btn-outline-primary-border,
-        "secondary":    $btn-outline-secondary-border,
-        "info":         $btn-outline-info-border,
+    "primary":      $btn-outline-primary-border,
+    "secondary":    $btn-outline-secondary-border,
+    "info":         $btn-outline-info-border,
 ), $btn-outline-colors-border);
 
 $btn-outline-colors-hover: ();
 $btn-outline-colors-hover: map-merge((
-        "primary":      $btn-outline-primary-hover,
-        "secondary":    $btn-outline-secondary-hover,
-        "info":         $btn-outline-info-hover,
+    "primary":      $btn-outline-primary-hover,
+    "secondary":    $btn-outline-secondary-hover,
+    "info":         $btn-outline-info-hover,
 ), $btn-outline-colors-hover);
 
 $btn-outline-colors-text-hover: ();
 $btn-outline-colors-text-hover: map-merge((
-        "primary":      $btn-outline-primary-text-hover,
-        "secondary":    $btn-outline-secondary-text-hover,
-        "info":         $btn-outline-info-text-hover,
+    "primary":      $btn-outline-primary-text-hover,
+    "secondary":    $btn-outline-secondary-text-hover,
+    "info":         $btn-outline-info-text-hover,
 ), $btn-outline-colors-text-hover);
 
 $btn-outline-colors-border-hover: ();
 $btn-outline-colors-border-hover: map-merge((
-        "primary":      $btn-outline-primary-border-hover,
-        "secondary":    $btn-outline-secondary-border-hover,
-        "info":         $btn-outline-info-border-hover,
+    "primary":      $btn-outline-primary-border-hover,
+    "secondary":    $btn-outline-secondary-border-hover,
+    "info":         $btn-outline-info-border-hover,
 ), $btn-outline-colors-border-hover);
 
 $btn-outline-colors-disabled: ();
 $btn-outline-colors-disabled: map-merge((
-        "primary":      $btn-outline-primary-disabled,
-        "secondary":    $btn-outline-secondary-disabled,
-        "info":         $btn-outline-info-disabled,
+    "primary":      $btn-outline-primary-disabled,
+    "secondary":    $btn-outline-secondary-disabled,
+    "info":         $btn-outline-info-disabled,
 ), $btn-outline-colors-disabled);
 
 $btn-outline-colors-text-disabled: ();
 $btn-outline-colors-text-disabled: map-merge((
-        "primary":      $btn-outline-primary-text-disabled,
-        "secondary":    $btn-outline-secondary-text-disabled,
-        "info":         $btn-outline-info-text-disabled,
+    "primary":      $btn-outline-primary-text-disabled,
+    "secondary":    $btn-outline-secondary-text-disabled,
+    "info":         $btn-outline-info-text-disabled,
 ), $btn-outline-colors-text-disabled);
 
 $btn-outline-colors-border-disabled: ();
 $btn-outline-colors-border-disabled: map-merge((
-        "primary":      $btn-outline-primary-border-disabled,
-        "secondary":    $btn-outline-secondary-border-disabled,
-        "info":         $btn-outline-info-border-disabled,
+    "primary":      $btn-outline-primary-border-disabled,
+    "secondary":    $btn-outline-secondary-border-disabled,
+    "info":         $btn-outline-info-border-disabled,
 ), $btn-outline-colors-border-disabled);
 
 // Buttons Outline BG-Dark maps
 
 $btn-outline-colors-bg-dark: ();
 $btn-outline-colors-bg-dark: map-merge((
-        "primary":      $btn-outline-primary-bg-dark,
-        "secondary":    $btn-outline-secondary-bg-dark,
-        "info":         $btn-outline-info-bg-dark,
+    "primary":      $btn-outline-primary-bg-dark,
+    "secondary":    $btn-outline-secondary-bg-dark,
+    "info":         $btn-outline-info-bg-dark,
 ), $btn-outline-colors-bg-dark);
 
 $btn-outline-colors-text-bg-dark: ();
 $btn-outline-colors-text-bg-dark: map-merge((
-        "primary":      $btn-outline-primary-text-bg-dark,
-        "secondary":    $btn-outline-secondary-text-bg-dark,
-        "info":         $btn-outline-info-text-bg-dark,
+    "primary":      $btn-outline-primary-text-bg-dark,
+    "secondary":    $btn-outline-secondary-text-bg-dark,
+    "info":         $btn-outline-info-text-bg-dark,
 ), $btn-outline-colors-text-bg-dark);
 
 $btn-outline-colors-border-bg-dark: ();
 $btn-outline-colors-border-bg-dark: map-merge((
-        "primary":      $btn-outline-primary-border-bg-dark,
-        "secondary":    $btn-outline-secondary-border-bg-dark,
-        "info":         $btn-outline-info-border-bg-dark,
+    "primary":      $btn-outline-primary-border-bg-dark,
+    "secondary":    $btn-outline-secondary-border-bg-dark,
+    "info":         $btn-outline-info-border-bg-dark,
 ), $btn-outline-colors-border-bg-dark);
 
 $btn-outline-colors-hover-bg-dark: ();
 $btn-outline-colors-hover-bg-dark: map-merge((
-        "primary":      $btn-outline-primary-hover-bg-dark,
-        "secondary":    $btn-outline-secondary-hover-bg-dark,
-        "info":         $btn-outline-info-hover-bg-dark,
+    "primary":      $btn-outline-primary-hover-bg-dark,
+    "secondary":    $btn-outline-secondary-hover-bg-dark,
+    "info":         $btn-outline-info-hover-bg-dark,
 ), $btn-outline-colors-hover-bg-dark);
 
 $btn-outline-colors-text-hover-bg-dark: ();
 $btn-outline-colors-text-hover-bg-dark: map-merge((
-        "primary":      $btn-outline-primary-text-hover-bg-dark,
-        "secondary":    $btn-outline-secondary-text-hover-bg-dark,
-        "info":         $btn-outline-info-text-hover-bg-dark,
+    "primary":      $btn-outline-primary-text-hover-bg-dark,
+    "secondary":    $btn-outline-secondary-text-hover-bg-dark,
+    "info":         $btn-outline-info-text-hover-bg-dark,
 ), $btn-outline-colors-text-hover-bg-dark);
 
 $btn-outline-colors-border-hover-bg-dark: ();
 $btn-outline-colors-border-hover-bg-dark: map-merge((
-        "primary":      $btn-outline-primary-border-hover-bg-dark,
-        "secondary":    $btn-outline-secondary-border-hover-bg-dark,
-        "info":         $btn-outline-info-border-hover-bg-dark,
+    "primary":      $btn-outline-primary-border-hover-bg-dark,
+    "secondary":    $btn-outline-secondary-border-hover-bg-dark,
+    "info":         $btn-outline-info-border-hover-bg-dark,
 ), $btn-outline-colors-border-hover-bg-dark);
 
 $btn-outline-colors-disabled-bg-dark: ();
 $btn-outline-colors-disabled-bg-dark: map-merge((
-        "primary":      $btn-outline-primary-disabled-bg-dark,
-        "secondary":    $btn-outline-secondary-disabled-bg-dark,
-        "info":         $btn-outline-info-disabled-bg-dark,
+    "primary":      $btn-outline-primary-disabled-bg-dark,
+    "secondary":    $btn-outline-secondary-disabled-bg-dark,
+    "info":         $btn-outline-info-disabled-bg-dark,
 ), $btn-outline-colors-disabled-bg-dark);
 
 $btn-outline-colors-text-disabled-bg-dark: ();
 $btn-outline-colors-text-disabled-bg-dark: map-merge((
-        "primary":      $btn-outline-primary-text-disabled-bg-dark,
-        "secondary":    $btn-outline-secondary-text-disabled-bg-dark,
-        "info":         $btn-outline-info-text-disabled-bg-dark,
+    "primary":      $btn-outline-primary-text-disabled-bg-dark,
+    "secondary":    $btn-outline-secondary-text-disabled-bg-dark,
+    "info":         $btn-outline-info-text-disabled-bg-dark,
 ), $btn-outline-colors-text-disabled-bg-dark);
 
 $btn-outline-colors-border-disabled-bg-dark: ();
 $btn-outline-colors-border-disabled-bg-dark: map-merge((
-        "primary":      $btn-outline-primary-border-disabled-bg-dark,
-        "secondary":    $btn-outline-secondary-border-disabled-bg-dark,
-        "info":         $btn-outline-info-border-disabled-bg-dark,
+    "primary":      $btn-outline-primary-border-disabled-bg-dark,
+    "secondary":    $btn-outline-secondary-border-disabled-bg-dark,
+    "info":         $btn-outline-info-border-disabled-bg-dark,
 ), $btn-outline-colors-border-disabled-bg-dark);
 
 // Select Buttons
 
 $btn-colors-selected: ();
 $btn-colors-selected: map-merge((
-        "primary":    $bright-blue-30,
-        "secondary":  $orange-60,
-        "info":       $btn-info-hover,
+    "primary":    $bright-blue-30,
+    "secondary":  $orange-60,
+    "info":       $btn-info-hover,
 ), $btn-colors-selected);
 
 
@@ -908,7 +896,7 @@ $custom-file-box-shadow:            $input-box-shadow !default;
 $custom-file-button-color:          $custom-file-color !default;
 $custom-file-button-bg:             $input-group-addon-bg !default;
 $custom-file-text: (
-  en: "Browse"
+        en: "Browse"
 ) !default;
 
 

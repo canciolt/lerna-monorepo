@@ -3,210 +3,210 @@
 //
 
 .btn {
-	@extend %fontSecondaryBold;
-	text-transform: uppercase;
-	display: inline-block;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	user-select: none;
-	cursor: pointer;
-	outline: none;
-	border: $btn-border-width solid transparent;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	@include transition($btn-transition);
+    @extend %fontSecondaryBold;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: $btn-border-width solid transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include transition($btn-transition);
 
-	.disabled &,
-	&.disabled,
-	&:disabled {
-		pointer-events: none;
-	}
+    .disabled &,
+    &.disabled,
+    &:disabled {
+        pointer-events: none;
+    }
 
-	// BTN TRIM
-	@include classBpModifier('btn-trim') {
-		padding: 0;
-		margin: 0;
-		border: none;
-	}
+    // BTN TRIM
+    @include classBpModifier('btn-trim') {
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
 
-	// BTN WRAP
-	@include classBpModifier('btn-wrap') {
-		white-space: normal;
-	}
+    // BTN WRAP
+    @include classBpModifier('btn-wrap') {
+        white-space: normal;
+    }
 }
 
 // Alternate buttons
 
 @each $color,
 $value in $btn-colors {
-	$text: map-get($btn-colors-text, $color);
-	$border: map-get($btn-colors-border, $color);
-	$background: map-get($btn-colors, $color);
-	$text-hover: map-get($btn-colors-text-hover, $color);
-	$border-hover: map-get($btn-colors-border-hover, $color);
-	$background-hover: map-get($btn-colors-hover, $color);
-	$text-disabled: map-get($btn-colors-text-disabled, $color);
-	$border-disabled: map-get($btn-colors-border-disabled, $color);
-	$background-disabled: map-get($btn-colors-disabled, $color);
+    $text: map-get($btn-colors-text, $color);
+    $border: map-get($btn-colors-border, $color);
+    $background: map-get($btn-colors, $color);
+    $text-hover: map-get($btn-colors-text-hover, $color);
+    $border-hover: map-get($btn-colors-border-hover, $color);
+    $background-hover: map-get($btn-colors-hover, $color);
+    $text-disabled: map-get($btn-colors-text-disabled, $color);
+    $border-disabled: map-get($btn-colors-border-disabled, $color);
+    $background-disabled: map-get($btn-colors-disabled, $color);
 
-	$text-outline: map-get($btn-outline-colors-text, $color);
-	$border-outline: map-get($btn-outline-colors-border, $color);
-	$background-outline: map-get($btn-outline-colors, $color);
-	$text-outline-hover: map-get($btn-outline-colors-text-hover, $color);
-	$border-outline-hover: map-get($btn-outline-colors-border-hover, $color);
-	$background-outline-hover: map-get($btn-outline-colors-hover, $color);
-	$text-outline-disabled: map-get($btn-outline-colors-text-disabled, $color);
-	$border-outline-disabled: map-get($btn-outline-colors-border-disabled, $color);
-	$background-outline-disabled: map-get($btn-outline-colors-disabled, $color);
+    $text-outline: map-get($btn-outline-colors-text, $color);
+    $border-outline: map-get($btn-outline-colors-border, $color);
+    $background-outline: map-get($btn-outline-colors, $color);
+    $text-outline-hover: map-get($btn-outline-colors-text-hover, $color);
+    $border-outline-hover: map-get($btn-outline-colors-border-hover, $color);
+    $background-outline-hover: map-get($btn-outline-colors-hover, $color);
+    $text-outline-disabled: map-get($btn-outline-colors-text-disabled, $color);
+    $border-outline-disabled: map-get($btn-outline-colors-border-disabled, $color);
+    $background-outline-disabled: map-get($btn-outline-colors-disabled, $color);
 
-	$text-outline-bg-dark: map-get($btn-outline-colors-text-bg-dark, $color);
-	$border-outline-bg-dark: map-get($btn-outline-colors-border-bg-dark, $color);
-	$background-outline-bg-dark: map-get($btn-outline-colors-bg-dark, $color);
-	$text-outline-hover-bg-dark: map-get($btn-outline-colors-text-hover-bg-dark, $color);
-	$border-outline-hover-bg-dark: map-get($btn-outline-colors-border-hover-bg-dark, $color);
-	$background-outline-hover-bg-dark: map-get($btn-outline-colors-hover-bg-dark, $color);
-	$text-outline-disabled-bg-dark: map-get($btn-outline-colors-text-disabled-bg-dark, $color);
-	$border-outline-disabled-bg-dark: map-get($btn-outline-colors-border-disabled-bg-dark, $color);
-	$background-outline-disabled-bg-dark: map-get($btn-outline-colors-disabled-bg-dark, $color);
+    $text-outline-bg-dark: map-get($btn-outline-colors-text-bg-dark, $color);
+    $border-outline-bg-dark: map-get($btn-outline-colors-border-bg-dark, $color);
+    $background-outline-bg-dark: map-get($btn-outline-colors-bg-dark, $color);
+    $text-outline-hover-bg-dark: map-get($btn-outline-colors-text-hover-bg-dark, $color);
+    $border-outline-hover-bg-dark: map-get($btn-outline-colors-border-hover-bg-dark, $color);
+    $background-outline-hover-bg-dark: map-get($btn-outline-colors-hover-bg-dark, $color);
+    $text-outline-disabled-bg-dark: map-get($btn-outline-colors-text-disabled-bg-dark, $color);
+    $border-outline-disabled-bg-dark: map-get($btn-outline-colors-border-disabled-bg-dark, $color);
+    $background-outline-disabled-bg-dark: map-get($btn-outline-colors-disabled-bg-dark, $color);
 
-	.btn-#{$color} {
-		@include button-variant($text, $border, $background, $text-hover, $border-hover, $background-hover, $text-disabled, $border-disabled, $background-disabled);
-	}
+    .btn-#{$color} {
+        @include button-variant($text, $border, $background, $text-hover, $border-hover, $background-hover, $text-disabled, $border-disabled, $background-disabled);
+    }
 
-	.btn-outline-#{$color} {
-		@include button-variant($text-outline, $border-outline, $background-outline, $text-outline-hover, $border-outline-hover, $background-outline-hover, $text-outline-disabled, $border-outline-disabled, $background-outline-disabled);
-		.-bg-dark & {
+    .btn-outline-#{$color} {
+        @include button-variant($text-outline, $border-outline, $background-outline, $text-outline-hover, $border-outline-hover, $background-outline-hover, $text-outline-disabled, $border-outline-disabled, $background-outline-disabled);
+        .-bg-dark & {
             @include button-variant($text-outline-bg-dark, $border-outline-bg-dark, $background-outline-bg-dark, $text-outline-hover-bg-dark, $border-outline-hover-bg-dark, $background-outline-hover-bg-dark, $text-outline-disabled-bg-dark, $border-outline-disabled-bg-dark, $background-outline-disabled-bg-dark);
         }
-	}
+    }
 
-	.ipt {
-		&:checked {
-			&+.btn-outline-#{$color} {
-				color: $text-outline-hover;
-				border-color: map-get($btn-colors-selected, $color);
-				background: map-get($btn-colors-selected, $color);
-			}
-		}
-		.disabled &,
-		&.disabled,
-		&:disabled {
-			&+.btn-outline-#{$color} {
-				color: $text-outline-disabled;
-				border-color: $border-outline-disabled;
-				background: $background-outline-disabled;
-				pointer-events: none;
-			}
-		}
-	}
+    .ipt {
+        &:checked {
+            &+.btn-outline-#{$color} {
+                color: $text-outline-hover;
+                border-color: map-get($btn-colors-selected, $color);
+                background: map-get($btn-colors-selected, $color);
+            }
+        }
+        .disabled &,
+        &.disabled,
+        &:disabled {
+            &+.btn-outline-#{$color} {
+                color: $text-outline-disabled;
+                border-color: $border-outline-disabled;
+                background: $background-outline-disabled;
+                pointer-events: none;
+            }
+        }
+    }
 }
 
 // Button Sizes
 
 .btn {
-	@include button-size($btn-padding-y, $btn-padding-x, $font-size-md, $btn-line-height, $btn-letter-spacing, $btn-border-radius);
+    @include button-size($btn-padding-y, $btn-padding-x, $font-size-md, $btn-line-height, $btn-letter-spacing, $btn-border-radius);
 }
 
 @include classBp(btn-lg) {
-	@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-letter-spacing-lg, $btn-border-radius-lg);
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-letter-spacing-lg, $btn-border-radius-lg);
 }
 
 @include classBp(btn-sm) {
-	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-letter-spacing-sm, $btn-border-radius-sm);
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-letter-spacing-sm, $btn-border-radius-sm);
 }
 
 
 .btn-short {
-	padding-right: rem(10px);
-	padding-left: rem(10px);
+    padding-right: rem(10px);
+    padding-left: rem(10px);
 }
 
 .ipt {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-	&+.btn {
-		@extend %fontSecondaryMedium;
-		text-transform: capitalize;
-		@include media-breakpoint-up(md) {
-			@include button-size($btn-check-padding-y, $btn-check-padding-x, $btn-check-font-size, $btn-check-line-height, $btn-check-letter-spacing, $btn-check-border-radius);
-		}
-		@include media-breakpoint-down(xs) {
-			@include button-size($btn-check-padding-y-lg, $btn-check-padding-x-lg, $btn-check-font-size-lg, $btn-check-line-height-lg, $btn-check-letter-spacing-lg, $btn-check-border-radius-lg);
-		}
-	}
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &+.btn {
+        @extend %fontSecondaryMedium;
+        text-transform: capitalize;
+        @include media-breakpoint-up(md) {
+            @include button-size($btn-check-padding-y, $btn-check-padding-x, $btn-check-font-size, $btn-check-line-height, $btn-check-letter-spacing, $btn-check-border-radius);
+        }
+        @include media-breakpoint-down(xs) {
+            @include button-size($btn-check-padding-y-lg, $btn-check-padding-x-lg, $btn-check-font-size-lg, $btn-check-line-height-lg, $btn-check-letter-spacing-lg, $btn-check-border-radius-lg);
+        }
+    }
 }
 
 // Button group
 
 .btn-group,
 .btn-group-vertical {
-	.btn {
-		width: 100%;
-		margin-bottom: 0;
-	}
+    .btn {
+        width: 100%;
+        margin-bottom: 0;
+    }
 }
 
 .btn-group {
-	@include media-breakpoint-down(xs) {
-		width: 100%;
-	}
-	&:not(:last-child) {
-		@include media-breakpoint-up(md) {
-			margin-right: rem(10px);
-		}
-		@include media-breakpoint-down(xs) {
-			margin-bottom: rem(16px);
-		}
-		html[dir="rtl"] & {
-			@include media-breakpoint-up(md) {
-				margin-left: rem(10px);
-				margin-right: 0;
-			}
-		}
-	}
+    @include media-breakpoint-down(xs) {
+        width: 100%;
+    }
+    &:not(:last-child) {
+        @include media-breakpoint-up(md) {
+            margin-right: rem(10px);
+        }
+        @include media-breakpoint-down(xs) {
+            margin-bottom: rem(16px);
+        }
+        html[dir="rtl"] & {
+            @include media-breakpoint-up(md) {
+                margin-left: rem(10px);
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 .btn-group-vertical {
-	&:not(:last-child) {
-		margin-bottom: rem(16px);
-	}
+    &:not(:last-child) {
+        margin-bottom: rem(16px);
+    }
 }
 
 // Button link
 
 .btn-link {
-	font-weight: $font-weight-normal;
-	color: $link-color;
-	background-color: transparent;
-	@include hover {
-		color: $link-hover-color;
-		text-decoration: $link-hover-decoration;
-		background-color: transparent;
-		border-color: transparent;
-	}
-	&:focus,
-	&.focus {
-		text-decoration: $link-hover-decoration;
-		border-color: transparent;
-		box-shadow: none;
-	}
-	&:disabled,
-	&.disabled {
-		color: $btn-link-disabled-color;
-		pointer-events: none;
-	}
+    font-weight: $font-weight-normal;
+    color: $link-color;
+    background-color: transparent;
+    @include hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+        background-color: transparent;
+        border-color: transparent;
+    }
+    &:focus,
+    &.focus {
+        text-decoration: $link-hover-decoration;
+        border-color: transparent;
+        box-shadow: none;
+    }
+    &:disabled,
+    &.disabled {
+        color: $btn-link-disabled-color;
+        pointer-events: none;
+    }
 }
 
 // Button block
 
 @include classBp(btn-block) {
-	display: block;
-	width: 100%;
-	&+.btn-block {
-		margin-top: $btn-block-spacing-y;
-	}
+    display: block;
+    width: 100%;
+    &+.btn-block {
+        margin-top: $btn-block-spacing-y;
+    }
 }
 
 // Specificity overrides
@@ -214,7 +214,7 @@ $value in $btn-colors {
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-	&.btn-block {
-		width: 100%;
-	}
+    &.btn-block {
+        width: 100%;
+    }
 }
