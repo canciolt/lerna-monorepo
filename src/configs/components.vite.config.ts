@@ -17,7 +17,7 @@ export default defineConfig({
     build: {
         sourcemap: true,
         lib: {
-            entry: 'index.ts',
+            entry: 'main.ts',
             formats: ['es', 'cjs']
         },
         rollupOptions: {
