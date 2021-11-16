@@ -9,6 +9,9 @@ import { C1_MODEL, Logo } from './c1.model'
 
 export default {
   component: C1,
+  parameters: {
+    layout: 'centered'
+  },
   title: 'Components/C1',
   argTypes: {
     logo: {
