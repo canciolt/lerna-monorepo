@@ -1,26 +1,17 @@
+//
+// GLOBALS
+//
+
 @import "commons";
-@import "theme/reboot";
 @import "utilities";
+@import "bootstrap";
+
+// Base
 
 @import "base/global";
 @import "base/license";
 @import "base/fonts";
 @import "base/text";
-
-@import "theme/grid";
-@import "theme/transitions";
-@import "theme/dropdown";
-@import "theme/buttons";
-@import "theme/button-group";
-@import "theme/custom-forms";
-@import "theme/badge";
-@import "theme/forms";
-@import "theme/modal";
-@import "theme/nav";
-@import "theme/tooltip";
-@import "theme/popover";
-
-
 
 
 
