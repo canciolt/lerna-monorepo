@@ -1,5 +1,5 @@
 import { defineComponent, computed, PropType } from 'vue'
-import { Logo } from "./c1.model";
+import { Logo } from './c1.model'
 
 
 export default defineComponent({
@@ -37,7 +37,7 @@ export default defineComponent({
       shield: 'logo-ncl-shield.svg'
     }
     const path = `https://${import.meta.env.HOST}${import.meta.env.STATIC}${props.baseUrl}`
-    const logoSrc = computed(() => logos.hasOwnProperty(props.logo)
+    const logoSrc = computed(() => Object.prototype.hasOwnProperty.call(logos, props.logo)
       ? `${path}${logos[props.logo]}`
       : '')
 
