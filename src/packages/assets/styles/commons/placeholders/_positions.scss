@@ -1,0 +1,53 @@
+// Positions
+
+%absolutePulled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+%absolutePulled-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+}
+
+%absolutePulled-down {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+%absolutePulled-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+%absolutePulled-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+%absolutePulled-x {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+%fixedPulled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

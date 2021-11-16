@@ -1,0 +1,25 @@
+//
+// Forms
+//
+
+@mixin inputPlaceholder($color: $input-placeholder-color, $opacity: 0.5) {
+    &::-webkit-input-placeholder { color: $color; opacity: $opacity; }
+    &::-moz-placeholder { color: $color; opacity: $opacity; }
+    &:-ms-input-placeholder { color: $color; opacity: $opacity; }
+    &:-moz-placeholder { color: $color; opacity: $opacity; }
+
+    &:focus::-webkit-input-placeholder { color: $color; opacity: $opacity; }
+    &:focus::-moz-placeholder { color: $color; opacity: $opacity; }
+    &:focus:-ms-input-placeholder { color: $color; opacity: $opacity; }
+    &:focus:-moz-placeholder { color: $color; opacity: $opacity; }
+
+    &:required::-webkit-input-placeholder { color: $color; opacity: $opacity; }
+    &:required::-moz-placeholder { color: $color; opacity: $opacity; }
+    &:required:-ms-input-placeholder { color: $color; opacity: $opacity; }
+    &:required:-moz-placeholder { color: $color; opacity: $opacity; }
+
+    &:required:focus::-webkit-input-placeholder { color: $color; opacity: $opacity; }
+    &:required:focus::-moz-placeholder { color: $color; opacity: $opacity; }
+    &:required:focus:-ms-input-placeholder { color: $color; opacity: $opacity; }
+    &:required:focus:-moz-placeholder { color: $color; opacity: $opacity; }
+}

@@ -1,0 +1,211 @@
+//
+// Modules
+//
+
+// Reset lists
+
+%resetList {
+    @include list-unstyled;
+    margin: 0;
+}
+
+// Device Orientation
+
+%fixedLandscapeMobile {
+    @media (orientation: landscape) {
+        .-mobile & {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: $zindex-fixed + 1;
+        }
+    }
+}
+
+// Image resize
+
+%imageResize {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+// Forms
+
+%formControlFiter {
+    @extend %fontSecondaryMedium;
+    font-size: rem(22px);
+    line-height: rem(30px);
+    letter-spacing: rem(.2px);
+    font-style: normal;
+    border: none;
+    color: $navy-70;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    @include inputPlaceholder($blue-60);
+}
+
+%toggleTitle {
+    font-size: rem(12px);
+    line-height: rem(14px);
+    letter-spacing: rem(1.5px);
+    @extend %fontSecondaryBold;
+    @include media-breakpoint-up(md) {
+        color: $blue-60;
+        text-transform: uppercase;
+        @include caret(down);
+        opacity: .3;
+    }
+    @include media-breakpoint-down(xs) {
+        font-family: $font-futura-medium;
+        font-size: rem(20px);
+        letter-spacing: rem(0.2px);
+        line-height: rem(23px);
+        color: $navy-70;
+    }
+}
+
+%backgroundWaves {
+    background-image: url("#{$img-path-base}/background/waves.png");
+}
+
+%priceSpacing {
+    white-space: nowrap;
+    word-spacing: -0.1em;
+}
+
+%close {
+    @include media-breakpoint-up(md) {
+        font-size: rem(16px);
+    }
+    @include media-breakpoint-down(xs) {
+        font-size: rem(24px);
+    }
+    &:before {
+        font-family: $font-family-icon;
+        content: $nis-times;
+        color: $blue-60;
+        .modal-dark & {
+            @include media-breakpoint-up(md) {
+                color: $bright-blue-50;
+            }
+        }
+    }
+    > i {
+        display: none;
+    }
+}
+
+%componentVariant {
+    padding: rem(20px);
+    background-color: $white;
+    border-radius: $border-radius;
+    @extend %shadowMedium;
+}
+
+@media print {
+    %exactColor {
+        color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}
+
+%opacity-0 {
+    opacity: $opacity-0;
+}
+%opacity-10 {
+    opacity: $opacity-10;
+}
+%opacity-15 {
+    opacity: $opacity-15;
+}
+%opacity-20 {
+    opacity: $opacity-20;
+}
+%opacity-25 {
+    opacity: $opacity-25;
+}
+%opacity-30 {
+    opacity: $opacity-30;
+}
+%opacity-35 {
+    opacity: $opacity-35;
+}
+%opacity-40 {
+    opacity: $opacity-40;
+}
+%opacity-45 {
+    opacity: $opacity-45;
+}
+%opacity-50 {
+    opacity: $opacity-50;
+}
+%opacity-55 {
+    opacity: $opacity-55;
+}
+%opacity-60 {
+    opacity: $opacity-60;
+}
+%opacity-65 {
+    opacity: $opacity-65;
+}
+%opacity-70 {
+    opacity: $opacity-70;
+}
+%opacity-75 {
+    opacity: $opacity-75;
+}
+%opacity-80 {
+    opacity: $opacity-80;
+}
+%opacity-85 {
+    opacity: $opacity-85;
+}
+%opacity-90 {
+    opacity: $opacity-90;
+}
+%opacity-95 {
+    opacity: $opacity-95;
+}
+%opacity-100 {
+    opacity: $opacity-100;
+}
+
+%strikeThrough {
+    color: $cool-grey-80 !important;
+    @extend %opacity-75;
+    position: relative;
+    display: inline-block;
+    &:before {
+        content: '';
+        position: absolute;
+        left: rem(-2px);
+        right: rem(-2px);
+        top: 50%;
+        height: rem(1px);
+        background: $cool-grey-80;
+    }
+}
+
+%emphasizeAnimation {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+
+%wider {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    html[dir="rtl"] & {
+        left: auto;
+        margin-left: 0;
+        right: 50%;
+        margin-right: -50vw;
+    }
+}
