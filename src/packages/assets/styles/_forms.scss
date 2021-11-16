@@ -1,0 +1,305 @@
+//
+// Forms
+//
+
+.form-control {
+	font-family: $font-futura-book;
+	font-size: rem(12px);
+	line-height: rem(16px);
+	color: $input-color;
+	width: 100%;
+	height: $input-height;
+	display: flex;
+	align-items: center;
+	padding: $input-padding-y $input-padding-x;
+	border: $input-border-width solid transparent;
+	border-radius: $input-border-radius;
+	background-color: $input-bg;
+	background-clip: padding-box;
+	@include box-shadow($input-box-shadow);
+	@include transition($input-transition);
+	@include media-breakpoint-down(xs) {
+		font-size: rem(16px); // To avoid zoom in iphone
+	}
+	//&:not(:last-child) {
+	//	margin-bottom: rem(10px);
+	//}
+	&::-ms-expand {
+		background-color: transparent;
+		border: 0;
+	}
+	@include form-control-focus();
+	@include inputPlaceholder($opacity: 1);
+
+	&[readonly] {
+		background-color: $input-disabled-bg; // iOS fix for unreadable disabled content;
+		opacity: 1;
+	}
+	&.disabled,
+	.disabled &,
+	&:disabled {
+		opacity: .5;
+		pointer-events: none;
+	}
+	&.-variant-1 {
+		background: $cool-grey-10;
+	}
+	.invalid & {
+		background: $error-10;
+		border-color: $error-30;
+		color: $error-90;
+		@include inputPlaceholder($error-90);
+	}
+	&.btn {
+		font-family: $font-futura-book;
+	}
+	&.bs-placeholder {
+		.filter-option-inner {
+			&-inner {
+				@extend %opacity-50;
+			}
+		}
+	}
+	&[type="search"] {
+		appearance: none; // to fix input rounded corners in Safari Mobile
+	}
+}
+
+// Labels
+
+.label-control {
+	@extend %paragraph-sans-6;
+	color: $cool-grey-80;
+	margin-bottom: rem(5px);
+	.invalid & {
+		color: $error-90;
+	}
+}
+
+//Validation messages
+
+.form-message {
+	padding-top: rem(10px);
+	@extend %paragraph-sans-6;
+	&.-error {
+		display: none;
+		color: $error-90;
+		.invalid & {
+			display: block;
+		}
+	}
+}
+
+
+//Form-description
+
+.form-description {
+	padding-top: rem(10px);
+	@extend %link-3;
+	font-weight: $text-medium;
+	font-style: oblique;
+}
+
+.required {
+	font-family: $font-web-safe;
+	font-size: rem(12px);
+	color: $error-90;
+}
+
+select.form-control {
+	&:not([size]):not([multiple]) {
+		height: $input-height;
+	}
+	&:focus::-ms-value {
+		// Suppress the nested default white text on blue background highlight given to
+		// the selected option text when the (still closed) <select> receives focus
+		// in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+		// match the appearance of the native widget.
+		// See https://github.com/twbs/bootstrap/issues/19398.
+		color: $input-color;
+		background-color: $input-bg;
+	}
+}
+
+// Make file inputs better match text inputs by forcing them to new lines.
+.form-control-file,
+.form-control-range {
+	display: block;
+	width: 100%;
+}
+
+// Form control sizing
+//
+// Build on `.form-control` with modifier classes to decrease or increase the
+// height and font-size of form controls.
+//
+// The `.form-group-* form-control` variations are sadly duplicated to avoid the
+// issue documented in https://github.com/twbs/bootstrap/issues/15074.
+.form-control-sm {
+	padding: $input-padding-y-sm $input-padding-x-sm;
+	font-size: $font-size-sm;
+	line-height: $input-line-height-sm;
+	@include border-radius($input-border-radius-sm);
+}
+
+select.form-control-sm {
+	&:not([size]):not([multiple]) {
+		height: $input-height-sm;
+	}
+}
+
+.form-control-lg {
+	padding: $input-padding-y-lg $input-padding-x-lg;
+	font-size: $font-size-lg;
+	line-height: $input-line-height-lg;
+	@include border-radius($input-border-radius-lg);
+}
+
+select.form-control-lg {
+	&:not([size]):not([multiple]) {
+		height: $input-height-lg;
+	}
+}
+
+// Form groups
+//
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
+.form-group {
+	&.-mb,
+	.form-grid & {
+		margin-bottom: $form-group-margin-bottom;
+	}
+}
+
+.form-text {
+	display: block;
+	margin-top: $form-text-margin-top;
+}
+
+// Form grid
+//
+// Special replacement for our grid system's `.row` for tighter form layouts.
+.form-row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -5px;
+	margin-left: -5px;
+	>.col,
+	>[class*="col-"] {
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+}
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+.form-check {
+	position: relative;
+	display: block;
+	padding-left: $form-check-input-gutter;
+}
+
+.form-check-input {
+	position: absolute;
+	margin-top: $form-check-input-margin-y;
+	margin-left: -$form-check-input-gutter;
+	&:disabled~.form-check-label {
+		color: $text-muted;
+	}
+}
+
+.form-check-label {
+	margin-bottom: 0; // Override default `<label>` bottom margin
+}
+
+.form-check-inline {
+	display: inline-flex;
+	align-items: center;
+	padding-left: 0; // Override base .form-check
+	margin-right: $form-check-inline-margin-x; // Undo .form-check-input defaults and add some `margin-right`.
+	.form-check-input {
+		position: static;
+		margin-top: 0;
+		margin-right: $form-check-inline-input-margin-x;
+		margin-left: 0;
+	}
+}
+
+// Form validation
+//
+// Provide feedback to users when form field values are valid or invalid. Works
+// primarily for client-side validation via scoped `:invalid` and `:valid`
+// pseudo-classes but also includes `.is-invalid` and `.is-valid` classes for
+// server side validation.
+//@include form-validation-state("valid", $form-feedback-valid-color);
+//@include form-validation-state("invalid", $form-feedback-invalid-color);
+// Inline forms
+//
+// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// forms begin stacked on extra small (mobile) devices and then go inline when
+// viewports reach <768px.
+//
+// Requires wrapping inputs and labels with `.form-group` for proper display of
+// default HTML form controls and our custom form controls (e.g., input groups).
+.form-inline {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center; // Prevent shorter elements from growing to same height as others (e.g., small buttons growing to normal sized button height)
+	// Because we use flex, the initial sizing of checkboxes is collapsed and
+	// doesn't occupy the full-width (which is what we want for xs grid tier),
+	// so we force that here.
+	.form-check {
+		width: 100%;
+	} // Kick in the inline
+	@include media-breakpoint-up(sm) {
+		label {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 0;
+		} // Inline-block all the things for "inline"
+		.form-group {
+			display: flex;
+			flex: 0 0 auto;
+			flex-flow: row wrap;
+			align-items: center;
+			margin-bottom: 0;
+		} // Allow folks to *not* use `.form-group`
+		.form-control {
+			display: inline-block;
+			width: auto; // Prevent labels from stacking above inputs in `.form-group`
+			vertical-align: middle;
+		} // Make static controls behave like regular ones
+		.form-control-plaintext {
+			display: inline-block;
+		}
+		.input-group,
+		.custom-select {
+			width: auto;
+		} // Remove default margin on radios/checkboxes that were used for stacking, and
+		// then undo the floating of radios and checkboxes to match.
+		.form-check {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: auto;
+			padding-left: 0;
+		}
+		.form-check-input {
+			position: relative;
+			margin-top: 0;
+			margin-right: $form-check-input-margin-x;
+			margin-left: 0;
+		}
+		.custom-control {
+			align-items: center;
+			justify-content: center;
+		}
+		.custom-control-label {
+			margin-bottom: 0;
+		}
+	}
+}
