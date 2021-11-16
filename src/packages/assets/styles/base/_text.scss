@@ -1,0 +1,1069 @@
+//
+// TEXTS
+//
+
+// Headlines
+
+@include classBpPlaceholder(headline-1) {
+    font-family: $font-futura-bold;
+    font-size: rem(45px);
+    line-height: rem(54px);
+    letter-spacing: rem(-2px);
+}
+@include classBpPlaceholderVariant(headline-1, -variant-1) {
+    font-family: $font-futura-medium;
+}
+@include classBpPlaceholderVariant(headline-1, -variant-2) {
+    font-family: $font-futura-light;
+}
+@include classBpPlaceholderVariant(headline-1, -variant-3) {
+    font-family: $font-futura-medium;
+    line-height: 1;
+}
+@include classBpPlaceholderVariant(headline-1, -variant-4) {
+    text-shadow: rem(2px) rem(2px) rem(2px) rgba($black, .3);
+    @include media-breakpoint-up(lg) {
+        font-size: rem(100px);
+        line-height: rem(100px);
+    }
+    @include media-breakpoint-down(md) {
+        font-size: rem(80px);
+        line-height: rem(80px);
+    }
+}
+
+@include classBpPlaceholder(headline-2) {
+    font-family: $font-futura-bold;
+    font-size: rem(32px);
+    line-height: rem(40px);
+    letter-spacing: rem(-1px);
+}
+@include classBpPlaceholderVariant(headline-2, -variant-1) {
+    font-family: $font-futura-medium;
+}
+@include classBpPlaceholderVariant(headline-2, -variant-2) {
+    font-family: $font-futura-book;
+}
+@include classBpPlaceholderVariant(headline-2, -variant-3) {
+    font-family: $font-futura-light;
+}
+@include classBpPlaceholderVariant(headline-2, -variant-4) {
+    font-family: $font-futura-medium;
+    text-transform: uppercase;
+}
+
+@include classBpPlaceholder(headline-3) {
+    font-family: $font-futura-bold;
+    font-size: rem(30px);
+    line-height: rem(34px);
+    letter-spacing: rem(.5px);
+}
+@include classBpPlaceholderVariant(headline-3, -variant-1) {
+    font-family: $font-futura-medium;
+}
+@include classBpPlaceholderVariant(headline-3, -variant-2) {
+    font-family: $font-futura-book;
+}
+
+@include classBpPlaceholder(headline-4) {
+    font-family: $font-futura-bold;
+    font-size: rem(28px);
+    line-height: rem(32px);
+}
+@include classBpPlaceholderVariant(headline-4, -variant-1) {
+    font-family: $font-futura-medium;
+}
+
+@include classBpPlaceholder(headline-5) {
+    font-family: $font-futura-bold;
+    font-size: rem(25px);
+    line-height: rem(28px);
+    letter-spacing: rem(.1px);
+}
+@include classBpPlaceholderVariant(headline-5, -variant-1) {
+    font-family: $font-futura-medium;
+}
+@include classBpPlaceholderVariant(headline-5, -variant-2) {
+    font-family: $font-futura-book;
+}
+
+@include classBpPlaceholder(headline-6) {
+    font-family: $font-futura-book;
+    font-size: rem(24px);
+    line-height: rem(28px);
+}
+@include classBpPlaceholderVariant(headline-6, -variant-1) {
+    font-family: $font-futura-medium;
+}
+@include classBpPlaceholderVariant(headline-6, -variant-2) {
+    font-family: $font-futura-medium;
+    text-transform: uppercase;
+    color: $bright-blue-80;
+    strong {
+        font-family: $font-futura-bold;
+    }
+}
+@include classBpPlaceholderVariant(headline-6, -variant-3) {
+    font-family: $font-futura-light;
+}
+@include classBpPlaceholderVariant(headline-6, -variant-4) {
+    font-family: $font-futura-bold;
+}
+@include classBpPlaceholderVariant(headline-6, -variant-5) {
+    font-family: $font-futura-medium;
+    font-size: rem(23px);
+    line-height: rem(23px);
+    letter-spacing: rem(.59px);
+    color: $navy;
+}
+
+@include classBpPlaceholder(headline-7) {
+    font-family: $font-futura-bold;
+    font-size: rem(20px);
+    line-height: rem(24px);
+    letter-spacing: rem(-0.5px);
+}
+@include classBpPlaceholderVariant(headline-7, -variant-1) {
+    font-family: $font-futura-medium;
+    letter-spacing: rem(0.25px);
+}
+@include classBpPlaceholderVariant(headline-7, -variant-2) {
+    font-family: $font-futura-book;
+    line-height: rem(26px);
+    letter-spacing: 0;
+}
+@include classBpPlaceholderVariant(headline-7, -variant-3) {
+    font-family: $font-futura-light;
+    line-height: rem(26px);
+    letter-spacing: 0;
+}
+@include classBpPlaceholderVariant(headline-7, -variant-4) {
+    color: $gold;
+}
+@include classBpPlaceholderVariant(headline-7, -variant-5) {
+    color: $white;
+}
+@include classBpPlaceholderVariant(headline-7, -variant-6) {
+    font-family: $font-futura-medium;
+    letter-spacing: rem(0.25px);
+    color: $cool-grey-80;
+    opacity: $opacity-75;
+}
+@include classBpPlaceholderVariant(headline-7, -variant-7) {
+    font-family: $font-futura-medium;
+    letter-spacing: 0;
+    line-height: 1;
+    color: $blue;
+}
+@include classBpPlaceholderVariant(headline-7, -variant-8) {
+    color: $blue-60;
+}
+@include classBpPlaceholderVariant(headline-7, -variant-9) {
+    font-family: $font-futura-light;
+    letter-spacing: rem(0.25px);
+}
+@include classBpPlaceholderVariant(headline-7, -variant-10) {
+    letter-spacing: rem(0.25px);
+}
+@include classBpPlaceholderVariant(headline-7, -variant-11) {
+    font-family: $font-futura-medium;
+    letter-spacing: rem(0.25px);
+    line-height: rem(24px);
+}
+
+[class*='headline-'] {
+    color: $navy-70;
+    @include classBpParentModifier(-bg-medium) {
+        color: $white;
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $white;
+    }
+}
+
+// Paragraphs sans
+
+@include classBpPlaceholder(paragraph-sans-1) {
+    font-family: $font-futura-book;
+    font-size: rem(16px);
+    line-height: rem(22px);
+    letter-spacing: rem(0.15px);
+}
+
+@include classBpPlaceholderVariant(paragraph-sans-1, -variant-1) {
+    font-family: $font-futura-medium;
+    font-size: rem(17px);
+    line-height: rem(17px);
+    letter-spacing: rem(0.26px);
+}
+
+@include classBpPlaceholder(paragraph-sans-2) {
+    font-family: $font-futura-book;
+    font-size: rem(15px);
+    line-height: rem(20px);
+    letter-spacing: rem(0.1px);
+}
+@include classBpPlaceholderVariant(paragraph-sans-2, -variant-1) {
+    font-family: $font-futura-medium;
+}
+
+@include classBpPlaceholderVariant(paragraph-sans-2, -variant-2) {
+    color: $navy-70;
+    font-family: $font-futura-medium;
+}
+
+@include classBpPlaceholderVariant(paragraph-sans-2, -variant-3) {
+    color: $navy-70;
+    font-family: $font-futura-bold;
+}
+@include classBpPlaceholderVariant(paragraph-sans-2, -variant-4) {
+    color: $cool-grey-80;
+}
+@include classBpPlaceholderVariant(paragraph-sans-2, -variant-5) {
+    color: $cool-grey-90;
+}
+@include classBpPlaceholderVariant(paragraph-sans-2, -variant-6) {
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(paragraph-sans-2, -variant-7) {
+    font-family: $font-futura-medium;
+    color: $navy-70;
+    font-weight: $text-book;
+}
+
+@include classBpPlaceholderVariant(paragraph-sans-2, -variant-8) {
+    font-family: $font-futura-medium;
+    color: $blue;
+}
+
+@include classBpPlaceholder(paragraph-sans-3) {
+    font-family: $font-futura-book;
+    font-size: rem(14px);
+    line-height: rem(20px);
+    letter-spacing: rem(0.1px);
+    strong {
+        font-family: $font-futura-bold;
+    }
+}
+@include classBpPlaceholderVariant(paragraph-sans-3, -variant-1) {
+    font-family: $font-futura-medium;
+}
+@include classBpPlaceholderVariant(paragraph-sans-3, -variant-2) {
+    font-family: $font-futura-bold;
+    letter-spacing: rem(0.35px);
+}
+@include classBpPlaceholderVariant(paragraph-sans-3, -variant-3) {
+    font-family: $font-futura-medium;
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(paragraph-sans-3, -variant-4) {
+    font-family: $font-futura-bold;
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(paragraph-sans-3, -variant-5) {
+    font-family: $font-futura-bold;
+    font-size: rem(13px);
+    line-height: rem(16px);
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: $bright-blue-80;
+}
+@include classBpPlaceholderVariant(paragraph-sans-3, -variant-6) {
+    font-size: rem(13px);
+    line-height: rem(16px);
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: $bright-blue-80;
+}
+@include classBpPlaceholderVariant(paragraph-sans-3, -variant-7) {
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(paragraph-sans-3, -variant-8) {
+    color: $cool-grey-80;
+}
+@include classBpPlaceholderVariant(paragraph-sans-3, -variant-9) {
+    font-family: $font-futura-medium;
+    line-height: rem(14px);
+}
+@include classBpPlaceholderVariant(paragraph-sans-3, -variant-10) {
+    font-family: $font-futura-bold;
+    letter-spacing: rem(1.75px);
+    text-transform: uppercase;
+    color: $cool-grey-80;
+}
+
+@include classBpPlaceholder(paragraph-sans-4) {
+    font-family: $font-futura-book;
+    font-size: rem(12px);
+    line-height: rem(16px);
+    strong {
+        font-family: $font-futura-bold;
+    }
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-1) {
+    font-family: $font-futura-medium;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-2) {
+    font-family: $font-futura-bold;
+    letter-spacing: rem(1.5px);
+    text-transform: uppercase;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-3) {
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-4) {
+    font-family: $font-futura-bold;
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-5) {
+    color: $cool-grey-80;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-6) {
+    font-family: $font-futura-medium;
+    font-size: rem(11px);
+    line-height: rem(13px);
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-7) {
+    color: $bright-blue-80;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-8) {
+    font-family: $font-futura-medium;
+    color: $navy-30;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-9) {
+    text-transform: uppercase;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-10) {
+    font-family: $font-futura-bold;
+    letter-spacing: rem(.25px);
+    color: $navy-30;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-11) {
+    font-family: $font-futura-bold;
+    letter-spacing: rem(1.5px);
+    font-size: rem(10px);
+    line-height: rem(12px);
+    text-transform: uppercase;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-12) {
+    font-family: $font-futura-bold;
+    letter-spacing: rem(.3px);
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-13) {
+    font-family: $font-futura-bold;
+    letter-spacing: rem(1.5px);
+    text-transform: uppercase;
+    color: $cool-grey-80;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-14) {
+    font-family: $font-futura-medium;
+    letter-spacing: rem(.25px);
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-15) {
+    font-family: $font-futura-medium;
+    line-height: rem(20px);
+    letter-spacing: rem(.12px);
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-16) {
+    line-height: rem(18px);
+    letter-spacing: rem(.12px);
+    color: $bright-blue-80;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-17) {
+    font-family: $font-futura-medium;
+    color: $cool-grey-80;
+    opacity: $opacity-75;
+}
+@include classBpPlaceholderVariant(paragraph-sans-4, -variant-18) {
+    font-family: $font-futura-bold;
+    color: $navy-70;
+    letter-spacing: rem(1.5px);
+}
+
+@include classBpPlaceholder(paragraph-sans-5) {
+    font-family: $font-futura-book;
+    font-size: rem(10px);
+    line-height: rem(12px);
+    letter-spacing: rem(0.5px);
+    strong {
+        font-family: $font-futura-bold;
+    }
+}
+@include classBpPlaceholderVariant(paragraph-sans-5, -variant-1) {
+    font-family: $font-futura-bold;
+}
+@include classBpPlaceholderVariant(paragraph-sans-5, -variant-2) {
+    color: $cool-grey-80;
+}
+
+@include classBpPlaceholder(paragraph-sans-6) {
+    font-family: $font-web-safe;
+    font-size: rem(10px);
+    line-height: rem(12px);
+    letter-spacing: rem(0.5px);
+    font-weight: $font-weight-normal;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-1) {
+    font-weight: $font-weight-bold;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-2) {
+    font-style: oblique;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-3) {
+    letter-spacing: 0;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-4) {
+    line-height: rem(16px);
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-5) {
+    font-size: rem(12px);
+    line-height: rem(14px);
+    letter-spacing: 0;
+    font-weight: $font-weight-bold;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-6) {
+    font-size: rem(12px);
+    line-height: rem(12px);
+    font-weight: $font-weight-bold;
+    color: $error-70;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-7) {
+    font-size: rem(12px);
+    line-height: rem(18px);
+    letter-spacing: 0;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-8) {
+    color: $cool-grey-80;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-9) {
+    color: $cool-grey-80;
+    font-weight: $font-weight-bold;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-10) {
+    color: $navy-70;
+    font-weight: $font-weight-medium;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-11) {
+    color: $cool-grey-80;
+    font-weight: $font-weight-medium;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-12) {
+    font-size: rem(8px);
+    line-height: rem(10px);
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-13) {
+    font-size: rem(9px);
+    line-height: rem(9px);
+    color: $navy;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-14) {
+    color: $navy-70;
+    text-transform: none;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-15) {
+    color: $bright-blue-80;
+    text-transform: none;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-16) {
+    color: $white;
+}
+@include classBpPlaceholderVariant(paragraph-sans-6, -variant-17) {
+    font-size: rem(11px);
+    line-height: rem(11px);
+    font-weight: $text-bold;
+    color: $bright-blue-80;
+    letter-spacing: rem(1px);
+}
+
+// Paragraphs serif
+
+@include classBpPlaceholder(paragraph-serif-1) {
+    font-family: $font-merriweather;
+    font-weight: $text-light;
+    font-size: rem(20px);
+    line-height: rem(32px);
+    letter-spacing: rem(0.25px);
+}
+
+@include classBpPlaceholderVariant(paragraph-serif-1, -variant-1) {
+    font-style: italic;
+}
+
+@include classBpPlaceholder(paragraph-serif-2) {
+    font-family: $font-merriweather;
+    font-weight: $text-light;
+    font-size: rem(16px);
+    line-height: rem(28px);
+    letter-spacing: rem(0.25px);
+}
+@include classBpPlaceholderVariant(paragraph-serif-2, -variant-2) {
+    font-weight: $text-bold;
+}
+
+@include classBpPlaceholder(paragraph-serif-3) {
+    font-family: $font-merriweather;
+    font-weight: $text-light;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    letter-spacing: rem(0.25px);
+}
+@include classBpPlaceholderVariant(paragraph-serif-3, -variant-1) {
+    font-weight: $text-book;
+}
+@include classBpPlaceholderVariant(paragraph-serif-3, -variant-2) {
+    font-weight: $text-bold;
+}
+@include classBpPlaceholderVariant(paragraph-serif-3, -variant-3) {
+    color: $bright-blue-80;
+}
+@include classBpPlaceholderVariant(paragraph-serif-3, -variant-4) {
+    line-height: rem(18px);
+}
+@include classBpPlaceholderVariant(paragraph-serif-3, -variant-5) {
+    color: $cool-grey-80;
+}
+
+@include classBpPlaceholder(paragraph-serif-4) {
+    font-family: $font-merriweather;
+    font-size: rem(12px);
+    line-height: rem(18px);
+    letter-spacing: rem(0.25px);
+}
+@include classBpPlaceholderVariant(paragraph-serif-4, -variant-1) {
+    font-weight: $text-book;
+}
+@include classBpPlaceholderVariant(paragraph-serif-4, -variant-2) {
+    font-weight: $text-bold;
+}
+@include classBpPlaceholderVariant(paragraph-serif-4, -variant-3) {
+    font-weight: $text-bold;
+    font-style: italic;
+    color: $navy-30;
+}
+
+@include classBpPlaceholderVariant(paragraph-serif-4, -variant-4) {
+    color: $bright-blue-80;
+}
+@include classBpPlaceholderVariant(paragraph-serif-4, -variant-5) {
+    color: $bright-blue-80;
+    font-style: italic;
+}
+
+[class*='paragraph-'] {
+    @include classBpParentModifier(-bg-medium) {
+        color: $blue-10;
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $blue-10;
+    }
+    @include classBpModifier(text-blue) {
+        color: $blue;
+    }
+    @include classBpModifier(text-teal) {
+        color: $teal-50;
+    }
+}
+
+// Labels
+
+@include classBpPlaceholder(label-1) {
+    font-family: $font-futura-bold;
+    font-size: rem(14px);
+    line-height: rem(16px);
+    letter-spacing: rem(1.75px);
+    text-transform: uppercase;
+}
+@include classBpPlaceholderVariant(label-1, -variant-1) {
+    line-height: rem(20px);
+    letter-spacing: rem(0.35px);
+    text-transform: none;
+}
+@include classBpPlaceholderVariant(label-1, -variant-2) {
+    font-family: $font-futura-book;
+    line-height: rem(20px);
+    letter-spacing: rem(0.35px);
+    text-transform: none;
+}
+@include classBpPlaceholderVariant(label-1, -variant-3) {
+    text-transform: none;
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(label-1, -variant-4) {
+    color: $cool-grey-80;
+}
+@include classBpPlaceholderVariant(label-1, -variant-5) {
+    display: block;
+    color: $white;
+}
+@include classBpPlaceholderVariant(label-1, -variant-6) {
+    line-height: rem(20px);
+    letter-spacing: rem(0.35px);
+    text-transform: none;
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(label-1, -variant-7) {
+    color: $blue-60;
+}
+@include classBpPlaceholderVariant(label-1, -variant-8) {
+    color: $cool-grey-80;
+    text-transform: capitalize;
+}
+@include classBpPlaceholderVariant(label-1, -variant-9) {
+    font-size: rem(13px);
+    line-height: rem(20px);
+    letter-spacing: rem(0.09px);
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(label-1, -variant-10) {
+    color: $white;
+    text-shadow: 0 rem(2px) rem(4px) rgba($teal-90, 0.5);
+    line-height: rem(20px);
+}
+@include classBpPlaceholderVariant(label-1, -variant-11) {
+    font-family: $font-futura-book;
+}
+
+@include classBpPlaceholder(label-2) {
+    font-family: $font-futura-bold;
+    font-size: rem(12px);
+    line-height: rem(16px);
+    letter-spacing: rem(1.5px);
+    text-transform: uppercase;
+}
+@include classBpPlaceholderVariant(label-2, -variant-1) {
+    letter-spacing: 0;
+    text-transform: none;
+    color: $cool-grey-80;
+}
+@include classBpPlaceholderVariant(label-2, -variant-3) {
+    font-family: $font-futura-book;
+}
+@include classBpPlaceholderVariant(label-2, -variant-4) {
+    color: $cool-grey-80;
+}
+@include classBpPlaceholderVariant(label-2, -variant-5) {
+    color: $gold;
+}
+@include classBpPlaceholderVariant(label-2, -variant-6) {
+    color: $white;
+}
+@include classBpPlaceholderVariant(label-2, -variant-7) {
+    line-height: 1;
+}
+@include classBpPlaceholderVariant(label-2, -variant-8) {
+    color: $cool-grey-80;
+    text-transform: none;
+}
+@include classBpPlaceholderVariant(label-2, -variant-9) {
+    font-family: $font-futura-book;
+    color: $cool-grey-80;
+}
+@include classBpPlaceholderVariant(label-2, -variant-10) {
+    line-height: rem(14px);
+    letter-spacing: rem(1.36px);
+    color: $neutral-70;
+}
+
+@include classBpPlaceholder(label-3) {
+    font-family: $font-futura-bold;
+    font-size: rem(9px);
+    line-height: rem(13px);
+    letter-spacing: rem(1px);
+    text-transform: uppercase;
+}
+@include classBpPlaceholderVariant(label-3, -variant-1) {
+    color: $cool-grey-80;
+    .-bg-dark & {
+        color: $cool-grey-80;
+    }
+}
+@include classBpPlaceholderVariant(label-3, -variant-2) {
+    color: $cool-grey-80;
+    font-family: $font-futura-book;
+    .-bg-dark & {
+        color: $cool-grey-80;
+    }
+}
+@include classBpPlaceholderVariant(label-3, -variant-3) {
+    color: $white;
+}
+@include classBpPlaceholderVariant(label-3, -variant-4) {
+    color: $navy-70;
+}
+@include classBpPlaceholderVariant(label-3, -variant-5) {
+    line-height: rem(11px);
+    color: $cool-grey-80;
+}
+
+[class*='label-'] {
+    @include classBpParentModifier(-bg-medium) {
+        color: $grey-blue;
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $teal-70;
+    }
+}
+
+// Links
+
+@include classBpPlaceholder(link-1) {
+    font-family: $font-futura-bold;
+    font-size: rem(14px);
+    line-height: rem(16px);
+    letter-spacing: rem(1.75px);
+    text-transform: uppercase;
+}
+@include classBpPlaceholderVariant(link-1, -variant-1) {
+    line-height: rem(20px);
+    letter-spacing: rem(0.35px);
+    text-transform: none;
+}
+@include classBpPlaceholderVariant(link-1, -variant-2) {
+    font-family: $font-futura-medium;
+    line-height: rem(20px);
+    letter-spacing: rem(0.35px);
+    text-transform: none;
+}
+@include classBpPlaceholderVariant(link-1, -variant-3) {
+    font-family: $font-futura-book;
+    line-height: rem(20px);
+    letter-spacing: rem(0.1px);
+    text-transform: none;
+}
+@include classBpPlaceholderVariant(link-1, -variant-4) {
+    font-size: rem(13px);
+    letter-spacing: 0;
+    color: $blue-60;
+}
+@include classBpPlaceholderVariant(link-1, -variant-5) {
+    font-size: rem(13px);
+    letter-spacing: 0;
+}
+
+@include classBpPlaceholder(link-2) {
+    font-family: $font-futura-bold;
+    font-size: rem(12px);
+    line-height: rem(16px);
+    letter-spacing: rem(1.5px);
+    text-transform: uppercase;
+}
+@include classBpPlaceholderVariant(link-2, -variant-1) {
+    text-transform: none;
+}
+@include classBpPlaceholderVariant(link-2, -variant-2) {
+    font-family: $font-futura-medium;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+@include classBpPlaceholderVariant(link-2, -variant-3) {
+    color: $bright-blue-80;
+}
+
+@include classBpPlaceholder(link-3) {
+    font-family: $font-web-safe;
+    font-size: rem(10px);
+    line-height: rem(12px);
+    letter-spacing: rem(0.5px);
+}
+@include classBpPlaceholderVariant(link-3, -variant-1) {
+    font-weight: $text-medium;
+}
+@include classBpPlaceholderVariant(link-3, -variant-2) {
+    font-weight: $text-book;
+}
+@include classBpPlaceholderVariant(link-3, -variant-3) {
+    font-weight: $font-weight-bold;
+}
+@include classBpPlaceholderVariant(link-3, -variant-4) {
+    color: $cool-grey-80;
+}
+@include classBpPlaceholderVariant(link-3, -variant-5) {
+    color: $navy-70;
+    font-weight: $text-book;
+}
+@include classBpPlaceholderVariant(link-3, -variant-6) {
+    color: $cool-grey-80;
+    font-weight: $font-weight-bold;
+}
+@include classBpPlaceholderVariant(link-3, -variant-7) {
+    color: $navy-50;
+}
+@include classBpPlaceholderVariant(link-3, -variant-8) {
+    font-weight: $font-weight-bold;
+    color: $white;
+    .-bg-dark & {
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+
+    }
+}
+@include classBpPlaceholderVariant(link-3, -variant-9) {
+    color: $navy-70;
+    font-weight: $text-medium;
+}
+
+@include classBpPlaceholder(link-4) {
+    font-family: $font-futura-medium;
+    font-size: rem(15px);
+    line-height: rem(20px);
+}
+
+[class*='link-'] {
+    @include classBpParentModifier(-bg-medium) {
+        color: $bright-blue-50;
+        @include hover-focus {
+            color: $bright-blue-50;
+        }
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $bright-blue-50;
+        @include hover-focus {
+            color: $bright-blue-50;
+        }
+    }
+    &.-caret {
+        @include caret($direction: right);
+    }
+    &.-back {
+        position: relative;
+        padding-left: rem(33px);
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: rem(11px);
+            color: $blue-60;
+            @extend .icon-family;
+            @include icon-content($nis-arrow-left-medium);
+        }
+    }
+    @include classBpModifier(text-blue) {
+        color: $blue;
+    }
+    &.-expand {
+        &:after {
+            @extend .icon-family;
+            content: $nis-expand-off;
+            position: relative;
+            font-size: rem(8px);
+            display: inline-flex;
+            color: $blue-60;
+            margin-left: rem(5px);
+            vertical-align: rem(1px);
+            html[dir="rtl"] & {
+                margin-left: 0;
+                margin-right: rem(5px);
+                transform: rotateY(180deg);
+            }
+        }
+        &:hover {
+            &:after {
+                content: $nis-expand-on;
+                html[dir="rtl"] & {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+    .disabled &,
+    &.disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+}
+
+// Script
+
+@include classBpPlaceholder(script-1) {
+    font-family: $font-liontin-slant;
+    font-size: rem(60px);
+    line-height: rem(60px);
+    letter-spacing: rem(0.94px);
+}
+
+@include classBpPlaceholder(script-2) {
+    font-family: $font-liontin-slant;
+    font-size: rem(50px);
+    line-height: rem(50px);
+    letter-spacing: rem(0.78px);
+}
+@include classBpPlaceholder(script-3) {
+    font-family: $font-liontin-slant;
+    font-size: rem(35px);
+    line-height: rem(35px);
+    letter-spacing: rem(0.55px);
+}
+
+@include classBpPlaceholder(script-4) {
+    font-family: $font-hertine;
+    font-size: rem(60px);
+    line-height: rem(60px);
+    letter-spacing: rem(0.94px);
+}
+
+@include classBpPlaceholder(script-5) {
+    font-family: $font-hertine;
+    font-size: rem(50px);
+    line-height: rem(50px);
+    letter-spacing: rem(0.78px);
+}
+@include classBpPlaceholder(script-6) {
+    font-family: $font-hertine;
+    font-size: rem(35px);
+    line-height: rem(35px);
+    letter-spacing: rem(0.55px);
+}
+
+[class*='script-'] {
+    color: $navy-70;
+    @include classBpParentModifier(-bg-medium) {
+        color: $white;
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $white;
+    }
+}
+
+$color-map : (
+    'navy':$navy,
+    'blue':$blue,
+    'teal':$teal,
+    'bright-blue':$bright-blue,
+    'white':$white,
+    'black':$black,
+    'warm-grey':$warm-grey,
+    'orange':$orange,
+    'yellow':$yellow,
+    'magenta':$magenta,
+    'navy-10':$navy-10,
+    'navy-20':$navy-20,
+    'navy-30':$navy-30,
+    'navy-40':$navy-40,
+    'navy-50':$navy-50,
+    'navy-60':$navy-60,
+    'navy-70':$navy-70,
+    'navy-80':$navy-80,
+    'navy-90':$navy-90,
+    'blue-10':$blue-10,
+    'blue-20':$blue-20,
+    'blue-30':$blue-30,
+    'blue-40':$blue-40,
+    'blue-50':$blue-50,
+    'blue-60':$blue-60,
+    'blue-70':$blue-70,
+    'blue-80':$blue-80,
+    'blue-90':$blue-90,
+    'teal-10':$teal-10,
+    'teal-20':$teal-20,
+    'teal-30':$teal-30,
+    'teal-40':$teal-40,
+    'teal-50':$teal-50,
+    'teal-60':$teal-60,
+    'teal-70':$teal-70,
+    'teal-80':$teal-80,
+    'teal-90':$teal-90,
+    'bright-blue-10':$bright-blue-10,
+    'bright-blue-20':$bright-blue-20,
+    'bright-blue-30':$bright-blue-30,
+    'bright-blue-40':$bright-blue-40,
+    'bright-blue-50':$bright-blue-50,
+    'bright-blue-60':$bright-blue-60,
+    'bright-blue-70':$bright-blue-70,
+    'bright-blue-80':$bright-blue-80,
+    'bright-blue-90':$bright-blue-90,
+    'warm-grey-10':$warm-grey-10,
+    'warm-grey-15':$warm-grey-15,
+    'warm-grey-20':$warm-grey-20,
+    'warm-grey-30':$warm-grey-30,
+    'warm-grey-40':$warm-grey-40,
+    'warm-grey-50':$warm-grey-50,
+    'warm-grey-60':$warm-grey-60,
+    'warm-grey-70':$warm-grey-70,
+    'warm-grey-80':$warm-grey-80,
+    'warm-grey-90':$warm-grey-90,
+    'cool-grey-5':$cool-grey-5,
+    'cool-grey-10':$cool-grey-10,
+    'cool-grey-20':$cool-grey-20,
+    'cool-grey-30':$cool-grey-30,
+    'cool-grey-40':$cool-grey-40,
+    'cool-grey-50':$cool-grey-50,
+    'cool-grey-60':$cool-grey-60,
+    'cool-grey-70':$cool-grey-70,
+    'cool-grey-80':$cool-grey-80,
+    'cool-grey-90':$cool-grey-90,
+    'green-10':$green-10,
+    'green-50':$green-50,
+    'green-80':$green-80,
+    'orange-50':$orange-50,
+    'orange-60':$orange-60,
+    'grey-blue':$grey-blue,
+    'gold':$gold,
+    'neutral-10':$neutral-10,
+    'neutral-30':$neutral-30,
+    'neutral-50':$neutral-50,
+    'neutral-70':$neutral-70,
+    'neutral-90':$neutral-90,
+    'important-10':$important-10,
+    'important-30':$important-30,
+    'important-50':$important-50,
+    'important-70':$important-70,
+    'important-90':$important-90,
+    'success-10':$success-10,
+    'success-30':$success-30,
+    'success-50':$success-50,
+    'success-70':$success-70,
+    'success-90':$success-90,
+    'error-10':$error-10,
+    'error-30':$error-30,
+    'error-50':$error-50,
+    'error-70':$error-70,
+    'error-90':$error-90
+);
+
+@each $name, $color in $color-map {
+    @include classBp(text-#{$name}){
+        color:$color !important;
+    };
+}
+
+.text-shadow {
+    text-shadow: rem(3px) rem(7px) rem(26px) rgba($teal-90, 0.8);
+}
+
+.text-primary {
+    &-light {
+        font-weight: $text-light;
+    }
+    &-book {
+        font-weight: $text-book;
+    }
+    &-regular {
+        font-weight: $text-regular;
+    }
+    &-medium {
+        font-weight: $text-medium;
+    }
+    &-bold {
+        font-weight: $text-bold;
+    }
+}
+
+.text-secondary {
+    &-light {
+        font-family: $font-futura-light;
+    }
+    &-book {
+        font-family: $font-futura-book;
+    }
+    &-medium {
+        font-family: $font-futura-medium;
+    }
+    &-bold {
+        font-family: $font-futura-bold;
+    }
+}
