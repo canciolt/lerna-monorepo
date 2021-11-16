@@ -1,23 +1,23 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import E5 from '../src/e5.vue'
-import '../src/e5.style.scss'
+import E27 from '../src/e27.vue'
+import '../src/e27.style.scss'
 
 export default {
-  component: E5,
+  component: E27,
   parameters: {
     layout: 'centered'
   },
-  title: 'Elements/E5'
+  title: 'Elements/E27'
 } as Meta
 
 const Template: Story<Record<string, any>> = (args) => ({
-  components: { E5 },
+  components: { E27 },
   setup() {
     return { args }
   },
-  template: '<e5 v-bind="args" />',
+  template: '<e27 v-bind="args" />',
 })
 
 export const Default = Template.bind({})
