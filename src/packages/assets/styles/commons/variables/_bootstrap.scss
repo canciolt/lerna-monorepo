@@ -7,7 +7,6 @@
 
 @use "sass:math";
 
-//
 // Color system
 //
 
@@ -87,6 +86,7 @@ $yiq-contrasted-threshold:  150 !default;
 $yiq-text-dark:             $gray-900 !default;
 $yiq-text-light:            $white !default;
 
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -130,12 +130,14 @@ $sizes: map-merge((
     auto: auto
 ),$sizes);
 
+
 // Body
 //
 // Settings for the `<body>` element.
 
 $body-bg:                   $cool-grey-20;
 $body-color:                $bright-blue-80;
+
 
 // Links
 //
@@ -147,6 +149,7 @@ $link-hover-color:          $navy-70;
 $link-hover-decoration:     none;
 
 $caret-color:               $teal-50;
+
 
 // Paragraphs
 //
@@ -192,6 +195,7 @@ $container-max-widths: (
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           20px;
+
 
 // Components
 //
@@ -326,6 +330,7 @@ $table-striped-order:         odd !default;
 
 $table-caption-color:         $text-muted !default;
 
+
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
@@ -407,7 +412,7 @@ $btn-block-spacing-y:           .5rem !default;
 
 $btn-transition:                color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-//
+
 // Button colors
 //
 
@@ -590,6 +595,7 @@ $btn-colors-border-disabled: map-merge((
     "info":         $btn-info-border-disabled,
 ), $btn-colors-border-disabled);
 
+
 // Outline buttons maps
 
 $btn-outline-colors: ();
@@ -655,6 +661,7 @@ $btn-outline-colors-border-disabled: map-merge((
     "info":         $btn-outline-info-border-disabled,
 ), $btn-outline-colors-border-disabled);
 
+
 // Buttons Outline BG-Dark maps
 
 $btn-outline-colors-bg-dark: ();
@@ -719,6 +726,7 @@ $btn-outline-colors-border-disabled-bg-dark: map-merge((
     "secondary":    $btn-outline-secondary-border-disabled-bg-dark,
     "info":         $btn-outline-info-border-disabled-bg-dark,
 ), $btn-outline-colors-border-disabled-bg-dark);
+
 
 // Select Buttons
 
@@ -949,6 +957,7 @@ $zindex-modal:                      1050 !default;
 $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
 
+
 // Navs
 
 $nav-link-padding-y:                .5rem !default;
@@ -969,6 +978,7 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 
 $nav-divider-color:                 $gray-200 !default;
 $nav-divider-margin-y:              math.div($spacer, 2) !default;
+
 
 // Navbar
 
@@ -1001,6 +1011,7 @@ $navbar-light-active-color:         rgba($black, .9) !default;
 $navbar-light-disabled-color:       rgba($black, .3) !default;
 $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
+
 
 // Pagination
 
@@ -1178,6 +1189,7 @@ $progress-bar-bg:                   theme-color("primary") !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
 $progress-bar-transition:           width .6s ease !default;
 
+
 // List group
 
 $list-group-bg:                     $white !default;
@@ -1264,6 +1276,7 @@ $close-font-weight:                 $font-weight-bold !default;
 $close-color:                       $black !default;
 $close-text-shadow:                 0 1px 0 $white !default;
 
+
 // Code
 
 $code-font-size:                    87.5% !default;
@@ -1280,5 +1293,6 @@ $pre-scrollable-max-height:         340px !default;
 
 
 // Printing
+
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
