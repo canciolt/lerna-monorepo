@@ -4,7 +4,6 @@
 
 @import "commons";
 @import "utilities";
-@import "bootstrap";
 
 // Base
 
@@ -12,18 +11,3 @@
 @import "base/license";
 @import "base/fonts";
 @import "base/text";
-
-
-
-
-
-
-
-
-.text {
-  font-family: $font-family-primary;
-  line-height: $line-height-base;
-  border-radius: $border-radius;
-  color: $primary;
-  background: $secondary;
-}
