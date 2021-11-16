@@ -52,7 +52,9 @@
     @return $string;
 }
 
+
 // Color contrast
+
 @function color-yiq($color) {
     $r: red($color);
     $g: green($color);
@@ -67,7 +69,9 @@
     }
 }
 
+
 // Retrieve color Sass maps
+
 @function color($key: "blue") {
     @return map-get($colors, $key);
 }
@@ -80,7 +84,9 @@
     @return map-get($grays, $key);
 }
 
+
 // Request a theme color level
+
 @function theme-color-level($color-name: "primary", $level: 0) {
     $color: theme-color($color-name);
     $color-base: if($level > 0, $black, $white);
@@ -88,6 +94,7 @@
 
     @return mix($color-base, $color, $level * $theme-color-interval);
 }
+
 
 // PX to REM
 
@@ -163,6 +170,7 @@ $rem-px-only: false !default;
         }
     }
 }
+
 
 // PX to EM
 

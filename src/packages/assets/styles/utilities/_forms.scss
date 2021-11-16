@@ -65,6 +65,7 @@
     }
 }
 
+
 // Labels
 
 .label-control {
@@ -75,6 +76,7 @@
         color: $error-90;
     }
 }
+
 
 //Validation messages
 
@@ -121,12 +123,14 @@ select.form-control {
     }
 }
 
+
 // Make file inputs better match text inputs by forcing them to new lines.
 .form-control-file,
 .form-control-range {
     display: block;
     width: 100%;
 }
+
 
 // Form control sizing
 //
@@ -161,11 +165,11 @@ select.form-control-lg {
     }
 }
 
+
 // Form groups
 //
 // Designed to help with the organization and spacing of vertical forms. For
 // horizontal forms, use the predefined grid classes.
-
 .form-group {
     &.-mb,
     .form-grid & {
@@ -177,6 +181,7 @@ select.form-control-lg {
     display: block;
     margin-top: $form-text-margin-top;
 }
+
 
 // Form grid
 //
@@ -192,6 +197,7 @@ select.form-control-lg {
         padding-left: 5px;
     }
 }
+
 
 // Checkboxes and radios
 //
@@ -227,6 +233,7 @@ select.form-control-lg {
         margin-left: 0;
     }
 }
+
 
 // Form validation
 //

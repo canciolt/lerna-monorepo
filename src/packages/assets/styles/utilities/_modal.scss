@@ -104,6 +104,7 @@
     }
 }
 
+
 // Actual modal
 
 .modal-content {
@@ -200,6 +201,7 @@
     }
 }
 
+
 // Modal background
 
 .modal-backdrop {
@@ -219,6 +221,7 @@
     &.show,
     &.in { opacity: $modal-backdrop-opacity; }
 }
+
 
 // Modal header
 
@@ -298,6 +301,7 @@
     }
 }
 
+
 // Modal title
 
 .modal-title {
@@ -318,6 +322,7 @@
         margin: 0;
     }
 }
+
 
 // Modal close
 
@@ -373,6 +378,7 @@
         }
     }
 }
+
 
 // Modal body
 
@@ -453,7 +459,9 @@
     }
 }
 
+
 // Measure scrollbar width for padding body during modal show/hide
+
 .modal-scrollbar-measure {
     position: absolute;
     top: -9999px;
