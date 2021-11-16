@@ -10,10 +10,10 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src",
+    "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src --fix",
     "bootstrap": "lerna bootstrap",
     "build:style": "lerna run --scope style build",
-    "build:components": "lerna run --scope '{e*, c*, m*}' build",
+    "build:components": "lerna run --scope e* --scope c* --scope m* build",
     "publish": "build:pro && lerna publish"
   },
   "dependencies": {
@@ -34,7 +34,6 @@
     "eslint": "^8.2.0",
     "eslint-plugin-vue": "^8.0.3",
     "lerna": "^4.0.0",
-    "lerna-alias": "^3.0.2",
     "merge": "^2.1.1",
     "sass": "^1.43.4",
     "storybook-builder-vite": "^0.1.6",

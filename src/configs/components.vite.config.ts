@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { rollup as lernaAliases } from 'lerna-alias'
 import autoprefixer from 'autoprefixer'
 
 const ROOT_PATH = `${__dirname }/..`
@@ -10,7 +9,9 @@ export default defineConfig({
     resolve: {
         alias: {
             '@src': ROOT_PATH,
-            ...lernaAliases({ mainFields:['./'] })
+            '@elements': `${ROOT_PATH}/packages/elements`,
+            '@components': `${ROOT_PATH}/packages/components`,
+            '@modules': `${ROOT_PATH}/packages/modules`
         }
     },
     build: {
