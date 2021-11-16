@@ -1,1 +1,1 @@
-export { default as DS } from './src/c1.vue'
+export { default as C1 } from './src/c1.vue'
