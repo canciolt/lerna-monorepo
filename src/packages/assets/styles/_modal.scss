@@ -1,0 +1,464 @@
+//
+// MODAL
+//
+
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex-modal;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+    .modal-open & {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    &.-variant-13 {
+        .modal-open & {
+            @include media-breakpoint-up(md) {
+                overflow-y: hidden;
+            }
+        }
+    }
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: $modal-dialog-margin auto;
+    pointer-events: none;
+    @include classBpModifier(modal-full) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        height: 100%;
+    }
+    @include classBpModifier(modal-xlarge) {
+        @include media-breakpoint-up(lg) {
+            max-width: calc( 1440px - #{$grid-gutter-width} );
+            width: 88vw;
+        }
+        @include media-breakpoint-only(md) {
+            max-width: calc( 1024px -  #{$grid-gutter-width});
+            width: 92vw;
+        }
+        @include media-breakpoint-down(xs) {
+            max-width: 100%;
+        }
+    }
+    @include classBpModifier(modal-large) {
+        @include media-breakpoint-up(lg) {
+            max-width: rem(1000px);
+        }
+        @include media-breakpoint-only(md) {
+            max-width: rem(648px);
+        }
+        @include media-breakpoint-down(xs) {
+            max-width: 100%;
+        }
+    }
+    @include classBpModifier(modal-medium) {
+        @include media-breakpoint-up(lg) {
+            max-width: $modal-lg;
+        }
+        @include media-breakpoint-only(md) {
+            max-width: $modal-md;
+        }
+    }
+    @include classBpModifier(modal-small) {
+        @include media-breakpoint-up(md) {
+            max-width: $modal-md;
+        }
+        @include media-breakpoint-down(xs) {
+            max-width: $modal-sm;
+        }
+    }
+    @include classBpModifier(modal-auto) {
+        &.modal-dialog-centered {
+            justify-content: center;
+        }
+    }
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - (#{$modal-dialog-margin} * 2));
+    &:before {
+        content: '';
+        display: block;
+        height: calc(100vh - (.5rem * 2));
+    }
+    .modal.-variant-6 & {
+        justify-content: center;
+    }
+}
+
+// Actual modal
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background: $modal-content-bg;
+    background-clip: padding-box;
+    outline: 0;
+    border-radius: rem(2px);
+    @include classBpParent(modal-full) {
+        border: none;
+        border-radius: 0;
+        margin: 0;
+        height: 100%;
+        overflow-y: auto;
+    }
+    @include classBpParent(modal-auto) {
+        width: auto;
+    }
+
+    @include classBpModifier(modal-dark) {
+        background: $navy-70;
+    }
+    @include classBpModifier(modal-grey) {
+        background: $cool-grey-20;
+    }
+
+    @include classBpModifier(modal-shadow-heavy) {
+        box-shadow: $shadow-heavy;
+    }
+    @include classBpModifier(modal-shadow-medium) {
+        box-shadow: $shadow-medium;
+    }
+    @include classBpModifier(modal-border) {
+        border: $border-grey-2;
+    }
+
+    .modal.-variant-1 & {
+        background-color: $navy-70;
+    }
+    .modal.-variant-2 &,
+    .modal.-variant-3 & {
+        background-color: $cool-grey-20;
+    }
+    .modal.-variant-4 & {
+        background-color: rgba($navy-70, .95);
+    }
+    .modal.-variant-5 & {
+        padding: rem(20px);
+        @include media-breakpoint-up(md) {
+            box-shadow: $shadow-heavy;
+        }
+        @include media-breakpoint-down(xs) {
+            overflow-y: hidden;
+        }
+    }
+    .modal.-variant-6 & {
+        @include media-breakpoint-up(md) {
+            box-shadow: $shadow-medium;
+            width: auto;
+            background-color: transparent;
+            overflow: hidden;
+        }
+    }
+    .modal.-variant-7 & {
+        @include media-breakpoint-up(md) {
+            box-shadow: $shadow-heavy;
+        }
+    }
+
+    .modal.-variant-10 & {
+        padding: rem(20px);
+    }
+
+    .modal.-variant-11 & {
+        padding: rem(20px);
+        overflow: hidden;
+    }
+
+    .modal.-variant-13 & {
+        padding: rem(20px);
+        @include media-breakpoint-up(md) {
+            overflow: hidden;
+            max-height: 95vh;
+        }
+    }
+
+    @include fadeOutBack;
+    .modal.show & {
+        @include fadeInBack;
+    }
+}
+
+// Modal background
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $modal-backdrop-bg;
+    z-index: $zindex-modal-backdrop;
+    @include media-breakpoint-down(xs) {
+        overflow-y: hidden;
+    }
+
+    // Fade for backdrop
+    &.fade { opacity: 0; }
+    &.show,
+    &.in { opacity: $modal-backdrop-opacity; }
+}
+
+// Modal header
+
+.modal-header {
+    display: flex;
+    align-items: flex-start; // so the close btn always stays on the upper right corner
+    justify-content: flex-end;
+    @include border-top-radius($modal-content-border-radius);
+    @include classBpParent(modal-full) {
+        border: none;
+        border-radius: 0;
+        display: block;
+        @include media-breakpoint-up(md) {
+            padding: rem(0 30px);
+            .modal.-variant-9 & {
+                padding: 0;
+            }
+        }
+    }
+    @include fadeOutWrap;
+    .modal.show & {
+        @include fadeInWrap;
+    }
+    &_wrap {
+        .modal.-variant-5 & {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            .modal-title {
+                flex: 1 1 auto;
+                margin-right: rem(20px);
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+        .modal.-variant-6 & {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .modal.-variant-7 & {
+            position: absolute;
+            right: rem(20px);
+            top: rem(20px);
+        }
+        .modal.-variant-8 & {
+            position: absolute;
+            padding: rem(20px);
+        }
+    }
+    .modal.-variant-5 & {
+        margin-bottom: rem(5px);
+    }
+    .modal.-variant-6 & {
+        @include media-breakpoint-up(md) {
+            border-bottom: $border-grey-6;
+            padding: rem(20px);
+            background-color: $white;
+        }
+    }
+    .modal.-variant-7 & {
+        @include media-breakpoint-up(md) {
+            position: relative;
+            z-index: 1;
+        }
+        @include media-breakpoint-down(xs) {
+            padding: rem(20px);
+        }
+    }
+    .modal.-variant-8 & {
+        z-index: 1;
+        @include media-breakpoint-only(xs) {
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+// Modal title
+
+.modal-title {
+    margin-bottom: rem(30px);
+    .modal.-variant-1 & {
+        .headline {
+            @include media-breakpoint-up(md) {
+                color: $white;
+            }
+        }
+    }
+    .modal.-variant-4 & {
+        display: none;
+    }
+    .modal.-variant-6 & {
+        flex: 1 1 auto;
+        padding-right: rem(20px);
+        margin: 0;
+    }
+}
+
+// Modal close
+
+.modal-close {
+    padding: rem(30px 0);
+    display: flex;
+    justify-content: flex-end;
+    &_item {
+        .modal.-variant-3 & {
+            position: fixed;
+            z-index: 1;
+            @include media-breakpoint-up(lg) {
+                top: rem(30px);
+                right: rem(30px);
+            }
+            @include media-breakpoint-only(md) {
+                top: rem(10px);
+                right: rem(10px);
+            }
+        }
+    }
+    .modal.-variant-3 & {
+        padding: rem(37.5px 0);
+    }
+    .modal.-variant-5 & {
+        padding: 0;
+    }
+    .modal.-variant-6 & {
+        padding: 0;
+    }
+    .modal.-variant-7 & {
+        padding: 0;
+    }
+    .modal.-variant-8 & {
+        padding: 0;
+    }
+}
+
+.modal-icon {
+    @include media-breakpoint-up(md) {
+        font-size: rem(15px);
+    }
+    @include media-breakpoint-down(xs) {
+        font-size: rem(20px);
+    }
+    .modal.-variant-1 &,
+    .modal.-variant-4 & {
+        @include media-breakpoint-up(md) {
+            color: $bright-blue-50;
+            &:hover {
+                color: $bright-blue-50;
+            }
+        }
+    }
+}
+
+// Modal body
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 0;
+    .modal-full & {
+        @include media-breakpoint-down(xs) {
+            overflow-y: auto;
+        }
+    }
+    .modal-full.modal-dialog-centered & {
+        @include media-breakpoint-up(md) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .modal.-variant-4 & {
+        @include media-breakpoint-up(md) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @include media-breakpoint-down(xs) {
+            padding: rem(20px 10px);
+        }
+    }
+    .modal.-variant-5 & {
+        @include media-breakpoint-down(xs) {
+            flex: 1;
+            overflow-y: auto;
+            margin: rem(0 -20px);
+            padding: rem(0 20px);
+        }
+    }
+    .modal.-variant-7 & {
+        @include media-breakpoint-down(xs) {
+            height: 100%;
+        }
+    }
+    @include classBpParent(modal-full) {
+        .modal.-variant-8 & {
+            overflow: hidden;
+        }
+        .modal.-variant-9 & {
+            height: 100%;
+            overflow-y: auto;
+            justify-content: flex-start;
+        }
+    }
+
+    .modal.-variant-11 & {
+        @include media-breakpoint-down(xs) {
+            height: 100%;
+        }
+    }
+    .modal.-variant-12 & {
+        @include media-breakpoint-down(xs) {
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+    .modal.-variant-13 & {
+        @include media-breakpoint-up(md) {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+
+    @include fadeOutWrap;
+    .modal.show & {
+        @include fadeInWrap;
+    }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}
+
