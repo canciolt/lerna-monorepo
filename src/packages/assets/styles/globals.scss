@@ -1,5 +1,5 @@
 @import "commons";
-@import "reboot";
+@import "theme/reboot";
 @import "utilities";
 
 @import "base/global";
@@ -7,18 +7,18 @@
 @import "base/fonts";
 @import "base/text";
 
-@import "grid";
-@import "transitions";
-@import "dropdown";
-@import "buttons";
-@import "button-group";
-@import "custom-forms";
-@import "badge";
-@import "forms";
-@import "modal";
-@import "nav";
-@import "tooltip";
-@import "popover";
+@import "theme/grid";
+@import "theme/transitions";
+@import "theme/dropdown";
+@import "theme/buttons";
+@import "theme/button-group";
+@import "theme/custom-forms";
+@import "theme/badge";
+@import "theme/forms";
+@import "theme/modal";
+@import "theme/nav";
+@import "theme/tooltip";
+@import "theme/popover";
 
 
 
