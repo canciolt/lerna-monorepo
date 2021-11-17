@@ -1,16 +1,16 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import m106 from '../src/m106.vue'
+import M106 from '../src/m106.vue'
 import '../src/m106.style.scss'
 
 export default {
-  component: m106,
-  title: 'Modules/m106',
+  component: M106,
+  title: 'Modules/M106',
 } as Meta
 
 const Template: Story<Record<string, any>> = (args) => ({
-  components: { m106 },
+  components: { M106 },
   setup() {
     return { args }
   },

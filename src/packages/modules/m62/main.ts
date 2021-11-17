@@ -1,1 +1,1 @@
-export { default as m62 } from './src/m62.vue'
+export { default as M62 } from './src/m62.vue'

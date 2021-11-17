@@ -1,1 +1,1 @@
-export { default as mHeader } from './src/mHeader.vue'
+export { default as MHeader } from './src/mHeader.vue'
