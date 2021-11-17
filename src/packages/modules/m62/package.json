@@ -1,0 +1,17 @@
+{
+  "name": "m62",
+  "version": "0.0.0",
+  "main": "dist/m62.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vue-tsc && vite build"
+  }
+}

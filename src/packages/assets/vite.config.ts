@@ -1,6 +1,6 @@
 import packageJson from './package.json'
-import { getComponentConfig } from '../../configs'
+import { getAssetsConfig } from '../../configs'
 
 export default ({ mode }: Record<string, any>) => {
-    return getComponentConfig(packageJson, {}, mode)
+  return getAssetsConfig(packageJson, {}, mode)
 }

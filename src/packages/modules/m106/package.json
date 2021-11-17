@@ -1,0 +1,17 @@
+{
+  "name": "m106",
+  "version": "0.0.0",
+  "main": "dist/m106.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vue-tsc && vite build"
+  }
+}

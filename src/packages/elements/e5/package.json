@@ -1,0 +1,17 @@
+{
+  "name": "e5",
+  "version": "0.0.0",
+  "main": "dist/e5.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vue-tsc && vite build"
+  }
+}

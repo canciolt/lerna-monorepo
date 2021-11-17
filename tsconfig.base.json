@@ -8,14 +8,14 @@
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
-    "allowJs": false,
+    "allowJs": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "baseUrl": ".",
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "baseUrl": "."
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["./**/*.ts", "../../env.d.ts", "./**/*.d.ts", "./**/*.tsx", "./*.vue"]
+  "include": ["*.ts", "*.tsx", "*.vue", "*.d.ts"]
 }

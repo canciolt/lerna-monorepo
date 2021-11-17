@@ -1,0 +1,17 @@
+{
+  "name": "c1",
+  "version": "0.0.0",
+  "main": "dist/c1.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vue-tsc && vite build"
+  }
+}

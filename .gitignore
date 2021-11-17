@@ -6,4 +6,5 @@ dist-ssr
 lerna-debug.log
 npm-debug.log
 src/components/*/dist
+storybook-static
 .idea

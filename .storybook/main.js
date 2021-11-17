@@ -1,8 +1,6 @@
-const path = require('path');
 const merge = require('merge');
-const vue = require("@vitejs/plugin-vue");
 
-const resolve = (item) => path.join(__dirname, '../', item);
+const ROOT_PATH = `${__dirname }/..`
 
 module.exports = {
   "stories": [
@@ -12,9 +10,28 @@ module.exports = {
     builder: "storybook-builder-vite"
   },
   viteFinal(config, { configType }) {
-    config.plugins = [...config.plugins, vue()]
+    config.plugins = [...config.plugins]
     // return the customized config
-    return merge.recursive(config, {});
+    return merge.recursive(config, {
+      mode: 'development',
+      resolve: {
+        alias: {
+          '@elements': '../src/packages/elements',
+          '@components': '../src/packages/components',
+          '@modules': '.../src/packages/modules'
+        }
+      },
+      build: {
+        chunkSizeWarningLimit: 1500
+      },
+      css: {
+        preprocessorOptions: {
+          scss: {
+            additionalData: `@import "${ROOT_PATH}/src/packages/assets/styles/commons.scss";`
+          },
+        }
+      }
+    });
   },
   "addons": [
     "@storybook/addon-links",

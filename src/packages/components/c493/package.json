@@ -1,0 +1,17 @@
+{
+  "name": "c493",
+  "version": "0.0.0",
+  "main": "dist/c493.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vue-tsc && vite build"
+  }
+}
