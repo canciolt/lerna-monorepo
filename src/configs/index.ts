@@ -27,11 +27,11 @@ export function getComponentConfig (pkg: Record<any, any>, options: Record<strin
  */
 export function getAssetsConfig (pkg: Record<any, any>, options: Record<string, any> = {}, mode: string) {
   console.log(`Building assets package ${pkg.name} v.${pkg.version} ...`)
-  /* const _customConfig = merge.recursive(options, {
+  const _customConfig = merge.recursive(options, {
     mode: mode ? mode : 'development',
     build: { minify: mode === 'production' }
-  }) */
-  return getConfig(AssetsConfig, {})
+  })
+  return getConfig(AssetsConfig, _customConfig)
 }
 
 /**
