@@ -12,7 +12,7 @@
     "build-storybook": "build-storybook",
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src --fix",
     "bootstrap": "lerna bootstrap",
-    "build:style": "lerna run --scope assets build",
+    "build:assets": "lerna run --scope assets build",
     "build:components": "lerna run --scope e* --scope c* --scope m* build",
     "publish": "build:pro && lerna publish"
   },
