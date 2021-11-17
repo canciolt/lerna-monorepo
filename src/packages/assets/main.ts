@@ -1,1 +1,1 @@
-export { default as DS } from './assets.vue'
+import './styles/globals.scss'

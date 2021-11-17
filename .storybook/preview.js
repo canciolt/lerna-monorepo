@@ -1,4 +1,4 @@
-import '../src/packages/assets/styles/globals.scss'
+import '../src/packages/assets/dist/global.css'
 
 export const parameters = {
   layout: 'fullscreen'

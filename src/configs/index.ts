@@ -1,5 +1,6 @@
 import merge from 'merge'
 import ComponentsConfig from './components.vite.config'
+import AssetsConfig from './assets.vite.config'
 
 /**
  * Returns Vite build configuration for component packages,
@@ -15,6 +16,22 @@ export function getComponentConfig (pkg: Record<any, any>, options: Record<strin
     build: { minify: mode === 'production' }
   })
   return getConfig(ComponentsConfig, _customConfig, pkg?.name)
+}
+
+/**
+ * Returns Vite build configuration for component packages,
+ * optionally amended with the specified options
+ * @param pkg package.json data
+ * @param options Custom build options
+ * @returns Vite build configuration
+ */
+export function getAssetsConfig (pkg: Record<any, any>, options: Record<string, any> = {}, mode: string) {
+  console.log(`Building assets package ${pkg.name} v.${pkg.version} ...`)
+  /* const _customConfig = merge.recursive(options, {
+    mode: mode ? mode : 'development',
+    build: { minify: mode === 'production' }
+  }) */
+  return getConfig(AssetsConfig, {})
 }
 
 /**
