@@ -1,7 +1,7 @@
 {
-  "name": "style",
+  "name": "assets",
   "version": "0.0.0",
-  "main": "dist/style.es.js",
+  "main": "",
   "publishConfig": {
     "access": "public"
   },

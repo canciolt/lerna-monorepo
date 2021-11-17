@@ -1,0 +1,19 @@
+//
+// SHADOWS
+//
+
+%shadowHairline {
+    box-shadow: $shadow-hairline;
+}
+
+%shadowLight {
+    box-shadow: $shadow-light;
+}
+
+%shadowMedium {
+    box-shadow: $shadow-medium;
+}
+
+%shadowHeavy {
+    box-shadow: $shadow-heavy;
+}

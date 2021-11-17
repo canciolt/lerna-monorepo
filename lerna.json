@@ -1,7 +1,7 @@
 {
   "useWorkspaces": true,
   "packages": [
-    "src/packages/style",
+    "src/packages/assets",
     "src/packages/elements/*",
     "src/packages/components/*",
     "src/packages/modules/*"
