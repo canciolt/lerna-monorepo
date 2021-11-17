@@ -1,7 +1,6 @@
 import { defineComponent, computed, PropType } from 'vue'
 import { Logo } from './c1.model'
 
-
 export default defineComponent({
   name: 'C1',
   props: {
