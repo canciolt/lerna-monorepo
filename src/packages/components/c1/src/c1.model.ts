@@ -7,7 +7,6 @@ export enum Logo {
 export declare interface C1_MODEL {
   componentClass?: string,
   emit?: boolean,
-  baseUrl?: string,
   href?: string,
   title: string,
   logo: Logo

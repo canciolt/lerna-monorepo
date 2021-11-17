@@ -21,10 +21,6 @@ export default defineComponent({
       type: String,
       default: 'Norwegian Cruise Line'
     },
-    baseUrl: {
-      type: String,
-      default: 'images/logos/'
-    },
     logo: {
       type: String as PropType<Logo>,
       default: Logo.black
@@ -36,7 +32,8 @@ export default defineComponent({
       white: 'logo-ncl-white.svg',
       shield: 'logo-ncl-shield.svg'
     }
-    const path = `https://${import.meta.env.HOST}${import.meta.env.STATIC}${props.baseUrl}`
+    const logosBasePath = 'images/logos/'
+    const path = `https://${import.meta.env.HOST}${import.meta.env.ASSETS}${logosBasePath}`
     const logoSrc = computed(() => Object.prototype.hasOwnProperty.call(logos, props.logo)
       ? `${path}${logos[props.logo]}`
       : '')

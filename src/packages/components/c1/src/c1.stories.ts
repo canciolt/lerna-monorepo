@@ -26,10 +26,6 @@ export default {
       table: { disable: true },
       control: { type: 'text' }
     },
-    baseUrl: {
-      table: { disable: true },
-      control: { type: 'text' }
-    },
     title: {
       table: { disable: true },
       control: { type: 'text' }
