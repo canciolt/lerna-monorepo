@@ -1,7 +1,7 @@
 {
-  "name": "c396",
+  "name": "c398",
   "version": "0.0.0",
-  "main": "dist/c396.es.js",
+  "main": "dist/c398.es.js",
   "publishConfig": {
     "access": "public"
   },
