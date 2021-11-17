@@ -1,0 +1,58 @@
+//
+// CARET
+//
+
+@mixin caret-down {
+    @include icon-content($nis-caret-down);
+}
+
+@mixin caret-up {
+    @include icon-content($nis-caret-up);
+}
+
+@mixin caret-right {
+    @include icon-content($nis-caret-right);
+}
+
+@mixin caret-left {
+    @include icon-content($nis-caret-left);
+}
+
+@mixin caret($direction: down, $color: $caret-color) {
+    @if $enable-caret {
+        &::after {
+            @include icon-font();
+            display: inline-flex;
+            height: 0; // For IE
+            min-width: rem(14px);
+            min-height: rem(14px);
+            justify-content: center;
+            align-items: center;
+            color: $color;
+            font-size: rem(8px);
+            margin-left: rem(5px);
+            position: relative;
+            vertical-align: rem(1.2px);
+            @if $direction==up {
+                @include caret-up;
+            }
+            @else if $direction==right {
+                @include caret-right;
+                html[dir="rtl"] & {
+                    @include caret-left;
+                    margin-right: rem(5px);
+                    margin-left: 0;
+                }
+            }
+            @else if $direction==down {
+                @include caret-down;
+            }
+            @else if $direction==left {
+                @include caret-left;
+            }
+        }
+        &:empty::after {
+            margin-left: 0;
+        }
+    }
+}
