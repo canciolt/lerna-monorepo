@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="wifi" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(0.947369, 0, 0, 0.947369, 1.27363, 1.712155)">
+    <path d="M 18.013 17.11 L 10.631 17.096 L 8.822 18.842 L 18.917 18.856 C 19.417 18.856 19.822 18.466 19.822 17.983 L 19.822 8.856 L 18.013 10.603 L 18.013 17.11 Z" id="Fill-1" opacity="0.5" stroke="none" stroke-width="1" fill-rule="evenodd" style="fill: rgb(175, 143, 70);"/>
+    <path d="M 6.686 16.374 L 6.686 6.621 L 17.307 6.621 L 15.6 8.3 L 16.899 9.579 L 20.822 5.717 L 16.899 1.856 L 15.6 3.134 L 17.307 4.814 L 5.768 4.814 C 5.261 4.814 4.85 5.217 4.85 5.717 L 4.85 16.419 L 3.12 14.717 L 1.822 15.995 L 5.745 19.856 L 9.669 15.995 L 8.37 14.717 L 6.686 16.374 Z" id="Fill-3" stroke="none" stroke-width="1" fill-rule="evenodd" style="fill: rgb(175, 143, 70);"/>
+  </g>
+</svg>

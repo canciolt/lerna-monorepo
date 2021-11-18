@@ -1,0 +1,695 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff2?l6onka') format('woff2'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?l6onka') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?l6onka') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?l6onka##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="nis-"], [class*=" nis-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nis-add-user {
+  &:before {
+    content: $nis-add-user; 
+  }
+}
+.nis-anchor {
+  &:before {
+    content: $nis-anchor; 
+  }
+}
+.nis-archive {
+  &:before {
+    content: $nis-archive; 
+  }
+}
+.nis-arrow-down-small {
+  &:before {
+    content: $nis-arrow-down-small; 
+  }
+}
+.nis-arrow-left-large {
+  &:before {
+    content: $nis-arrow-left-large; 
+  }
+}
+.nis-arrow-left-medium {
+  &:before {
+    content: $nis-arrow-left-medium; 
+  }
+}
+.nis-arrow-left-small {
+  &:before {
+    content: $nis-arrow-left-small; 
+  }
+}
+.nis-arrow-left {
+  &:before {
+    content: $nis-arrow-left; 
+  }
+}
+.nis-arrow-right-large {
+  &:before {
+    content: $nis-arrow-right-large; 
+  }
+}
+.nis-arrow-right-medium {
+  &:before {
+    content: $nis-arrow-right-medium; 
+  }
+}
+.nis-arrow-right-small {
+  &:before {
+    content: $nis-arrow-right-small; 
+  }
+}
+.nis-arrow-right {
+  &:before {
+    content: $nis-arrow-right; 
+  }
+}
+.nis-arrow-up-small {
+  &:before {
+    content: $nis-arrow-up-small; 
+  }
+}
+.nis-asterisk {
+  &:before {
+    content: $nis-asterisk; 
+  }
+}
+.nis-award-solid {
+  &:before {
+    content: $nis-award-solid; 
+  }
+}
+.nis-award {
+  &:before {
+    content: $nis-award; 
+  }
+}
+.nis-bars {
+  &:before {
+    content: $nis-bars; 
+  }
+}
+.nis-beverages {
+  &:before {
+    content: $nis-beverages; 
+  }
+}
+.nis-bike {
+  &:before {
+    content: $nis-bike; 
+  }
+}
+.nis-binoculars {
+  &:before {
+    content: $nis-binoculars; 
+  }
+}
+.nis-brochure {
+  &:before {
+    content: $nis-brochure; 
+  }
+}
+.nis-calendar-rounded {
+  &:before {
+    content: $nis-calendar-rounded; 
+  }
+}
+.nis-calendar {
+  &:before {
+    content: $nis-calendar; 
+  }
+}
+.nis-camera {
+  &:before {
+    content: $nis-camera; 
+  }
+}
+.nis-caret-down {
+  &:before {
+    content: $nis-caret-down; 
+  }
+}
+.nis-caret-left {
+  &:before {
+    content: $nis-caret-left; 
+  }
+}
+.nis-caret-right {
+  &:before {
+    content: $nis-caret-right; 
+  }
+}
+.nis-caret-up {
+  &:before {
+    content: $nis-caret-up; 
+  }
+}
+.nis-cart-off {
+  &:before {
+    content: $nis-cart-off; 
+  }
+}
+.nis-cart-on {
+  &:before {
+    content: $nis-cart-on; 
+  }
+}
+.nis-cart-solid {
+  &:before {
+    content: $nis-cart-solid; 
+  }
+}
+.nis-check-user {
+  &:before {
+    content: $nis-check-user; 
+  }
+}
+.nis-check {
+  &:before {
+    content: $nis-check; 
+  }
+}
+.nis-chevron-down {
+  &:before {
+    content: $nis-chevron-down; 
+  }
+}
+.nis-chevron-left {
+  &:before {
+    content: $nis-chevron-left; 
+  }
+}
+.nis-chevron-right-bold {
+  &:before {
+    content: $nis-chevron-right-bold; 
+  }
+}
+.nis-chevron-right {
+  &:before {
+    content: $nis-chevron-right; 
+  }
+}
+.nis-chevron-up {
+  &:before {
+    content: $nis-chevron-up; 
+  }
+}
+.nis-chronometer {
+  &:before {
+    content: $nis-chronometer; 
+  }
+}
+.nis-circle-check {
+  &:before {
+    content: $nis-circle-check; 
+  }
+}
+.nis-circle-minus {
+  &:before {
+    content: $nis-circle-minus; 
+  }
+}
+.nis-circle-plus {
+  &:before {
+    content: $nis-circle-plus; 
+  }
+}
+.nis-circle-times {
+  &:before {
+    content: $nis-circle-times; 
+  }
+}
+.nis-clock {
+  &:before {
+    content: $nis-clock; 
+  }
+}
+.nis-cocktail-solid {
+  &:before {
+    content: $nis-cocktail-solid; 
+  }
+}
+.nis-cocktail {
+  &:before {
+    content: $nis-cocktail; 
+  }
+}
+.nis-comment {
+  &:before {
+    content: $nis-comment; 
+  }
+}
+.nis-copy {
+  &:before {
+    content: $nis-copy; 
+  }
+}
+.nis-dash {
+  &:before {
+    content: $nis-dash; 
+  }
+}
+.nis-dining {
+  &:before {
+    content: $nis-dining; 
+  }
+}
+.nis-dot-circle {
+  &:before {
+    content: $nis-dot-circle; 
+  }
+}
+.nis-drops {
+  &:before {
+    content: $nis-drops; 
+  }
+}
+.nis-email-back {
+  &:before {
+    content: $nis-email-back; 
+  }
+}
+.nis-email {
+  &:before {
+    content: $nis-email; 
+  }
+}
+.nis-exclamation {
+  &:before {
+    content: $nis-exclamation; 
+  }
+}
+.nis-exit {
+  &:before {
+    content: $nis-exit; 
+  }
+}
+.nis-expand-off {
+  &:before {
+    content: $nis-expand-off; 
+  }
+}
+.nis-expand-on {
+  &:before {
+    content: $nis-expand-on; 
+  }
+}
+.nis-external-link {
+  &:before {
+    content: $nis-external-link; 
+  }
+}
+.nis-facebook {
+  &:before {
+    content: $nis-facebook; 
+  }
+}
+.nis-favorite-off {
+  &:before {
+    content: $nis-favorite-off; 
+  }
+}
+.nis-favorite-on {
+  &:before {
+    content: $nis-favorite-on; 
+  }
+}
+.nis-flag-solid {
+  &:before {
+    content: $nis-flag-solid; 
+  }
+}
+.nis-flag {
+  &:before {
+    content: $nis-flag; 
+  }
+}
+.nis-globe {
+  &:before {
+    content: $nis-globe; 
+  }
+}
+.nis-google {
+  &:before {
+    content: $nis-google; 
+  }
+}
+.nis-hand-mony {
+  &:before {
+    content: $nis-hand-mony; 
+  }
+}
+.nis-helicopter {
+  &:before {
+    content: $nis-helicopter; 
+  }
+}
+.nis-help {
+  &:before {
+    content: $nis-help; 
+  }
+}
+.nis-hotel {
+  &:before {
+    content: $nis-hotel; 
+  }
+}
+.nis-hourglass {
+  &:before {
+    content: $nis-hourglass; 
+  }
+}
+.nis-instagram {
+  &:before {
+    content: $nis-instagram; 
+  }
+}
+.nis-level {
+  &:before {
+    content: $nis-level; 
+  }
+}
+.nis-like {
+  &:before {
+    content: $nis-like; 
+  }
+}
+.nis-map-marked {
+  &:before {
+    content: $nis-map-marked; 
+  }
+}
+.nis-map {
+  &:before {
+    content: $nis-map; 
+  }
+}
+.nis-marker-solid {
+  &:before {
+    content: $nis-marker-solid; 
+  }
+}
+.nis-marker {
+  &:before {
+    content: $nis-marker; 
+  }
+}
+.nis-minus {
+  &:before {
+    content: $nis-minus; 
+  }
+}
+.nis-money {
+  &:before {
+    content: $nis-money; 
+  }
+}
+.nis-museum {
+  &:before {
+    content: $nis-museum; 
+  }
+}
+.nis-ncl-shield {
+  &:before {
+    content: $nis-ncl-shield; 
+  }
+}
+.nis-overnight-solid {
+  &:before {
+    content: $nis-overnight-solid; 
+  }
+}
+.nis-overnight {
+  &:before {
+    content: $nis-overnight; 
+  }
+}
+.nis-pencil {
+  &:before {
+    content: $nis-pencil; 
+  }
+}
+.nis-phone-off {
+  &:before {
+    content: $nis-phone-off; 
+  }
+}
+.nis-phone-on {
+  &:before {
+    content: $nis-phone-on; 
+  }
+}
+.nis-pinterest {
+  &:before {
+    content: $nis-pinterest; 
+  }
+}
+.nis-plane-dual {
+  &:before {
+    content: $nis-plane-dual; 
+  }
+}
+.nis-plane-solid {
+  &:before {
+    content: $nis-plane-solid; 
+  }
+}
+.nis-plane-up {
+  &:before {
+    content: $nis-plane-up; 
+  }
+}
+.nis-plane {
+  &:before {
+    content: $nis-plane; 
+  }
+}
+.nis-plus {
+  &:before {
+    content: $nis-plus; 
+  }
+}
+.nis-printer {
+  &:before {
+    content: $nis-printer; 
+  }
+}
+.nis-refresh {
+  &:before {
+    content: $nis-refresh; 
+  }
+}
+.nis-resize {
+  &:before {
+    content: $nis-resize; 
+  }
+}
+.nis-search {
+  &:before {
+    content: $nis-search; 
+  }
+}
+.nis-settings {
+  &:before {
+    content: $nis-settings; 
+  }
+}
+.nis-share {
+  &:before {
+    content: $nis-share; 
+  }
+}
+.nis-ship {
+  &:before {
+    content: $nis-ship; 
+  }
+}
+.nis-sliders {
+  &:before {
+    content: $nis-sliders; 
+  }
+}
+.nis-stairs {
+  &:before {
+    content: $nis-stairs; 
+  }
+}
+.nis-star-rounded {
+  &:before {
+    content: $nis-star-rounded; 
+  }
+}
+.nis-star-thin {
+  &:before {
+    content: $nis-star-thin; 
+  }
+}
+.nis-star {
+  &:before {
+    content: $nis-star; 
+  }
+}
+.nis-suitcase-off {
+  &:before {
+    content: $nis-suitcase-off; 
+  }
+}
+.nis-suitcase-on {
+  &:before {
+    content: $nis-suitcase-on; 
+  }
+}
+.nis-sunglass {
+  &:before {
+    content: $nis-sunglass; 
+  }
+}
+.nis-tachometer-hight {
+  &:before {
+    content: $nis-tachometer-hight; 
+  }
+}
+.nis-tachometer-low {
+  &:before {
+    content: $nis-tachometer-low; 
+  }
+}
+.nis-tachometer-medium {
+  &:before {
+    content: $nis-tachometer-medium; 
+  }
+}
+.nis-thermometer {
+  &:before {
+    content: $nis-thermometer; 
+  }
+}
+.nis-times-bold {
+  &:before {
+    content: $nis-times-bold; 
+  }
+}
+.nis-times {
+  &:before {
+    content: $nis-times; 
+  }
+}
+.nis-trash {
+  &:before {
+    content: $nis-trash; 
+  }
+}
+.nis-triangle-exclamation {
+  &:before {
+    content: $nis-triangle-exclamation; 
+  }
+}
+.nis-triangle-right-up {
+  &:before {
+    content: $nis-triangle-right-up; 
+  }
+}
+.nis-tropical {
+  &:before {
+    content: $nis-tropical; 
+  }
+}
+.nis-twitter {
+  &:before {
+    content: $nis-twitter; 
+  }
+}
+.nis-upload {
+  &:before {
+    content: $nis-upload; 
+  }
+}
+.nis-user {
+  &:before {
+    content: $nis-user; 
+  }
+}
+.nis-vault {
+  &:before {
+    content: $nis-vault; 
+  }
+}
+.nis-view-360 {
+  &:before {
+    content: $nis-view-360; 
+  }
+}
+.nis-view-grid {
+  &:before {
+    content: $nis-view-grid; 
+  }
+}
+.nis-view-list {
+  &:before {
+    content: $nis-view-list; 
+  }
+}
+.nis-wave-bold {
+  &:before {
+    content: $nis-wave-bold; 
+  }
+}
+.nis-wave {
+  &:before {
+    content: $nis-wave; 
+  }
+}
+.nis-wearable {
+  &:before {
+    content: $nis-wearable; 
+  }
+}
+.nis-wheelchair {
+  &:before {
+    content: $nis-wheelchair; 
+  }
+}
+.nis-wifi-thin {
+  &:before {
+    content: $nis-wifi-thin; 
+  }
+}
+.nis-wifi {
+  &:before {
+    content: $nis-wifi; 
+  }
+}
+.nis-wings {
+  &:before {
+    content: $nis-wings; 
+  }
+}
+.nis-youtube {
+  &:before {
+    content: $nis-youtube; 
+  }
+}
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="GEM_FMA_Profile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 271.6 87.5" style="enable-background:new 0 0 271.6 87.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#B7DAEA;}
+	.st2{fill:none;}
+	.st3{fill:none;stroke:#D3DADF;stroke-width:0.52;stroke-miterlimit:10;}
+	.st4{fill:#231F20;}
+	.st5{font-family:'Futura-Medium';}
+	.st6{font-size:9px;}
+	.st7{fill:#0E84BD;}
+	.st8{font-family:'Futura-Bold';}
+	.st9{font-size:6.25px;}
+</style>
+<g id="gGemAft">
+	<g id="hGemAft">
+		<rect id="back" x="0.3" y="0.3" class="st0" width="97.7" height="87"/>
+		<path id="ship" class="st1" d="M77.3,34.3L64.8,19.2H64L63.4,18h-0.7l0.6,1.2h-0.4L62.3,18h-1.4l0.6,1.2H61L60.4,18H59l0.6,1.2
+			h-0.5L58.6,18h-1.4l0.5,1.2h-0.9l0.2,0.5c0.8,2.1,0.9,4.4,0.4,6.6c-0.6,2.2-2.9,4.2-3.4,4.6H44l-5.6,10.6H24.8l-0.3,3.4h-1.3
+			l1.7,3.7c-4.2,3.9-2.6,14.8-2.4,16.2L18.4,72h79.8V34.3H77.3z"/>
+		<rect id="check" x="0.3" y="84.1" class="st2" width="97.7" height="3.1"/>
+		<rect id="border" x="0.3" y="0.3" class="st3" width="97.7" height="87"/>
+		<text id="text" transform="matrix(1 0 0 1 47.7278 55.7551)" class="st4 st5 st6">+  $0</text>
+		<text id="title" transform="matrix(1 0 0 1 42.4 15.7)" class="st7 st8 st9">AFT</text>
+	</g>
+</g>
+<g id="gGemMidShip">
+	<g id="hGemMidShip">
+		<rect id="back_1_" x="98" y="0.3" class="st0" width="79.8" height="87"/>
+		<path id="ship_1_" class="st1" d="M177.5,41.5H145l3.2-10.2l-3.3-0.9l1.3-1.3h-18c-2-0.7-4-1.2-6.1-1.5c-0.8-0.2-1.7-0.2-2.5,0.1
+			h-0.2v2.5l-0.7,0.9h-7.9l1.8,3.2H98.2V72H178V40L177.5,41.5z"/>
+		<rect id="check_1_" x="98" y="84.1" class="st2" width="79.8" height="3.1"/>
+		<rect id="border_1_" x="98" y="0.3" class="st3" width="79.8" height="87"/>
+		<text id="text_1_" transform="matrix(1 0 0 1 123.7278 55.7551)" class="st4 st5 st6">+  $15</text>
+		<text id="title_1_" transform="matrix(1 0 0 1 123.2 15.7)" class="st7 st8 st9">MID-SHIP</text>
+	</g>
+</g>
+<g id="gGemForward">
+	<g id="hGemForward">
+		<rect id="back_2_" x="177.8" y="0.3" class="st0" width="93.6" height="87"/>
+		<polygon id="ship_2_" class="st1" points="257.6,57.9 246.5,57.9 235.2,49.5 238.1,49.5 239.1,45 234.3,45 234.3,41.4 231.9,41.4
+			229.5,38.3 212.5,38.3 208.9,31 203.4,31 204.1,29.8 200.7,29.8 198.4,27.8 199.6,27.8 200.6,26 196.4,26 194.3,24.2 195.6,24.2 
+			196.6,22.4 192.3,22.4 191,21.1 189.7,21.1 191,22.4 190,22.4 188.6,21.1 187.4,21.1 188.7,22.4 188.1,22.4 188.2,22.5 
+			188.2,22.5 194.5,29.4 194.5,31 187.9,31 186.3,38 178.7,38 178,40 178,72 245.2,72 		"/>
+		<rect id="check_2_" x="177.8" y="84.1" class="st2" width="93.6" height="3.1"/>
+		<rect id="border_2_" x="177.8" y="0.3" class="st3" width="93.6" height="87"/>
+		<text id="text_2_" transform="matrix(1 0 0 1 200.3944 55.7551)" class="st4 st5 st6">+  $0</text>
+		<text id="title_2_" transform="matrix(1 0 0 1 204.2 15.7)" class="st7 st8 st9">FORWARD</text>
+	</g>
+</g>
+</svg>

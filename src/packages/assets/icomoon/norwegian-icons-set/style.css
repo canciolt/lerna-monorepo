@@ -1,0 +1,426 @@
+@font-face {
+  font-family: 'norwegian-icons-set';
+  src:
+    url('fonts/norwegian-icons-set.woff2?l6onka') format('woff2'),
+    url('fonts/norwegian-icons-set.ttf?l6onka') format('truetype'),
+    url('fonts/norwegian-icons-set.woff?l6onka') format('woff'),
+    url('fonts/norwegian-icons-set.svg?l6onka#norwegian-icons-set') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="nis-"], [class*=" nis-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'norwegian-icons-set' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nis-add-user:before {
+  content: "\e900";
+}
+.nis-anchor:before {
+  content: "\e901";
+}
+.nis-archive:before {
+  content: "\e902";
+}
+.nis-arrow-down-small:before {
+  content: "\e903";
+}
+.nis-arrow-left-large:before {
+  content: "\e904";
+}
+.nis-arrow-left-medium:before {
+  content: "\e905";
+}
+.nis-arrow-left-small:before {
+  content: "\e906";
+}
+.nis-arrow-left:before {
+  content: "\e907";
+}
+.nis-arrow-right-large:before {
+  content: "\e908";
+}
+.nis-arrow-right-medium:before {
+  content: "\e909";
+}
+.nis-arrow-right-small:before {
+  content: "\e90a";
+}
+.nis-arrow-right:before {
+  content: "\e90b";
+}
+.nis-arrow-up-small:before {
+  content: "\e90c";
+}
+.nis-asterisk:before {
+  content: "\e90d";
+}
+.nis-award-solid:before {
+  content: "\e90e";
+}
+.nis-award:before {
+  content: "\e90f";
+}
+.nis-bars:before {
+  content: "\e910";
+}
+.nis-beverages:before {
+  content: "\e911";
+}
+.nis-bike:before {
+  content: "\e912";
+}
+.nis-binoculars:before {
+  content: "\e913";
+}
+.nis-brochure:before {
+  content: "\e914";
+}
+.nis-calendar-rounded:before {
+  content: "\e915";
+}
+.nis-calendar:before {
+  content: "\e916";
+}
+.nis-camera:before {
+  content: "\e917";
+}
+.nis-caret-down:before {
+  content: "\e918";
+}
+.nis-caret-left:before {
+  content: "\e919";
+}
+.nis-caret-right:before {
+  content: "\e91a";
+}
+.nis-caret-up:before {
+  content: "\e91b";
+}
+.nis-cart-off:before {
+  content: "\e91c";
+}
+.nis-cart-on:before {
+  content: "\e91d";
+}
+.nis-cart-solid:before {
+  content: "\e91e";
+}
+.nis-check-user:before {
+  content: "\e91f";
+}
+.nis-check:before {
+  content: "\e920";
+}
+.nis-chevron-down:before {
+  content: "\e921";
+}
+.nis-chevron-left:before {
+  content: "\e922";
+}
+.nis-chevron-right-bold:before {
+  content: "\e923";
+}
+.nis-chevron-right:before {
+  content: "\e924";
+}
+.nis-chevron-up:before {
+  content: "\e925";
+}
+.nis-chronometer:before {
+  content: "\e926";
+}
+.nis-circle-check:before {
+  content: "\e927";
+}
+.nis-circle-minus:before {
+  content: "\e928";
+}
+.nis-circle-plus:before {
+  content: "\e929";
+}
+.nis-circle-times:before {
+  content: "\e92a";
+}
+.nis-clock:before {
+  content: "\e92b";
+}
+.nis-cocktail-solid:before {
+  content: "\e92c";
+}
+.nis-cocktail:before {
+  content: "\e92d";
+}
+.nis-comment:before {
+  content: "\e92e";
+}
+.nis-copy:before {
+  content: "\e92f";
+}
+.nis-dash:before {
+  content: "\e930";
+}
+.nis-dining:before {
+  content: "\e931";
+}
+.nis-dot-circle:before {
+  content: "\e932";
+}
+.nis-drops:before {
+  content: "\e933";
+}
+.nis-email-back:before {
+  content: "\e934";
+}
+.nis-email:before {
+  content: "\e935";
+}
+.nis-exclamation:before {
+  content: "\e936";
+}
+.nis-exit:before {
+  content: "\e937";
+}
+.nis-expand-off:before {
+  content: "\e938";
+}
+.nis-expand-on:before {
+  content: "\e939";
+}
+.nis-external-link:before {
+  content: "\e93a";
+}
+.nis-facebook:before {
+  content: "\e93b";
+}
+.nis-favorite-off:before {
+  content: "\e93c";
+}
+.nis-favorite-on:before {
+  content: "\e93d";
+}
+.nis-flag-solid:before {
+  content: "\e93e";
+}
+.nis-flag:before {
+  content: "\e93f";
+}
+.nis-globe:before {
+  content: "\e940";
+}
+.nis-google:before {
+  content: "\e941";
+}
+.nis-hand-mony:before {
+  content: "\e942";
+}
+.nis-helicopter:before {
+  content: "\e943";
+}
+.nis-help:before {
+  content: "\e944";
+}
+.nis-hotel:before {
+  content: "\e945";
+}
+.nis-hourglass:before {
+  content: "\e946";
+}
+.nis-instagram:before {
+  content: "\e947";
+}
+.nis-level:before {
+  content: "\e948";
+}
+.nis-like:before {
+  content: "\e949";
+}
+.nis-map-marked:before {
+  content: "\e94a";
+}
+.nis-map:before {
+  content: "\e94b";
+}
+.nis-marker-solid:before {
+  content: "\e94c";
+}
+.nis-marker:before {
+  content: "\e94d";
+}
+.nis-minus:before {
+  content: "\e94e";
+}
+.nis-money:before {
+  content: "\e94f";
+}
+.nis-museum:before {
+  content: "\e950";
+}
+.nis-ncl-shield:before {
+  content: "\e951";
+}
+.nis-overnight-solid:before {
+  content: "\e952";
+}
+.nis-overnight:before {
+  content: "\e953";
+}
+.nis-pencil:before {
+  content: "\e954";
+}
+.nis-phone-off:before {
+  content: "\e955";
+}
+.nis-phone-on:before {
+  content: "\e956";
+}
+.nis-pinterest:before {
+  content: "\e957";
+}
+.nis-plane-dual:before {
+  content: "\e958";
+}
+.nis-plane-solid:before {
+  content: "\e959";
+}
+.nis-plane-up:before {
+  content: "\e95a";
+}
+.nis-plane:before {
+  content: "\e95b";
+}
+.nis-plus:before {
+  content: "\e95c";
+}
+.nis-printer:before {
+  content: "\e95d";
+}
+.nis-refresh:before {
+  content: "\e95e";
+}
+.nis-resize:before {
+  content: "\e95f";
+}
+.nis-search:before {
+  content: "\e960";
+}
+.nis-settings:before {
+  content: "\e961";
+}
+.nis-share:before {
+  content: "\e962";
+}
+.nis-ship:before {
+  content: "\e963";
+}
+.nis-sliders:before {
+  content: "\e964";
+}
+.nis-stairs:before {
+  content: "\e965";
+}
+.nis-star-rounded:before {
+  content: "\e966";
+}
+.nis-star-thin:before {
+  content: "\e967";
+}
+.nis-star:before {
+  content: "\e968";
+}
+.nis-suitcase-off:before {
+  content: "\e969";
+}
+.nis-suitcase-on:before {
+  content: "\e96a";
+}
+.nis-sunglass:before {
+  content: "\e96b";
+}
+.nis-tachometer-hight:before {
+  content: "\e96c";
+}
+.nis-tachometer-low:before {
+  content: "\e96d";
+}
+.nis-tachometer-medium:before {
+  content: "\e96e";
+}
+.nis-thermometer:before {
+  content: "\e96f";
+}
+.nis-times-bold:before {
+  content: "\e970";
+}
+.nis-times:before {
+  content: "\e971";
+}
+.nis-trash:before {
+  content: "\e972";
+}
+.nis-triangle-exclamation:before {
+  content: "\e973";
+}
+.nis-triangle-right-up:before {
+  content: "\e974";
+}
+.nis-tropical:before {
+  content: "\e975";
+}
+.nis-twitter:before {
+  content: "\e976";
+}
+.nis-upload:before {
+  content: "\e977";
+}
+.nis-user:before {
+  content: "\e978";
+}
+.nis-vault:before {
+  content: "\e979";
+}
+.nis-view-360:before {
+  content: "\e97a";
+}
+.nis-view-grid:before {
+  content: "\e97b";
+}
+.nis-view-list:before {
+  content: "\e97c";
+}
+.nis-wave-bold:before {
+  content: "\e97d";
+}
+.nis-wave:before {
+  content: "\e97e";
+}
+.nis-wearable:before {
+  content: "\e97f";
+}
+.nis-wheelchair:before {
+  content: "\e980";
+}
+.nis-wifi-thin:before {
+  content: "\e981";
+}
+.nis-wifi:before {
+  content: "\e982";
+}
+.nis-wings:before {
+  content: "\e983";
+}
+.nis-youtube:before {
+  content: "\e984";
+}

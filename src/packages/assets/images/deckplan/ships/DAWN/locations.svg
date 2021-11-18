@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="DAWN_FMA_Profile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 271.6 87.5" style="enable-background:new 0 0 271.6 87.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#B7DAEA;}
+	.st2{fill:none;}
+	.st3{fill:none;stroke:#D3DADF;stroke-width:0.52;stroke-miterlimit:10;}
+	.st4{fill:#231F20;}
+	.st5{font-family:'Futura-Medium';}
+	.st6{font-size:9px;}
+	.st7{fill:#0E84BD;}
+	.st8{font-family:'Futura-Bold';}
+	.st9{font-size:6.25px;}
+</style>
+<g id="gDawnForward">
+	<g id="hDawnForward">
+		<rect id="back" x="177.8" y="0.3" class="st0" width="93.6" height="87"/>
+		<polygon id="ship" class="st1" points="257.4,57.1 247.2,57.1 235.4,47.8 237.7,47.8 238.7,43.1 236.3,43.1 233.1,37.2 234.1,35.5
+			209.1,35.5 207.7,32.1 201.4,32.1 202.3,30.4 198.9,30.4 196.6,28.2 197.8,28.2 198.8,26.3 194.5,26.3 192.5,24.4 193.7,24.4
+			194.8,22.5 190.5,22.5 189.1,21 187.9,21 189.2,22.5 188.1,22.5 186.8,21 185.5,21 186.8,22.5 186.2,22.5 186.3,22.6 186.3,22.6
+			192.7,30 192.7,32.1 186.9,32.1 185.8,35.5 182.1,35.5 180.9,39.3 177.8,39.3 177.8,72 245.3,72.1 	"/>
+		<rect id="check" x="177.8" y="84.1" class="st2" width="93.6" height="3.1"/>
+		<rect id="border" x="177.8" y="0.3" class="st3" width="93.6" height="87"/>
+		<text id="text" transform="matrix(1 0 0 1 199.6 55.5)" class="st4 st5 st6">+  $0</text>
+		<text id="title" transform="matrix(1 0 0 1 205.2 15.7)" class="st7 st8 st9">FORWARD</text>
+	</g>
+</g>
+<g id="gDawnMidShip">
+	<g id="hDawnMidShip">
+		<rect id="back_1_" x="98" y="0.3" class="st0" width="79.8" height="87"/>
+		<path id="ship_1_" class="st1" d="M150.1,39.2l2.5-6.6l-1.1-1.2l1.5-1.6h-25.1c-2-0.6-4-1.1-6.1-1.5c-0.8-0.1-1.7-0.1-2.5,0H119V31
+			l-0.6,0.9h-8l1.8,3.3H98V72h79.8V39.3L150.1,39.2z"/>
+		<rect id="check_1_" x="98" y="84.1" class="st2" width="79.8" height="3.1"/>
+		<rect id="border_1_" x="98" y="0.3" class="st3" width="79.8" height="87"/>
+		<text id="text_1_" transform="matrix(1 0 0 1 123.6 55.5)" class="st4 st5 st6">+  $15</text>
+		<text id="title_1_" transform="matrix(1 0 0 1 123.2 15.7)" class="st7 st8 st9">MID-SHIP</text>
+	</g>
+</g>
+<g id="gDawnAft">
+	<g id="hDawnAft">
+		<rect id="back_2_" x="0.3" y="0.3" class="st0" width="97.7" height="87"/>
+		<path id="ship_2_" class="st1" d="M78.1,35.4L65.4,19.3h-0.3L64.5,18h-0.9l0.5,1.3h-0.6L63,18h-1l0.6,1.3H62l-0.6-1.2H60l0.5,1.2
+			h-0.6l-0.5-1.2H58l0.5,1.2h-0.3v0.4c0.2,2.4,0.2,4.7-0.1,7.1c-0.7,1.9-1.8,3.7-3.4,5H43.9l-2.4,7.4H24.6l-0.3,3.6H23l1.7,4
+			c-3.8,4-2.7,15.2-2.5,16.6l-4,8.5H98V35.4H78.1z"/>
+		<rect id="check_2_" x="0.3" y="84.1" class="st2" width="97.7" height="3.1"/>
+		<rect id="border_2_" x="0.3" y="0.3" class="st3" width="97.7" height="87"/>
+		<text id="text_2_" transform="matrix(1 0 0 1 51.3 55.5)" class="st4 st5 st6">+  $0</text>
+		<text id="title_2_" transform="matrix(1 0 0 1 42.4 15.7)" class="st7 st8 st9">AFT</text>
+	</g>
+</g>
+</svg>
