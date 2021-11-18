@@ -1,4 +1,12 @@
-<div class="e27">
-  <span class="e27_item link-3 -variant-3">Need help?</span>
-  <a class="e27_item link-3 -variant-3" href="#" title="Call 1-866-625-1160" aria-label="Call 1-866-625-1160">Call 1-866-625-1160</a>
+<div class="e27" :class="componentClass">
+  <span v-if="text" class="e27_item link-3 -variant-3" v-text="text" />
+  <a
+    v-for="(link, index) in links"
+    :key="`e27_item_${index}`"
+    class="e27_item link-3 -variant-3"
+    :href="link.href"
+    :title="link.title"
+    :aria-label="link.ariaLabel"
+    v-text="link.title"
+  />
 </div>
