@@ -1,5 +1,5 @@
 import { defineComponent, computed, PropType } from 'vue'
-import { Logo } from './c1.model'
+import { C1_LOGO_MODEL } from './c1.model'
 
 export default defineComponent({
   name: 'C1',
@@ -17,8 +17,8 @@ export default defineComponent({
       default: 'Norwegian Cruise Line'
     },
     logo: {
-      type: String as PropType<Logo>,
-      default: Logo.black
+      type: String as PropType<C1_LOGO_MODEL>,
+      default: C1_LOGO_MODEL.black
     }
   },
   setup (props) {
