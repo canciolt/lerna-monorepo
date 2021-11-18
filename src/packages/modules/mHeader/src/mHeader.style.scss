@@ -1,7 +1,5 @@
 /* Module styles */
 
-@use "sass:math";
-
 //Default
 .header {
     $a: &;
@@ -27,9 +25,9 @@
         }
         .listing {
             &.-pipeRight {
-                margin-left: math.div(-$grid-gutter-width, 2);
+                margin-left: -$grid-gutter-width * 0.5;
                 html[dir="rtl"] & {
-                    margin-right: math.div(-$grid-gutter-width, 2);
+                    margin-right: -$grid-gutter-width * 0.5;
                     margin-left: 0;
                     a[href^="tel:"] {
                         i[class^="nis-"] {
@@ -42,10 +40,10 @@
                 }
             }
             &.-pipeLeft {
-                margin-right: math.div(-$grid-gutter-width, 2);
+                margin-right: -$grid-gutter-width * 0.5;
                 justify-content: flex-end;
                 html[dir="rtl"] & {
-                    margin-left: math.div(-$grid-gutter-width, 2);
+                    margin-left: -$grid-gutter-width * 0.5;
                     margin-right: 0;
                     a[href^="tel:"] {
                         i[class^="nis-"] {
@@ -169,7 +167,7 @@
                     &_image {
                         width: auto;
                         height: rem(24px);
-                    } 
+                    }
                 }
                 &.-sticky {
                     z-index: $zindex-sticky+1;
@@ -179,8 +177,8 @@
                 border-top: $border-grey-2;
                 .listing {
                     &.-pipeLeft {
-                        margin-left: math.div(-$grid-gutter-width, 2);
-                        margin-right: math.div(-$grid-gutter-width, 2);
+                        margin-left: -$grid-gutter-width * 0.5;
+                        margin-right: -$grid-gutter-width * 0.5;
                         .listing_item {
                             &:first-child {
                                 border-left: none;
@@ -582,8 +580,8 @@
                 }
                 @include media-breakpoint-down(xs) {
                     height: rem(54px);
-                    margin-right: math.div(-$grid-gutter-width, 2);
-                    margin-left: math.div(-$grid-gutter-width, 2);
+                    margin-right: -$grid-gutter-width * 0.5;
+                    margin-left: -$grid-gutter-width * 0.5;
                 }
                 &_item {
                     height: 100%;
@@ -764,8 +762,8 @@
                 }
                 @include media-breakpoint-down(xs) {
                     height: rem(54px);
-                    margin-right: math.div(-$grid-gutter-width, 2);
-                    margin-left: math.div(-$grid-gutter-width, 2);
+                    margin-right: -$grid-gutter-width * 0.5;
+                    margin-left: -$grid-gutter-width * 0.5;
                 }
                 &_item {
                     height: 100%;
