@@ -1,1 +1,14 @@
 /* Component styles */
+.c397{
+    $a: &;
+    &_header {
+        display: flex;
+        margin-bottom: rem(5px);
+    }
+    &.-variant-1 {
+        text-align: center;
+        #{$a}_header {
+            justify-content: center;
+        }
+    }
+}

@@ -1,1 +1,10 @@
 /* Component styles */
+.c1 {
+    &_link {
+        display: inline-block;
+        line-height: 0;
+    }
+    &_image {
+        width: 100%;
+    }
+}
