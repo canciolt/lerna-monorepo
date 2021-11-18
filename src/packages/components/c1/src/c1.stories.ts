@@ -18,18 +18,15 @@ export default {
       options: [Logo.black, Logo.white, Logo.shield],
       control: { type: 'select' }
     },
-    emit: {
-      defaultValue: false,
-      control: { type: 'boolean' }
-    },
     href: {
-      table: { disable: true },
-      control: { type: 'text' }
+      table: { disable: true }
     },
     title: {
-      table: { disable: true },
-      control: { type: 'text' }
-    }
+      table: { disable: true }
+    },
+    componentClass: {
+      table: { disable: true }
+    },
   }
 } as Meta
 

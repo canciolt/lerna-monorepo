@@ -8,10 +8,6 @@ export default defineComponent({
       type: String,
       default: ''
     },
-    emit: {
-      type: Boolean,
-      default: false
-    },
     href: {
       type: String,
       default: '/'
