@@ -1,9 +1,9 @@
-<div class="c397 -variant-1">
+<div class="c397" :class="componentClass">
   <div class="c397_header">
     <!-- E27 -->
-    <e27 />
+    <e27 v-bind="e27Data" />
   </div>
   <div class="c397_body">
-    <span class="paragraph-sans-6 -variant-8">Mon - Fri 9:00am - 8:00pm ET Sat, Sun 9:00am - 5:30pm ET</span>
+    <span class="paragraph-sans-6 -variant-8" v-text="body" />
   </div>
 </div>
