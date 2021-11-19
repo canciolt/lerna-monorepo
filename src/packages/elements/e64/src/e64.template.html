@@ -1,8 +1,8 @@
-<div class="e64 -variant-11">
-  <div class="e64_header">
-    <span class="e64_header_title headline-7 -variant-1">Reset your password</span>
+<div class="e64" :class="componentClass">
+  <div v-if="title" class="e64_header">
+    <span class="e64_header_title" :class="titleClass" v-text="title" />
   </div>
-  <div class="e64_body">
-    <span class="e64_body_text paragraph-serif-3 -variant-3">Enter a new password below to regain access to your Norwegian account.</span>
+  <div v-if="bodyText" class="e64_body">
+    <span class="e64_body_text" :class="bodyClass" v-text="bodyText" />
   </div>
 </div>
