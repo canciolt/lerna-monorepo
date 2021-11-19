@@ -1,9 +1,21 @@
-<div class="e5 form-group -nm">
-  <div class="custom-control custom-checkbox -variant-2 -rtl">
-    <input type="checkbox" class="custom-control-input" id="checkbox_386570">
-    <label class="custom-control-label" for="checkbox_386570">
-      <span class="e5_label">Stay logged in</span>
+<div class="e5 form-group" :class="[componentClass, { '-rtl': isRtl, 'invalid': showError }]">
+  <div class="custom-control custom-checkbox" :class="controlClass">
+    <input
+      type="checkbox"
+      class="custom-control-input"
+      id="{$_id}"
+      :disabled="disabled"
+      v-model="checkedModel"
+    >
+    <label class="custom-control-label" for="{$_id}">
+      <span v-if="labelText && showLabelText" class="e5_label" :class="labelClass">
+        {{ labelText }}
+        <i v-if="hasLegend" class="icon-departure -inline" />
+      </span>
+      <span v-if="text && showLabelText" class="e5_text" :class="textClass" v-text="text" />
+      <span v-if="disclaimer && showLabelText" class="e5_disclaimer text-error-90" :class="disclaimerClass" v-text="disclaimer" />
+      <span v-if="required && showLabelText" class="required">*</span>
     </label>
-    <div class="form-message -error">Error message</div>
+    <div v-if="errorMessage" class="form-message -error" v-text="errorMessage" />
   </div>
 </div>
