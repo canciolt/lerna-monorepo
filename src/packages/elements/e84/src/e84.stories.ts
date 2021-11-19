@@ -3,13 +3,40 @@ import { Meta, Story } from '@storybook/vue3'
 /* Component */
 import E84 from '../src/e84.vue'
 import '../src/e84.style.scss'
+import { E84_MODEL } from "./e84.model";
 
 export default {
   component: E84,
-  title: 'Elements/E84'
+  parameters: {
+    layout: 'centered'
+  },
+  title: 'Elements/E84',
+  argTypes: {
+    componentClass: {
+      table: { disable: true }
+    },
+    linkClass: {
+      table: { disable: true }
+    },
+    href: {
+      table: { disable: true }
+    },
+    title: {
+      table: { disable: true }
+    },
+    subtitle: {
+      table: { disable: true }
+    },
+    aria: {
+      table: { disable: true }
+    },
+    isRtl: {
+      name: 'RTL'
+    }
+  }
 } as Meta
 
-const Template: Story<Record<string, any>> = (args) => ({
+const Template: Story<E84_MODEL> = (args) => ({
   components: { E84 },
   setup() {
     return { args }
@@ -18,3 +45,10 @@ const Template: Story<Record<string, any>> = (args) => ({
 })
 
 export const Default = Template.bind({})
+
+Default.args = {
+  linkClass: 'label-2',
+  title: 'LOG IN',
+  subtitle: 'Already have an account?',
+  isRtl: false
+}
