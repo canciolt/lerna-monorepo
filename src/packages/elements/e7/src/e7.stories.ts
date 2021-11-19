@@ -44,6 +44,15 @@ export default {
     },
     inputAria: {
       table: { disable: true }
+    },
+    inputDisabled: {
+      name: 'Disable'
+    },
+    required: {
+      name: 'Required'
+    },
+    invalid: {
+      name: 'Invalid'
     }
   }
 } as Meta
