@@ -26,41 +26,33 @@ export default {
     controlClass: {
       name: 'Class Modifiers',
       options: variants,
-      mapping: {
-        default: '',
-      },
+      mapping: { default: '', },
       control: 'select',
     },
     isRtl: {
       name: 'RTL',
-      control: 'boolean'
     },
     labelText: {
       name: 'Text',
-      control: 'text',
+      table: { disable: true }
     },
     disclaimer: {
       name: 'Disclaimer',
-      control: 'text',
     },
     disabled: {
-      name: 'Disabled',
-      control: 'boolean'
+      name: 'Disabled'
     },
     checked: {
-      control: 'boolean'
+      name: 'Checked'
     },
     hasLegend: {
       name: 'Legend',
-      control: 'boolean'
     },
     required: {
       name: 'Required',
-      control: 'boolean'
     },
     showError: {
       name: 'Error',
-      control: 'boolean'
     },
     errorMessage: {
       table: { disable: true }
