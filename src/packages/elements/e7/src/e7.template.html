@@ -1,8 +1,25 @@
-<div class="e7 form-group invalid">
-  <label class="label-control" for="input_1208">
-    <span>Username</span>
+<div class="e7 form-group" :class="[componentClass, { 'invalid': invalid }]">
+  <label v-if="label" class="label-control" :class="labelClass" for="{$_id}">
+    <span v-text="label" />
+    <span v-if="required" class="required">*</span>
   </label>
-  <input id="input_1208" class="e7_input form-control -variant-1" type="text" aria-label="aria label" placeholder="Username">
-  <div class="form-description">Lorem ipsum dolor sit amet.</div>
-  <div class="form-message -error">Error message</div>
+  <input
+    id="{$_id}"
+    class="e7_input form-control"
+    :class="inputClass"
+    :type="inputType"
+    :minlength="inputMinlength"
+    :maxlength="inputMaxlength"
+    :aria-label="inputAria"
+    :placeholder="inputPlaceholder"
+    :disabled="inputDisabled"
+  >
+  <div v-if="description" class="form-description" v-text="description" />
+  <div
+    v-for="(message, index) in formMessages"
+    :key="`e7_form-message_${index}`"
+    class="form-message"
+    :class="message.class"
+    v-text="message.text"
+  />
 </div>
