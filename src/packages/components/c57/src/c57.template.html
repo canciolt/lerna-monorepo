@@ -1,11 +1,16 @@
-<div class="c57">
+<div class="c57" :class="componentClass">
   <ul class="listing -inline -centered">
     <li class="listing_item">
-      <div class="textGray">&copy; 2021 Norwegian Cruise Line Holdings Ltd.</div>
+      <div class="textGray" v-text="copyright" />
     </li>
-    <li class="listing_item"><a class="simpleText" href="http://www.ncl.com/f" title="Norwegian Home" aria-label="Norwegian Home">Norwegian Home</a></li>
-    <li class="listing_item"><a class="simpleText" href="http://www.ncl.com/freestyle-cruise/legal-notice" title="Legal Notice" aria-label="Legal Notice">Legal Notice</a></li>
-    <li class="listing_item"><a class="simpleText" href="http://www.ncl.com/about/privacy-policy" title="Privacy Policy" aria-label="Privacy Policy">Privacy Policy</a></li>
-    <li class="listing_item"><a class="simpleText" href="http://www.ncl.com/about/additional-terms-and-conditions" title="Additional Terms & Conditions" aria-label="Additional Terms & Conditions">Additional Terms & Conditions</a></li>
+    <li v-for="(link, index) in links" :key="`c57_link_${index}`" class="listing_item">
+      <a
+        class="simpleText"
+        :href="link.href"
+        :title="link.title"
+        :aria-label="link.aria || link.title"
+        v-text="link.title"
+      />
+    </li>
   </ul>
 </div>
