@@ -5,7 +5,8 @@
       class="custom-control-input"
       id="{$_id}"
       :disabled="disabled"
-      v-model="checkedModel"
+      :checked="checked"
+      @change="$emit('update:checked', $event.target.checked)"
     >
     <label class="custom-control-label" for="{$_id}">
       <span v-if="labelText && showLabelText" class="e5_label" :class="labelClass">

@@ -16,5 +16,6 @@ export declare interface E7_MODEL {
   description?: string
   formMessages?: E7_MESSAGES_MODEL[]
   required?: boolean
-  invalid?: boolean
+  invalid?: boolean,
+  modelValue?: string
 }

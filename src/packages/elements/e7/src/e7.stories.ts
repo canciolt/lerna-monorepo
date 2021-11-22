@@ -45,6 +45,9 @@ export default {
     inputAria: {
       table: { disable: true }
     },
+    modelValue: {
+      table: { disable: true }
+    },
     inputDisabled: {
       name: 'Disable'
     },

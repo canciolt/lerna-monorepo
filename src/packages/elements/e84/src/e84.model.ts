@@ -3,7 +3,7 @@ export declare interface E84_MODEL {
   linkClass?: string,
   href: string,
   title: string,
-  aria: string,
+  aria?: string,
   subtitle: string,
   isRtl?: boolean
 }

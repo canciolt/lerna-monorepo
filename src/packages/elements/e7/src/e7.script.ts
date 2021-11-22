@@ -59,6 +59,11 @@ export default defineComponent({
     invalid: {
       type: Boolean,
       default: false
+    },
+    modelValue: {
+      type: String,
+      default: ''
     }
-  }
+  },
+  emits: ['update:modelValue']
 })

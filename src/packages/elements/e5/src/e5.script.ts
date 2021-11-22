@@ -65,18 +65,9 @@ export default defineComponent({
     }
   },
   emits: ['update:checked'],
-  setup (props,  { emit }) {
-    const checkedModel = computed({
-      get() {
-        return props.checked
-      },
-      set(value: boolean) {
-        emit('update:checked', value)
-      },
-    })
-
+  setup (props) {
     const showLabelText = computed(() => props.controlClass !== '-variant-4')
 
-    return { showLabelText, checkedModel }
+    return { showLabelText }
   }
 })
