@@ -1,5 +1,5 @@
-import { defineComponent, PropType } from "vue";
-import { C57_LINKS_MODEL } from "./c57.model";
+import { defineComponent, PropType } from 'vue'
+import { C57_LINKS_MODEL } from './c57.model'
 
 export default defineComponent({
   name: 'C57',
@@ -14,7 +14,7 @@ export default defineComponent({
     },
     links: {
       type: Array as PropType<C57_LINKS_MODEL[]>,
-      default: []
+      default: () => []
     }
   },
   setup (props) {

@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/vue3'
-import { E135_MODEL, E135_LINK_MODEL } from "./e135.model";
+import { E135_MODEL, E135_LINK_MODEL } from './e135.model'
 
 /* Component */
 import E135 from '../src/e135.vue'

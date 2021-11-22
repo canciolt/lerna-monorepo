@@ -1,5 +1,5 @@
-import { defineComponent, PropType } from "vue";
-import { E7_MESSAGES_MODEL } from "./e7.model";
+import { defineComponent, PropType } from 'vue'
+import { E7_MESSAGES_MODEL } from './e7.model'
 
 export default defineComponent({
   name: 'E7',
@@ -50,7 +50,7 @@ export default defineComponent({
     },
     formMessages: {
       type: Array as PropType<E7_MESSAGES_MODEL[]>,
-      default: []
+      default: () => []
     },
     required: {
       type: Boolean,

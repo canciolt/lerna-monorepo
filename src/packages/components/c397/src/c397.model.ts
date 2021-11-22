@@ -1,4 +1,4 @@
-import { E27_MODEL } from "e27/src/e27.model";
+import { E27_MODEL } from 'e27/src/e27.model'
 
 export declare interface C397_MODEL {
   componentClass: string

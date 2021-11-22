@@ -1,8 +1,8 @@
-import { defineComponent, PropType } from "vue";
+import { defineComponent, PropType } from 'vue'
 import C116 from '../../../components/c116/src/c116.vue'
 import C387 from '../../../components/c387/src/c387.vue'
-import { C116_MODEL } from "../../c116/src/c116.model"
-import { C387_MODEL, C387_VMODEL } from "../../c387/src/c387.model";
+import { C116_MODEL } from '../../c116/src/c116.model'
+import { C387_MODEL, C387_VMODEL } from '../../c387/src/c387.model'
 
 export default defineComponent({
   name: 'C389',
@@ -26,7 +26,7 @@ export default defineComponent({
     },
     modelValue: {
       type: Object as PropType<C387_VMODEL>,
-      default: {}
+      default: () => ({})
     }
   }
 })

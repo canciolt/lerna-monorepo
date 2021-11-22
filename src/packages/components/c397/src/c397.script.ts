@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from "vue";
+import { defineComponent, PropType } from 'vue'
 import E27 from '../../../elements/e27/src/e27.vue'
 import { E27_MODEL } from '../../../elements/e27/src/e27.model'
 
@@ -16,7 +16,7 @@ export default defineComponent({
     },
     e27Data: {
       type: Object as PropType<E27_MODEL>,
-      default: {}
+      default: () => ({})
     }
   }
 })

@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/vue3'
 /* Component */
 import C398 from '../src/c398.vue'
 import '../src/c398.style.scss'
-import { C398_MODEL } from "./c398.model";
+import { C398_MODEL } from './c398.model'
 
 const variants = ['-variant-1', '-variant-2']
 

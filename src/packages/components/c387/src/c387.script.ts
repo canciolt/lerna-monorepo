@@ -1,11 +1,11 @@
-import { defineComponent, PropType, reactive, watch, watchEffect } from "vue";
+import { defineComponent, PropType, reactive } from 'vue'
 import E7 from '../../../elements/e7/src/e7.vue'
 import E5 from '../../../elements/e5/src/e5.vue'
 import E84 from '../../../elements/e84/src/e84.vue'
-import { C387_LINKS_MODEL, C387_VMODEL } from "./c387.model";
-import { E5_MODEL } from "e5/src/e5.model";
-import { E84_MODEL } from "../../../elements/e84/src/e84.model";
-import { E7_MODEL } from "../../../elements/e7/src/e7.model";
+import { C387_LINKS_MODEL, C387_VMODEL } from './c387.model'
+import { E5_MODEL } from 'e5/src/e5.model'
+import { E84_MODEL } from '../../../elements/e84/src/e84.model'
+import { E7_MODEL } from '../../../elements/e7/src/e7.model'
 
 export default defineComponent({
   name: 'C387',
@@ -21,11 +21,11 @@ export default defineComponent({
     },
     links: {
       type: Array as PropType<C387_LINKS_MODEL[]>,
-      default: []
+      default: () => []
     },
     modelValue: {
       type: Object as PropType<C387_VMODEL>,
-      default: {}
+      default: () =>  ({})
     }
   },
   emits: ['update:modelValue'],

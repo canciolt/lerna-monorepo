@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/vue3'
 /* Component */
 import C116 from '../src/c116.vue'
 import '../src/c116.style.scss'
-import { C116_MODEL } from "./c116.model";
+import { C116_MODEL } from './c116.model'
 
 const variants = ['-neutral', '-error', '-important', '-success', '-notify']
 

@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/vue3'
-import { C397_MODEL } from "./c397.model";
+import { C397_MODEL } from './c397.model'
 
 /* Component */
 import C397 from '../src/c397.vue'

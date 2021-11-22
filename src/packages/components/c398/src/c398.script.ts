@@ -1,13 +1,13 @@
-import { defineComponent, PropType, reactive } from "vue";
+import { defineComponent, PropType, reactive } from 'vue'
 import E7 from '../../../elements/e7/src/e7.vue'
 import E64 from '../../../elements/e64/src/e64.vue'
 import C116 from '../../../components/c116/src/c116.vue'
 import C397 from '../../../components/c397/src/c397.vue'
-import { E64_MODEL } from "../../../elements/e64/src/e64.model";
-import { C116_MODEL } from "../../c116/src/c116.model";
-import { C397_MODEL } from "c397/src/c397.model";
-import { E7_MODEL } from "../../../elements/e7/src/e7.model";
-import { C398_VMODEL } from "./c398.model";
+import { E64_MODEL } from '../../../elements/e64/src/e64.model'
+import { C116_MODEL } from '../../c116/src/c116.model'
+import { C397_MODEL } from 'c397/src/c397.model'
+import { E7_MODEL } from '../../../elements/e7/src/e7.model'
+import { C398_VMODEL } from './c398.model'
 
 export default defineComponent({
   name: 'C398',
@@ -35,7 +35,7 @@ export default defineComponent({
     },
     modelValue: {
       type: Object as PropType<C398_VMODEL>,
-      default: {}
+      default: () => ({})
     }
   },
   emits: ['update:modelValue'],

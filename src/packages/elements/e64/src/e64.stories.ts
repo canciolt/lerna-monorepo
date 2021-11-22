@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/vue3'
-import { E64_MODEL } from "./e64.model";
+import { E64_MODEL } from './e64.model'
 
 /* Component */
 import E64 from '../src/e64.vue'
