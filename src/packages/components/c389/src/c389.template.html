@@ -1,17 +1,17 @@
-<div class="c389 -variant-4">
-  <div class="c389_header">
-    <span class="headline-7 -variant-1">Enter Your Account Information</span>
+<div class="c389" :class="componentClass">
+  <div v-if="headerText" class="c389_header">
+    <span class="headline-7 -variant-1" v-text="headerText" />
   </div>
   <div class="c389_body">
-    <div class="c389_block">
+    <div v-if="c116Data">
       <!-- C116 -->
-      <c116 />
+      <c116 v-bind="c116Data" />
     </div>
     <div class="c389_block">
       <div class="c389_group">
         <div class="c389_group_item">
           <!-- C387 -->
-          <c387 />
+          <c387 v-bind="c387Data" />
         </div>
       </div>
     </div>

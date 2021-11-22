@@ -3,6 +3,7 @@ import { Meta, Story } from '@storybook/vue3'
 /* Component */
 import C116 from '../src/c116.vue'
 import '../src/c116.style.scss'
+import { C116_MODEL } from "./c116.model";
 
 const variants = ['-neutral', '-error', '-important', '-success', '-notify']
 
@@ -25,7 +26,7 @@ export default {
   }
 } as Meta
 
-const Template: Story<Record<string, any>> = (args) => ({
+const Template: Story<C116_MODEL> = (args) => ({
   components: { C116 },
   setup() {
     return { args }
