@@ -9,6 +9,8 @@ const c387Links: C387_LINKS_MODEL[] = [
   { href: '#', title: 'Forgot Username or Password?' }
 ]
 
+const variants = ['default', '-variant-1']
+
 export default {
   component: C387,
   parameters: {
@@ -17,7 +19,10 @@ export default {
   title: 'Components/C387',
   argTypes: {
     componentClass: {
-      table: { disable: true }
+      name: 'Class Modifiers',
+      options: variants,
+      mapping: { default: '' },
+      control: 'select',
     },
     links: {
       table: { disable: true }
@@ -42,5 +47,6 @@ const Template: Story<C387_MODEL> = (args) => ({
 export const Default = Template.bind({})
 
 Default.args = {
+  componentClass: 'default',
   links: c387Links
 }
