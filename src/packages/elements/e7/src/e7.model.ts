@@ -8,6 +8,7 @@ export declare interface E7_MODEL {
   labelClass?: string
   label?: string
   inputClass?: string
+  inputType?: string
   inputMinlength?: number
   inputMaxlength?: number
   inputAria?: string
