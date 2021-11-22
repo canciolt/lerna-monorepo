@@ -5,7 +5,7 @@ export default defineComponent({
   setup () {
     const iconsBasePath = 'images/icons/'
     const icon = 'triangle-exclamation.svg'
-    const path = `https://${import.meta.env.HOST}${import.meta.env.ASSETS}${iconsBasePath}`
+    const path = `http://${import.meta.env.HOST}${import.meta.env.ASSETS}${iconsBasePath}`
     const figureItemSrc = `${path}${icon}`
 
     return { figureItemSrc }
