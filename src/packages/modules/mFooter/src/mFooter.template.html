@@ -1,8 +1,8 @@
-<footer id="footer" class="footer -border" data-analytics-region="utility_footer_nav">
+<footer id="footer" class="footer -border" :class="componentClass">
   <section class="wrapper bg-dark -bg-dark">
     <div class="container">
       <!-- C57 -->
-      <c57 />
+      <c57 v-bind="c57Data" />
     </div>
   </section>
 </footer>

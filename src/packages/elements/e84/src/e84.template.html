@@ -1,8 +1,8 @@
-<div class="e84 -rtl">
+<div class="e84" :class="[componentClass, { '-rtl': isRtl }]">
   <div class="e84_aside">
-    <a class="label-2" href="#" title="Register" aria-label="Register">Register</a>
+    <a :class="linkClass" :href="href" :title="title" :aria-label="aria || title" v-text="title" />
   </div>
   <div class="e84_subtitle">
-    <span class="paragraph-serif-4">Need a My NCL Account?</span>
+    <span class="paragraph-serif-4" v-text="subtitle" />
   </div>
 </div>

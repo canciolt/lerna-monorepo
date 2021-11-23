@@ -1,39 +1,44 @@
-<div class="c398 -variant-1">
+<div class="c398" :class="componentClass">
   <div class="c398_header">
     <!--E64-->
-    <e64 />
+    <e64 v-bind="e64Data" />
   </div>
   <form class="c398_form form-grid">
     <div class="c398_block">
       <!--C116-->
-      <c116 />
+      <c116 v-bind="c116Data" />
     </div>
     <div class="c398_block">
       <div class="row">
         <div class="col-md-6">
           <!-- E7 -->
-          <e7 />
+          <e7 v-bind="e7Data.first_name" v-model="model['first_name']" />
         </div>
         <div class="col-md-6">
           <!-- E7 -->
-          <e7 />
+          <e7 v-bind="e7Data.last_name" v-model="model['last_name']" />
         </div>
         <div class="col-md-6">
           <!-- E7 -->
-          <e7 />
+          <e7 v-bind="e7Data.email" v-model="model['email']" />
         </div>
       </div>
     </div>
     <div class="c398_block">
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <button class="btn btn-secondary btn-block" type="submit" data-js="submit-password">Submit</button>
+          <button
+            class="btn btn-secondary btn-block"
+            type="submit"
+            v-text="buttonTitle"
+            @click.prevent="$emit('update:modelValue', model)"
+          />
         </div>
       </div>
     </div>
   </form>
   <div class="c398_footer">
     <!--C397-->
-    <c397 />
+    <c397 v-bind="c397Data" />
   </div>
 </div>

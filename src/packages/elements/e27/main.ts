@@ -1,1 +1,3 @@
-export { default as E27 } from './src/e27.vue'
+import E27 from './src/e27.vue'
+
+export { E27 }

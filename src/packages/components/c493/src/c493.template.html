@@ -1,24 +1,14 @@
-<div class="c493">
+<div class="c493" :class="componentClass">
   <div class="c493_body">
-    <div class="c493_block" data-js="panel-1">
+    <div class="c493_block">
       <!-- C389 -->
-      <c389 />
-    </div>
-    <div class="c493_block hide" data-js="panel-2">
+      <c389 v-if="showComponent === componentTypes.C389 && c389Data" v-bind="c389Data" />
       <!-- C398 -->
-      <c398 />
-    </div>
-    <div class="c493_block hide" data-js="panel-3">
+      <c398 v-else-if="showComponent === componentTypes.C398 && c398Data" v-bind="c398Data" />
       <!-- C396 -->
-      <c396 />
-    </div>
-    <div class="c493_block hide" data-js="panel-4">
-      <!-- C396 -->
-      <c396 />
-    </div>
-    <div class="c493_block hide" data-js="panel-5">
+      <c396 v-else-if="showComponent === componentTypes.C396 && c396Data" v-bind="c396Data" />
       <!-- C399 -->
-      <c399 />
+      <c399 v-else-if="showComponent === componentTypes.C399 && c399Data" v-bind="c399Data" />
     </div>
   </div>
 </div>

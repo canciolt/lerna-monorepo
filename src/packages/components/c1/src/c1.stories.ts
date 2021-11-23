@@ -5,7 +5,7 @@ import C1 from '../src/c1.vue'
 import '../src/c1.style.scss'
 
 /* Models */
-import { C1_MODEL, Logo } from './c1.model'
+import { C1_MODEL, C1_LOGO_MODEL } from './c1.model'
 
 export default {
   component: C1,
@@ -15,21 +15,18 @@ export default {
   title: 'Components/C1',
   argTypes: {
     logo: {
-      options: [Logo.black, Logo.white, Logo.shield],
+      options: [C1_LOGO_MODEL.black, C1_LOGO_MODEL.white, C1_LOGO_MODEL.shield],
       control: { type: 'select' }
     },
-    emit: {
-      defaultValue: false,
-      control: { type: 'boolean' }
-    },
     href: {
-      table: { disable: true },
-      control: { type: 'text' }
+      table: { disable: true }
     },
     title: {
-      table: { disable: true },
-      control: { type: 'text' }
-    }
+      table: { disable: true }
+    },
+    componentClass: {
+      table: { disable: true }
+    },
   }
 } as Meta
 

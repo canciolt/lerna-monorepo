@@ -1,4 +1,4 @@
-export enum Logo {
+export enum C1_LOGO_MODEL {
   black = 'black',
   white = 'white',
   shield = 'shield'
@@ -6,8 +6,7 @@ export enum Logo {
 
 export declare interface C1_MODEL {
   componentClass?: string,
-  emit?: boolean,
   href?: string,
   title: string,
-  logo: Logo
+  logo: C1_LOGO_MODEL
 }

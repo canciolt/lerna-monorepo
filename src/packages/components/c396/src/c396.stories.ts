@@ -2,17 +2,36 @@ import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
 import C396 from '../src/c396.vue'
+import { C396_MODEL } from './c396.model'
 import '../src/c396.style.scss'
+
+const variants = ['-variant-1', '-variant-2', '-variant-3']
 
 export default {
   component: C396,
   title: 'Components/C396',
   parameters: {
     layout: 'centered'
+  },
+  argTypes: {
+    componentClass: {
+      name: 'Class Modifiers',
+      options: variants,
+      control: 'select',
+    },
+    title: {
+      table: { disable: true }
+    },
+    body: {
+      table: { disable: true }
+    },
+    icon: {
+      table: { disable: true }
+    }
   }
 } as Meta
 
-const Template: Story<Record<string, any>> = (args) => ({
+const Template: Story<C396_MODEL> = (args) => ({
   components: { C396 },
   setup() {
     return { args }
@@ -21,3 +40,10 @@ const Template: Story<Record<string, any>> = (args) => ({
 })
 
 export const Default = Template.bind({})
+
+Default.args = {
+  componentClass: '-variant-1',
+  icon: 'triangle-exclamation.svg',
+  title: 'Token not found',
+  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+}
