@@ -1,5 +1,6 @@
 import { defineComponent, PropType } from 'vue'
 import { E7_MESSAGES_MODEL } from './e7.model'
+import Utils from "../../../../utils";
 
 export default defineComponent({
   name: 'E7',
@@ -65,5 +66,10 @@ export default defineComponent({
       default: ''
     }
   },
-  emits: ['update:modelValue']
+  emits: ['update:modelValue'],
+  setup () {
+    const e7ID = Utils.randomId('e7_input')
+
+    return { e7ID }
+  }
 })

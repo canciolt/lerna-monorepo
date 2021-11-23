@@ -1,4 +1,5 @@
 import { computed, defineComponent } from 'vue'
+import Utils from '../../../../utils/index'
 
 export default defineComponent({
   name: 'E5',
@@ -67,7 +68,8 @@ export default defineComponent({
   emits: ['update:checked'],
   setup (props) {
     const showLabelText = computed(() => props.controlClass !== '-variant-4')
+    const e5ID = Utils.randomId('e5_input')
 
-    return { showLabelText }
+    return { showLabelText, e5ID  }
   }
 })

@@ -3,12 +3,12 @@
     <input
       type="checkbox"
       class="custom-control-input"
-      id="{$_id}"
+      :id="e5ID"
       :disabled="disabled"
       :checked="checked"
       @change="$emit('update:checked', $event.target.checked)"
     >
-    <label class="custom-control-label" for="{$_id}">
+    <label class="custom-control-label" :for="e5ID">
       <span v-if="labelText && showLabelText" class="e5_label" :class="labelClass">
         {{ labelText }}
         <i v-if="hasLegend" class="icon-departure -inline" />

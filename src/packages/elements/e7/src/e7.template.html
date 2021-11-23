@@ -1,10 +1,10 @@
 <div class="e7 form-group" :class="[componentClass, { 'invalid': invalid }]">
-  <label v-if="label" class="label-control" :class="labelClass" for="{$_input}">
+  <label v-if="label" class="label-control" :class="labelClass" :for="e7ID">
     <span v-text="label" />
     <span v-if="required" class="required">*</span>
   </label>
   <input
-    id="{$_input}"
+    :id="e7ID"
     class="e7_input form-control -variant-1"
     :class="inputClass"
     :type="inputType"
