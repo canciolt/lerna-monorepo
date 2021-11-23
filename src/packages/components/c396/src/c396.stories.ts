@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
 import C396 from '../src/c396.vue'
-import { C396_MODEL } from "./c396.model";
+import { C396_MODEL } from './c396.model'
 import '../src/c396.style.scss'
 
 const variants = ['-variant-1', '-variant-2', '-variant-3']

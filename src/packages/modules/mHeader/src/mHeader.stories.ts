@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
 import MHeader from '../src/mHeader.vue'
-import { MHEADER_MODEL, MHEADER_LINKS_MODEL } from "./mHeader.model";
+import { MHEADER_MODEL, MHEADER_LINKS_MODEL } from './mHeader.model'
 import '../src/mHeader.style.scss'
 
 const headerLinks: MHEADER_LINKS_MODEL[]  = [

@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
 import MFooter from '../src/mFooter.vue'
-import { C57_LINKS_MODEL } from "../../../components/c57/src/c57.model";
+import { C57_LINKS_MODEL } from '../../../components/c57/src/c57.model'
 import '../src/mFooter.style.scss'
 
 const c57Links: C57_LINKS_MODEL[]  = [

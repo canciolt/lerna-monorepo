@@ -1,6 +1,6 @@
-import { C398_MODEL } from "../../c398/src/c398.model";
-import { C396_MODEL } from "../../c396/src/c396.model";
-import { C399_MODEL } from "../../c399/src/c399.model";
+import { C398_MODEL } from '../../c398/src/c398.model'
+import { C396_MODEL } from '../../c396/src/c396.model'
+import { C399_MODEL } from '../../c399/src/c399.model'
 
 export enum C493_SHOW_MODEL {
   C389 = 'c389',

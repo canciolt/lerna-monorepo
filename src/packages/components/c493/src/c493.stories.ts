@@ -1,9 +1,9 @@
-import { Meta, Story } from "@storybook/vue3";
+import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import C493 from "../src/c493.vue";
-import { C493_MODEL, C493_SHOW_MODEL } from "./c493.model";
-import "../src/c493.style.scss";
+import C493 from '../src/c493.vue'
+import { C493_MODEL, C493_SHOW_MODEL } from './c493.model'
+import '../src/c493.style.scss'
 
 export default {
   component: C493,

@@ -1,6 +1,6 @@
-import { defineComponent, PropType } from "vue";
+import { defineComponent, PropType } from 'vue'
 import C57 from '../../../components/c57/src/c57.vue'
-import { C57_MODEL } from "../../../components/c57/src/c57.model";
+import { C57_MODEL } from '../../../components/c57/src/c57.model'
 
 export default defineComponent({
   name: 'MFooter',

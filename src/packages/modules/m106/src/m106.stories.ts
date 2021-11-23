@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/vue3'
 /* Component */
 import M106 from '../src/m106.vue'
 import '../src/m106.style.scss'
-import { M106_MODEL } from "./m106.model";
+import { M106_MODEL } from './m106.model'
 
 export default {
   component: M106,

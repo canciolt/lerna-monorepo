@@ -1,4 +1,4 @@
-import { M106_MODEL } from "../../m106/src/m106.model";
+import { M106_MODEL } from '../../m106/src/m106.model'
 
 export declare interface MHEADER_LINKS_MODEL {
   linkClass?: string
