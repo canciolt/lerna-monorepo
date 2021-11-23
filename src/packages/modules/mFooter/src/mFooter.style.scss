@@ -1,1 +1,61 @@
 /* Module styles */
+
+//Default
+.footer {
+    position: relative;
+    &.-wave {
+        &:before {
+            content: '';
+            background-image: url("#{$img-path-base}/decorations/decoration-02.svg");
+            display: block;
+            background-position: top center;
+            background-size: 101% auto; //to do, 101% is for safari
+            margin-bottom: -1px; // to do
+            background-repeat: no-repeat;
+            padding: 3%;
+            width: 100%;
+        }
+    }
+    &.-border {
+        padding-top: 0;
+        margin-top: rem(4px);
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            height: rem(4px);
+            top: rem(-4px);
+        }
+        &:before {
+            background-color: $navy-70;
+            right: 0;
+            width: 50%;
+        }
+        &:after {
+            background-color: $opacity-blue-2;
+            width: 100%;
+        }
+    }
+    html[dir="rtl"] & {
+        &.-wave {
+            &:before {
+                transform: rotateY(180deg);
+            }
+        }
+        &.-border {
+            &:before {
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+}
+
+//Simplified
+.footer {
+    .-deckplan & {
+        @include media-breakpoint-down(xs) {
+            display: none;
+        }
+    }
+}

@@ -28,7 +28,7 @@ export default defineComponent({
       shield: 'logo-ncl-shield.svg'
     }
     const logosBasePath = 'images/logos/'
-    const path = `https://${import.meta.env.HOST}${import.meta.env.ASSETS}${logosBasePath}`
+    const path = `http://${import.meta.env.HOST}${import.meta.env.ASSETS}${logosBasePath}`
     const logoSrc = computed(() => Object.prototype.hasOwnProperty.call(logos, props.logo)
       ? `${path}${logos[props.logo]}`
       : '')

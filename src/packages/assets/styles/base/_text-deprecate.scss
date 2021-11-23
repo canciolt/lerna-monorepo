@@ -1,0 +1,475 @@
+//
+// TEXTS
+//
+
+@include classBp(headline) {
+    color: $navy-70;
+    &.-variant-1 {
+        font-family: $font-futura-bold;
+        color: $navy-70;
+    }
+    &.-variant-2 {
+        font-family: $font-futura-light;
+        color: $cool-grey-80;
+    }
+    &.-variant-3 {
+        color: $blue-60;
+    }
+    &.-variant-4 {
+        color: $white;
+        letter-spacing: rem(1px);
+        text-shadow: rem(2px) rem(2px) rem(2px) rgba($black, .3);
+        text-transform: uppercase;
+    }
+    &_link {
+        color: $navy-70;
+    }
+    @include classBpParentModifier(-bg-medium) {
+        color: $white;
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $white;
+    }
+}
+@include classBpParentModifierExtend(headline, '-page.-medium', headline-1, -variant-1);
+@include classBpParentModifierExtend(headline, '-page.-small', headline-2, -variant-1);
+@include classBpParentModifierExtend(headline, -large, headline-1, -variant-2);
+@include classBpParentModifierExtend(headline, -medium, headline-2, -variant-2);
+@include classBpParentModifierExtend(headline, -small, headline-7, -variant-1);
+@include classBpParentModifierExtend(headline, -tiny, paragraph-sans-2, -variant-1);
+@include classBpParentModifierExtend(headline, -section, headline-7);
+
+@include classBp(label) {
+    color: $cool-grey-80;
+    &.-variant-1 {
+        color: $green-80;
+        &.-large {
+            font-family: $font-futura-book;
+        }
+    }
+    &.-variant-2 {
+        color: $blue-90;
+    }
+    &.-variant-3 {
+        font-family: $font-futura-book;
+    }
+    &.-variant-5 {
+        color: $grey-blue;
+    }
+    &.-variant-6 {
+        color: $navy-70;
+    }
+    .-variant-child-1 {
+        font-family: $font-futura-book;
+    }
+    @include classBpParentModifier(-bg-medium) {
+        color: $grey-blue;
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $teal-70;
+    }
+}
+@include classBpParentModifierExtend(label,-large, label-1);
+@include classBpParentModifierExtend(label,-small, label-2);
+
+.contextualLabel {
+    @extend %label-2;
+    @extend %label-2-variant-1;
+}
+
+.input {
+    @include classBpModifierExtend(-large, headline-7, -variant-1);
+    @include classBpModifierExtend(-medium, paragraph-sans-2, -variant-1);
+    &.-variant-1 {
+        color: $cool-grey-80;
+    }
+    &.-variant-2 {
+        color: $navy-70;
+    }
+    &.-variant-3 {
+        color: $blue-60;
+    }
+    &.-variant-4 {
+        color: $opacity-blue-3;
+    }
+}
+
+.paragraph {
+    color: $bright-blue-80;
+    &.-large {
+        @extend %paragraph-serif-2;
+        &.-variant-2 {
+            @extend %paragraph-serif-2;
+            @extend %paragraph-serif-2-variant-2;
+        }
+    }
+    &.-medium {
+        @extend %paragraph-serif-3;
+        &.-variant-2 {
+            @extend %paragraph-serif-3;
+            @extend %paragraph-serif-3-variant-2;
+        }
+    }
+    &.-small {
+        @extend %paragraph-serif-4;
+        @extend %paragraph-serif-4-variant-1;
+        &.-variant-2 {
+            @extend %paragraph-serif-4;
+            @extend %paragraph-serif-4-variant-2;
+        }
+    }
+    &.-variant-1 {
+        color: $navy-70;
+    }
+    &.-variant-2 {
+        color: $blue-90;
+    }
+    &.-variant-3 {
+        color: $blue-60;
+    }
+    @include classBpParentModifier(-bg-medium) {
+        color: $blue-10;
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $blue-10;
+    }
+}
+
+.copy {
+    color: $navy-70;
+    @include classBpModifierExtend(-medium, paragraph-sans-2);
+    @include classBpModifierExtend(-large, headline-7, -variant-2);
+    &.-variant-1 {
+        color: $cool-grey-90;
+    }
+}
+
+.extra {
+    color: $cool-grey-80;
+    &.-small {
+        @extend %paragraph-sans-5;
+    }
+    &.-variant-1 {
+        color: $green-80;
+    }
+    &.-variant-2 {
+        color: $blue-90;
+    }
+    &.-variant-3 {
+        @extend %paragraph-sans-5-variant-1;
+        color: $blue-90;
+    }
+    &.-variant-4 {
+        @extend %paragraph-sans-5-variant-1;
+        color: $navy-80;
+    }
+    &.-variant-5 {
+        @extend %paragraph-sans-5-variant-1;
+        color: $navy-70;
+    }
+    &.-variant-6 {
+        color: $grey-blue;
+    }
+    &.-variant-7 {
+        @extend %paragraph-sans-5-variant-1;
+    }
+    &.-variant-8 {
+        color: $green-80;
+        font-family: $font-futura-bold;
+    }
+    &.-variant-9 {
+        color: $teal-70;
+        font-family: $font-futura-bold;
+    }
+    @include classBpParentModifier(-bg-medium) {
+        color: $white;
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $white;
+    }
+}
+
+.pricing {
+    &.-offer {
+        color: $blue-90;
+        @include classBpModifierExtend(-large, headline-3, -variant-1);
+        @include classBpModifierExtend(-medium, headline-5, -variant-1);
+        @include classBpModifierExtend(-small, paragraph-sans-2, -variant-1);
+    }
+    &.-sail {
+        color: $green-80;
+        @include classBpModifierExtend(-large, headline-3, -variant-2);
+        @include classBpModifierExtend(-medium, headline-5, -variant-2);
+        @include classBpModifierExtend(-small, paragraph-sans-2);
+    }
+}
+
+.itinerary {
+    &.-destination {
+        color: $navy-70;
+    }
+    &.-departure {
+        @extend %headline-2-variant-3;
+        color: $navy-70;
+        @include classBpModifierExtend(-small, headline-7, -variant-3);
+    }
+    @include classBpModifierExtend(-large, headline-1);
+    @include classBpModifierExtend(-medium, headline-2);
+    @include classBpModifierExtend(-small, headline-7);
+
+    @include classBpParentModifier(-bg-dark) {
+        color: $white;
+    }
+}
+
+.quote {
+    color: $blue-60;
+    font-style: italic; //TODO
+    @include classBpModifierExtend(-medium, paragraph-serif-1);
+    @include classBpModifierExtend(-small, paragraph-serif-3);
+}
+
+.brand {
+    color: $navy-70;
+    &.-headline {
+        &.-large {
+            @extend %headline-4;
+            @extend %headline-4-variant-1;
+        }
+        &.-medium {
+            @extend %headline-6;
+            @extend %headline-6-variant-1;
+        }
+    }
+    &.-description {
+        @extend %fontPrimary;
+        font-weight: $text-book;
+        font-style: italic;
+        &.-medium {
+            font-size: rem(14px);
+            line-height: rem(20px);
+            letter-spacing: rem(0.25px);
+        }
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $white;
+    }
+}
+
+.linkText {
+    $a: &;
+    color: $blue-60;
+    position: relative;
+    &_icon {
+        color: $teal-50;
+        @include hover-focus {
+            color: $teal-50;
+        }
+        &:first-child {
+            margin-right: rem(5px);
+            html[dir="rtl"] & {
+                margin-right: 0;
+                margin-left: rem(5px);
+            }
+        }
+        &:last-child {
+            margin-left: rem(5px);
+            html[dir="rtl"] & {
+                margin-left: 0;
+                margin-right: rem(5px);
+            }
+        }
+    }
+    &.-large {
+        @extend %link-1;
+    }
+    &.-small {
+        @extend %link-2;
+    }
+    &.-tiny {
+        @extend %link-2;
+        @extend %link-2-variant-2;
+    }
+    &.-tbd {
+        @extend %link-1;
+        @extend %link-1-variant-1;
+    }
+    &.-caret {
+        @include caret($direction: right);
+    }
+    &.-back {
+        position: relative;
+        padding-left: rem(33px);
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: rem(11px);
+            color: $blue-60;
+            @extend .icon-family;
+            @include icon-content($nis-arrow-left-medium);
+        }
+    }
+    @include classBpParentModifier(-bg-medium) {
+        color: $bright-blue-50;
+        @include hover-focus {
+            color: $bright-blue-50;
+        }
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $bright-blue-50;
+        @include hover-focus {
+            color: $bright-blue-50;
+        }
+    }
+    &.-variant-1 {
+        text-transform: capitalize;
+    }
+
+    .disabled &,
+    &.disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+
+    .-unavailable &,
+    &.-unavailable {
+        color: $cool-grey-80;
+        pointer-events: none;
+        #{$a}_icon {
+            opacity: .5;
+        }
+    }
+    html[dir="rtl"] & {
+        &.-caret {
+            @include caret($direction: left);
+            &:after {
+                margin-left: 0;
+                margin-right: rem(5px);
+            }
+        }
+    }
+}
+
+.linkNav {
+    $a: &;
+    @extend %paragraph-sans-4;
+    @extend %paragraph-sans-4-variant-2;
+    color: $navy-70;
+    display: inline-block;
+    &.-icon {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+    &_icon {
+        color: $blue-50;
+        font-size: rem(20px);
+        &:first-child {
+            &:not(:last-child) {
+                margin-right: rem(5px);
+            }
+        }
+        &:last-child {
+            &:not(:first-child) {
+                margin-left: rem(5px);
+            }
+        }
+        html[dir="rtl"] & {
+            &:first-child {
+                &:not(:last-child) {
+                    margin-left: rem(5px);
+                    margin-right: 0;
+                }
+            }
+            &:last-child {
+                &:not(:first-child) {
+                    margin-right: rem(5px);
+                    margin-left: 0;
+                }
+            }
+            &.nis-phone-on {
+                &:before {
+                    transform: rotateY(180deg);
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &.-variant-1 {
+        font-size: rem(16px);
+        #{$a}_icon {
+            @include media-breakpoint-down(xs) {
+                font-size: rem(16px);
+            }
+        }
+    }
+}
+
+.linkItem {
+    display: block;
+    width: 100%;
+    @extend %paragraph-sans-4;
+    @extend %paragraph-sans-4-variant-2;
+    text-transform: uppercase; //TODO - submenu header
+    color: $blue-60;
+    @include hover-focus {
+        color: $navy-70;
+    }
+}
+
+.footerLabel {
+    @extend %paragraph-sans-3;
+    @extend %paragraph-sans-3-variant-2;
+    text-transform: uppercase;
+    @include classBpParentModifier(-bg-medium) {
+        color: $bright-blue-50;
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $bright-blue-50;
+    }
+}
+
+.simpleText {
+    @extend %fontPrimary;
+    font-weight: $text-book;
+    font-size: rem(14px);
+    line-height: rem(20px);
+    letter-spacing: rem(0.25px);
+    @include classBpParentModifier(-bg-medium) {
+        color: $blue-10;
+        &:focus {
+            outline-color: $blue-10;
+        }
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $blue-10;
+        &:focus {
+            outline-color: $blue-10;
+        }
+    }
+}
+
+.textGray {
+    @extend %fontPrimary;
+    font-weight: $text-book;
+    font-size: rem(14px);
+    line-height: rem(20px);
+    letter-spacing: rem(0.25px);
+    @include classBpParentModifier(-bg-medium) {
+        color: $warm-grey-10;
+    }
+    @include classBpParentModifier(-bg-dark) {
+        color: $opacity-blue-1;
+    }
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.underline {
+    text-decoration: underline;
+}

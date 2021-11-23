@@ -13,7 +13,9 @@
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src --fix",
     "bootstrap": "lerna bootstrap",
     "build:assets": "lerna run --scope assets build",
+    "build:assets:dev": "lerna run --scope assets build:dev",
     "build:components": "lerna run --scope e* --scope c* --scope m* build",
+    "live:assets": "lerna run --scope assets live",
     "publish": "build:pro && lerna publish"
   },
   "dependencies": {
