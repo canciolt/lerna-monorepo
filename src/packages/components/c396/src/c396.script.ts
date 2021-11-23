@@ -11,16 +11,19 @@ export default defineComponent({
       type: String,
       default: ''
     },
+    icon: {
+      type: String,
+      default: ''
+    },
     body: {
       type: String,
       default: ''
     }
   },
-  setup () {
+  setup (props) {
     const iconsBasePath = 'images/icons/'
-    const icon = 'triangle-exclamation.svg'
     const path = `https://${import.meta.env.HOST}${import.meta.env.ASSETS}${iconsBasePath}`
-    const figureItemSrc = `${path}${icon}`
+    const figureItemSrc = props.icon ? `${path}${props.icon}` : ''
 
     return { figureItemSrc }
   }

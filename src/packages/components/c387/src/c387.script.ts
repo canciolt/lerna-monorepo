@@ -55,7 +55,7 @@ export default defineComponent({
     }
 
     /* Reactive v-model  */
-    const model: C387_VMODEL = reactive({ username: '', password: '', checked: true })
+    const model: C387_VMODEL = reactive({ username: '', password: '', checked: false })
 
     return { e5Data, e84Data, e7Data, model }
   }
