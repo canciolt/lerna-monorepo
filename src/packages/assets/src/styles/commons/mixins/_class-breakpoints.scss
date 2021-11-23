@@ -1,0 +1,472 @@
+//
+// CLASS BREAKPOINTS
+//
+
+@mixin classBp($class) {
+    @each $bp in $breakpoints {
+        .#{$class}#{$bp}{
+            @if ($bp=='-lg') {
+                @include media-breakpoint-up(lg) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md') {
+                @include media-breakpoint-only(md) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-xs') {
+                @include media-breakpoint-down(xs) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md-up') {
+                @include media-breakpoint-up(md) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md-down') {
+                @include media-breakpoint-down(md) {
+                    @content;
+                }
+            }
+            @else {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin classBpParent($class) {
+    @each $bp in $breakpoints {
+        .#{$class}#{$bp} & {
+            @if ($bp=='-lg') {
+                @include media-breakpoint-up(lg) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md') {
+                @include media-breakpoint-only(md) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-xs') {
+                @include media-breakpoint-down(xs) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md-up') {
+                @include media-breakpoint-up(md) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md-down') {
+                @include media-breakpoint-down(md) {
+                    @content;
+                }
+            }
+            @else {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin classBpModifier($class) {
+    @each $bp in $breakpoints {
+        &.#{$class}#{$bp} {
+            @if ($bp=='-lg') {
+                @include media-breakpoint-up(lg) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md') {
+                @include media-breakpoint-only(md) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-xs') {
+                @include media-breakpoint-down(xs) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md-up') {
+                @include media-breakpoint-up(md) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md-down') {
+                @include media-breakpoint-down(md) {
+                    @content;
+                }
+            }
+            @else {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin classBpParentModifier($class) {
+    @each $bp in $breakpoints {
+        &.#{$class}#{$bp},
+        .#{$class}#{$bp} & {
+            @if ($bp=='-lg') {
+                @include media-breakpoint-up(lg) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md') {
+                @include media-breakpoint-only(md) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-xs') {
+                @include media-breakpoint-down(xs) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md-up') {
+                @include media-breakpoint-up(md) {
+                    @content;
+                }
+            }
+            @else if ($bp=='-md-down') {
+                @include media-breakpoint-down(md) {
+                    @content;
+                }
+            }
+            @else {
+                @content;
+            }
+        }
+    }
+}
+
+// Placeholders
+
+@mixin placeholderBp($name) {
+    @each $bp in $breakpoints {
+        @if ($bp=='-lg') {
+            @include media-breakpoint-up(lg) {
+                %#{$name}#{$bp} {
+                    @content;
+                }
+            }
+        }
+        @else if ($bp=='-md') {
+            @include media-breakpoint-only(md) {
+                %#{$name}#{$bp} {
+                    @content;
+                }
+            }
+        }
+        @else if ($bp=='-xs') {
+            @include media-breakpoint-down(xs) {
+                %#{$name}#{$bp} {
+                    @content;
+                }
+            }
+        }
+        @else if ($bp=='-md-up') {
+            @include media-breakpoint-up(md) {
+                %#{$name}#{$bp} {
+                    @content;
+                }
+            }
+        }
+        @else if ($bp=='-md-down') {
+            @include media-breakpoint-down(md) {
+                %#{$name}#{$bp} {
+                    @content;
+                }
+            }
+        }
+        @else {
+            %#{$name}#{$bp} {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin classBpPlaceholder($class, $placeholder:$class) {
+    @include placeholderBp($placeholder) {
+        @content;
+    }
+    @each $bp in $breakpoints {
+        .#{$class}#{$bp} {
+            @if ($bp=='-lg') {
+                @include media-breakpoint-up(lg) {
+                    @extend %#{$placeholder}#{$bp};
+                }
+            }
+            @else if ($bp=='-md') {
+                @include media-breakpoint-only(md) {
+                    @extend %#{$placeholder}#{$bp};
+                }
+            }
+            @else if ($bp=='-xs') {
+                @include media-breakpoint-down(xs) {
+                    @extend %#{$placeholder}#{$bp};
+                }
+            }
+            @else if ($bp=='-md-up') {
+                @include media-breakpoint-up(md) {
+                    @extend %#{$placeholder}#{$bp};
+                }
+            }
+            @else if ($bp=='-md-down') {
+                @include media-breakpoint-down(md) {
+                    @extend %#{$placeholder}#{$bp};
+                }
+            }
+            @else {
+                @extend %#{$placeholder}#{$bp};
+            }
+        }
+    }
+}
+
+@mixin classBpPlaceholderVariant($class, $variant) {
+    @include placeholderBp(#{$class}#{$variant}) {
+        @content;
+    }
+    @each $bp in $breakpoints {
+        .#{$class}#{$bp} {
+            @if ($bp=='-lg') {
+                @include media-breakpoint-up(lg) {
+                    &.#{$variant},
+                    &.#{$variant}-lg {
+                        @extend %#{$class}#{$variant}#{$bp};
+                    }
+                }
+            }
+            @else if ($bp=='-md') {
+                @include media-breakpoint-only(md) {
+                    &.#{$variant},
+                    &.#{$variant}-md {
+                        @extend %#{$class}#{$variant}#{$bp};
+                    }
+                }
+            }
+            @else if ($bp=='-xs') {
+                @include media-breakpoint-down(xs) {
+                    &.#{$variant},
+                    &.#{$variant}-xs {
+                        @extend %#{$class}#{$variant}#{$bp};
+                    }
+                }
+            }
+            @else if ($bp=='-md-up') {
+                @include media-breakpoint-up(md) {
+                    &.#{$variant},
+                    &.#{$variant}-md-up {
+                        @extend %#{$class}#{$variant}#{$bp};
+                    }
+                }
+            }
+            @else if ($bp=='-md-down') {
+                @include media-breakpoint-down(md) {
+                    &.#{$variant},
+                    &.#{$variant}-md-down {
+                        @extend %#{$class}#{$variant}#{$bp};
+                    }
+                }
+            }
+            @else {
+                &.#{$variant} {
+                    @extend %#{$class}#{$variant}#{$bp};
+                }
+            }
+        }
+    }
+}
+
+@mixin classBpModifierExtend($class, $placeholder, $variant:'') {
+    @each $bp in $breakpoints {
+        &.#{$class}#{$bp} {
+            @if ($bp=='-lg') {
+                @include media-breakpoint-up(lg) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-md') {
+                @include media-breakpoint-only(md) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-xs') {
+                @include media-breakpoint-down(xs) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-md-up') {
+                @include media-breakpoint-up(md) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-md-down') {
+                @include media-breakpoint-down(md) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else {
+                @extend %#{$placeholder}#{$bp};
+                @extend %#{$placeholder}#{$variant}#{$bp};
+            }
+        }
+    }
+}
+
+@mixin classBpParentModifierExtend($parent, $class, $placeholder, $variant:'') {
+    @each $bp in $breakpoints {
+        .#{$parent}.#{$class}#{$bp} {
+            @if ($bp=='-lg') {
+                @include media-breakpoint-up(lg) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-md') {
+                @include media-breakpoint-only(md) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-xs') {
+                @include media-breakpoint-down(xs) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-md-up') {
+                @include media-breakpoint-up(md) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-md-down') {
+                @include media-breakpoint-down(md) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else {
+                @extend %#{$placeholder}#{$bp};
+                @extend %#{$placeholder}#{$variant}#{$bp};
+            }
+        }
+        .#{$parent}#{$bp}.#{$class} {
+            @if ($bp=='-lg') {
+                @include media-breakpoint-up(lg) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-md') {
+                @include media-breakpoint-only(md) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-xs') {
+                @include media-breakpoint-down(xs) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-md-up') {
+                @include media-breakpoint-up(md) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else if ($bp=='-md-down') {
+                @include media-breakpoint-down(md) {
+                    @extend %#{$placeholder}#{$bp};
+                    @extend %#{$placeholder}#{$variant}#{$bp};
+                }
+            }
+            @else {
+                @extend %#{$placeholder}#{$bp};
+                @extend %#{$placeholder}#{$variant}#{$bp};
+            }
+        }
+    }
+}
+
+@mixin classPropertyBp($class, $prop, $values) {
+    @each $bp in $breakpoints {
+        .#{$class}#{$bp} {
+            @if ($bp == "") {
+                @include media-breakpoint-up(lg) {
+                    @if (map-get($values, lg)) {
+                        #{$prop}: map-get($values, lg);
+                    } @else {
+                        #{$prop}: map-get($values, defaultValue);
+                    }
+                }
+                @include media-breakpoint-only(md) {
+                    @if (map-get($values, md)) {
+                        #{$prop}: map-get($values, md);
+                    } @else {
+                        #{$prop}: map-get($values, defaultValue);
+                    }
+                }
+                @include media-breakpoint-down(xs) {
+                    @if (map-get($values, xs)) {
+                        #{$prop}: map-get($values, xs);
+                    } @else {
+                        #{$prop}: map-get($values, defaultValue);
+                    }
+                }
+            } @else if ($bp=='-lg') {
+                @include media-breakpoint-up(lg) {
+                    @if (map-get($values, lg)) {
+                        #{$prop}: map-get($values, lg);
+                    } @else {
+                        #{$prop}: map-get($values, defaultValue);
+                    }
+                }
+            } @else if ($bp=='-md') {
+                @include media-breakpoint-only(md) {
+                    @if (map-get($values, md)) {
+                        #{$prop}: map-get($values, md);
+                    } @else {
+                        #{$prop}: map-get($values, defaultValue);
+                    }
+                }
+            } @else if ($bp=='-md-up') {
+                @include media-breakpoint-up(md) {
+                    @if (map-get($values, md)) {
+                        #{$prop}: map-get($values, md);
+                    } @else {
+                        #{$prop}: map-get($values, defaultValue);
+                    }
+                }
+            } @else if ($bp=='-md-down') {
+                @include media-breakpoint-down(md) {
+                    @if (map-get($values, md)) {
+                        #{$prop}: map-get($values, md);
+                    } @else {
+                        #{$prop}: map-get($values, defaultValue);
+                    }
+                }
+            } @else if ($bp=='-xs') {
+                @include media-breakpoint-down(xs) {
+                    @if (map-get($values, xs)) {
+                        #{$prop}: map-get($values, xs);
+                    } @else {
+                        #{$prop}: map-get($values, defaultValue);
+                    }
+                }
+            }
+        }
+    }
+}
