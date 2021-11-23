@@ -16,6 +16,9 @@ export default {
       options: [C493_SHOW_MODEL.C389, C493_SHOW_MODEL.C398, C493_SHOW_MODEL.C396, C493_SHOW_MODEL.C399],
       control: { type: 'select' }
     },
+    componentClass: {
+      table: { disable: true }
+    },
     c389Data: {
       table: { disable: true }
     },
