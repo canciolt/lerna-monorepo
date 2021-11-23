@@ -18,6 +18,17 @@ const headerLinks: MHEADER_LINKS_MODEL[]  = [
 export default {
   component: MHeader,
   title: 'Modules/MHeader',
+  argTypes: {
+    links: {
+      table: { disable: true }
+    },
+    m106Data: {
+      table: { disable: true }
+    },
+    componentClass: {
+      table: { disable: true }
+    }
+  }
 } as Meta
 
 const Template: Story<MHEADER_MODEL> = (args) => ({
