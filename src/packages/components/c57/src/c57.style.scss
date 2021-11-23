@@ -1,1 +1,25 @@
 /* Component styles */
+.c57 {
+    padding: rem(20px 0);
+    text-align: center;
+    .listing {
+        @include media-breakpoint-only(md) {
+            flex-wrap: wrap;
+        }
+        &.-inline {
+            .listing_item {
+                @include media-breakpoint-only(md) {
+                    &:first-child {
+                        flex: 1 1 100%;
+                        margin-bottom: rem(10px);
+                    }
+                }
+                @include media-breakpoint-down(xs) {
+                    &:not(:last-child) {
+                        margin-bottom: rem(10px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,1 +1,23 @@
 /* Component styles */
+.c493 {
+    $a: &;
+    &_body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &.-variant-1 {
+        min-height: 100%;
+        background: $white;
+        @include media-breakpoint-down(xs) {
+            height: 100%;
+            padding-top: 0;
+        }
+        #{$a}_body {
+            height: 100%;
+        }
+        #{$a}_block {
+            width: 100%;
+        }
+    }
+}

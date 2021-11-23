@@ -1,7 +1,7 @@
 {
   "name": "assets",
   "version": "0.0.0",
-  "main": "dist/global.js",
+  "main": "dist/global.html",
   "publishConfig": {
     "access": "public"
   },
@@ -12,6 +12,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "vue-tsc && vite build"
+    "build": "vue-tsc && vite build",
+    "build:dev": "vue-tsc && vite build --watch",
+    "live": "vite preview --port 8888"
   }
 }
