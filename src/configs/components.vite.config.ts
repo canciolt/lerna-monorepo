@@ -36,7 +36,7 @@ export default defineConfig({
     },
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "${ROOT_PATH}/packages/assets/styles/commons.scss";`
+        additionalData: `@import "${ROOT_PATH}/packages/assets/src/styles/commons.scss";`
       },
     }
   }

@@ -27,7 +27,7 @@ module.exports = {
       css: {
         preprocessorOptions: {
           scss: {
-            additionalData: `@import "${ROOT_PATH}/src/packages/assets/styles/commons.scss";`
+            additionalData: `@import "${ROOT_PATH}/src/packages/assets/src/styles/commons.scss";`
           },
         }
       }
