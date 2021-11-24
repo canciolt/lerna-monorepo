@@ -1,6 +1,10 @@
 import merge from 'merge'
+import { existsSync } from 'fs'
+import { config } from 'dotenv'
 import ComponentsConfig from './components.vite.config'
 import AssetsConfig from './assets.vite.config'
+
+const ROOT_PATH = `${__dirname }/../../`
 
 /**
  * Returns Vite build configuration for component packages,
@@ -27,8 +31,10 @@ export function getComponentConfig (pkg: Record<any, any>, options: Record<strin
  */
 export function getAssetsConfig (pkg: Record<any, any>, options: Record<string, any> = {}, mode: string) {
   console.log(`Building assets package ${pkg.name} v.${pkg.version} ...`)
+  const { ASSETS } = loadEnv('development')
   const _customConfig = merge.recursive(options, {
-    mode: mode ? mode : 'development',
+    mode,
+    base: ASSETS ? ASSETS : '',
     build: { minify: mode === 'production' }
   })
   return getConfig(AssetsConfig, _customConfig)
@@ -45,3 +51,23 @@ function getConfig (config: Record<string, any> = {}, options: Record<string, an
   const _getPackageName = (() => name.split('/').pop())()
   return  merge.recursive(config, name ? { build: { lib: { name: _getPackageName } } } : {}, options)
 }
+
+/**
+ * Return environment variables from a .env
+ * @param mode this value can overridden via the command line --mode option.
+ */
+
+function loadEnv (mode: string) {
+  const envFile = '.env'
+  const modeEnvFile = `${envFile}.${mode}`
+
+  if (existsSync(`${ROOT_PATH}/${modeEnvFile}`)) {
+    const { parsed } = config({ path: `${ROOT_PATH}/${modeEnvFile}` })
+    return { ...parsed }
+  } else if (existsSync(`${ROOT_PATH}/${envFile}`)) {
+    const { parsed } = config({ path: `${ROOT_PATH}/${envFile}` })
+    return { ...parsed }
+  }
+  return {}
+}
+

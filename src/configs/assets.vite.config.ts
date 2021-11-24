@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import scss from 'rollup-plugin-scss'
 import copy from 'rollup-plugin-copy'
-import Utils from "../utils";
+import Utils from '../utils'
 
 const CONFIG = (() => {
   const outDir = 'dist'
@@ -20,7 +20,9 @@ const CONFIG = (() => {
       },
       copy: {
         hook: 'writeBundle',
-        targets: [{ src: [`${target}/images/*`], dest: `${outDir}/images` }]
+        targets: [
+          { src: [`${target}/images/*`], dest: `${outDir}/images` }
+        ]
       }
     }
   }
