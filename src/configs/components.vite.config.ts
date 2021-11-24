@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import autoprefixer from 'autoprefixer'
 
 const ROOT_PATH = `${__dirname }/..`
 
@@ -32,7 +31,7 @@ export default defineConfig({
   css: {
     postcss: {
       map: true,
-      plugins: [autoprefixer]
+      plugins: [require('autoprefixer')]
     },
     preprocessorOptions: {
       scss: {

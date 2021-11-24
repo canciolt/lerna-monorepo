@@ -38,6 +38,8 @@
     "eslint-plugin-vue": "^8.0.3",
     "lerna": "^4.0.0",
     "merge": "^2.1.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-scss": "^3.0.0",
     "sass": "^1.43.4",
     "storybook-addon-outline": "^1.4.1",
     "storybook-builder-vite": "^0.1.6",
