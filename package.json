@@ -8,7 +8,7 @@
     "src/packages/modules/*"
   ],
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "storybook": "vite preview --port 8889",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src --fix",
     "bootstrap": "lerna bootstrap",
