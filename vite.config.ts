@@ -1,5 +1,5 @@
 /**
- * Vite config for Storybook
+ * Vite config for Storybook.
  */
 import { defineConfig } from 'vite'
 

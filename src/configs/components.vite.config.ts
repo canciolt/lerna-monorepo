@@ -1,3 +1,6 @@
+/**
+ * Vite config for Vue component packages.
+ */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 

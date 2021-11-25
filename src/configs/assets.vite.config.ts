@@ -1,3 +1,6 @@
+/**
+ * Vite config for Assets package.
+ */
 import { defineConfig } from 'vite'
 import scss from 'rollup-plugin-scss'
 import copy from 'rollup-plugin-copy'
