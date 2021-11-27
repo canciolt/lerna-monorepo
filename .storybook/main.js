@@ -9,7 +9,7 @@ module.exports = {
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
   previewHead: (head) => head.replace('{% BASE_URL %}', process.env.BASE_URL),
   async viteFinal(config) {
-    const loadParams = {   mode: config.mode, command: 'build' }
+    const loadParams = {  mode: config.mode, command: 'build' }
     const { config: viteConfig } = await loadConfigFromFile(loadParams) || {}
     config.plugins = [...config.plugins]
     // return the customized config

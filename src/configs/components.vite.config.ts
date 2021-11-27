@@ -41,5 +41,6 @@ export default defineConfig({
         additionalData: `@import "${ROOT_PATH}/packages/assets/src/styles/commons.scss";`
       },
     }
-  }
+  },
+  logLevel: 'error',
 })
