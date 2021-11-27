@@ -2,7 +2,6 @@
  * Vite config for Assets package.
  */
 import { defineConfig } from 'vite'
-import scss from 'rollup-plugin-scss'
 import copy from 'rollup-plugin-copy'
 import Utils from '../utils'
 
@@ -14,13 +13,6 @@ const CONFIG = (() => {
     outDir,
     target,
     plugins: {
-      scss: {
-        output: `${outDir}/global.css`,
-        sourceMap: true,
-        failOnError: true,
-        outputStyle: 'compressed',
-        sass: require('sass')
-      },
       copy: {
         hook: 'writeBundle',
         targets: [
@@ -36,7 +28,7 @@ export default defineConfig({
     postcss: {
       map: true,
       plugins: [require('autoprefixer')]
-    },
+    }
   },
   build: {
     sourcemap: true,
@@ -54,8 +46,5 @@ export default defineConfig({
       }
     }
   },
-  plugins: [
-    scss(CONFIG.plugins.scss),
-    copy(CONFIG.plugins.copy)
-  ]
+  plugins: [copy(CONFIG.plugins.copy)]
 })

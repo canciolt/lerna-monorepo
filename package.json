@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "storybook": "vite preview --port 8889",
-    "build-storybook": "build-storybook",
+    "build:storybook": "build-storybook",
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src --fix",
     "bootstrap": "lerna bootstrap",
     "build:assets": "lerna run --scope assets build",
