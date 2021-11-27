@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import MFooter from '../src/mFooter.vue'
+import { MFooter } from '../dist/mFooter.es'
 import { C57_LINKS_MODEL } from '../../../components/c57/src/c57.model'
-import '../src/mFooter.style.scss'
+import '../dist/style.css'
 
 const c57Links: C57_LINKS_MODEL[]  = [
   { href: 'http://www.ncl.com/f', title: 'Norwegian Home' },

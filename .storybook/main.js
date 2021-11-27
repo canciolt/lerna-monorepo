@@ -7,7 +7,7 @@ module.exports = {
     builder: "storybook-builder-vite"
   },
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
-  previewHead: (head) => head.replace('{% ASSETS %}', process.env.ASSETS),
+  previewHead: (head) => head.replace('{% BASE_URL %}', process.env.BASE_URL),
   async viteFinal(config) {
     const loadParams = {   mode: config.mode, command: 'build' }
     const { config: viteConfig } = await loadConfigFromFile(loadParams) || {}

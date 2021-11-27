@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
 import { C1 } from '../dist/c1.es'
-import '../src/c1.style.scss'
+import '../dist/style.css'
 
 /* Models */
 import { C1_MODEL, C1_LOGO_MODEL } from './c1.model'

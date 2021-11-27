@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import C389 from '../src/c389.vue'
-import '../src/c389.style.scss'
+import { C389 } from '../dist/c389.es'
 import { C389_MODEL } from './c389.model'
+import '../dist/style.css'
 
 const variants = [
   'default',

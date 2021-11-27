@@ -2,8 +2,8 @@ import { Meta, Story } from '@storybook/vue3'
 import { C397_MODEL } from './c397.model'
 
 /* Component */
-import C397 from '../src/c397.vue'
-import '../src/c397.style.scss'
+import { C397 } from '../dist/c397.es'
+import '../dist/style.css'
 
 const variants = ['-variant-1']
 

@@ -2,8 +2,8 @@ import { Meta, Story } from '@storybook/vue3'
 import { E64_MODEL } from './e64.model'
 
 /* Component */
-import E64 from '../src/e64.vue'
-import '../src/e64.style.scss'
+import { E64 } from '../dist/e64.es'
+import '../dist/style.css'
 
 
 const variants = ['default', '-variant-11']

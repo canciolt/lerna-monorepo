@@ -2,8 +2,8 @@ import { Meta, Story } from '@storybook/vue3'
 import { E27_MODEL } from '../../e27/src/e27.model'
 
 /* Component */
-import E27 from '../src/e27.vue'
-import '../src/e27.style.scss'
+import { E27 } from '../dist/e27.es'
+import '../dist/style.css'
 
 export default {
   component: E27,
