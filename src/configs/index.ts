@@ -45,7 +45,7 @@ function getConfig (config: Record<string, any> = {}, options: Record<string, an
   const env = loadEnv(mode)
   const _customConfig = merge.recursive(options, {
     mode,
-    base: env?.BASE_URL ? env.BASE_URL : '',
+    base: env?.ASSETS_BASE_URL ? env.ASSETS_BASE_URL : '',
     build: {
       minify: mode === 'production'
     }
@@ -58,7 +58,7 @@ function getConfig (config: Record<string, any> = {}, options: Record<string, an
  * @param mode this value can overridden via the command line --mode option.
  */
 
-function loadEnv (mode: string) {
+export function loadEnv (mode: string) {
   const envFile = '.env'
   const modeEnvFile = `${envFile}.${mode}`
 

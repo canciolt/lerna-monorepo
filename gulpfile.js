@@ -32,16 +32,16 @@ const CONFIGS = {
  */
 
 const PATHS = (() => {
-  const basePath = 'src/packages'
+  const appBasePath = 'src/packages'
   const src = 'src'
   const dest = 'dist'
   return {
-    basePath,
+    appBasePath,
     src,
     dest,
     packages: {
       assets: {
-        path: `${basePath}/assets`,
+        path: `${appBasePath}/assets`,
         images: {
           src: `${src}/images/**/*`,
           dest: `${dest}/images`
@@ -49,9 +49,9 @@ const PATHS = (() => {
       },
       components: {
         path: [
-          `${basePath}/elements`,
-          `${basePath}/components`,
-          `${basePath}/modules`
+          `${appBasePath}/elements`,
+          `${appBasePath}/components`,
+          `${appBasePath}/modules`
         ]
       }
     },
@@ -127,7 +127,7 @@ task('build:components:watch', watchComponents)
 
 const runAssetsServer = () => {
   assetsServer.init({
-    startPath: process.env.BASE_URL,
+    startPath: process.env.ASSETS_BASE_URL,
     port: 8888,
     open: false,
     logLevel: 'silent',
@@ -138,7 +138,7 @@ const runAssetsServer = () => {
       directory: true,
       baseDir: path.join(PATHS.packages.assets.path, PATHS.dest),
       routes: {
-        [`${process.env.BASE_URL}`]: path.join(PATHS.packages.assets.path, PATHS.dest)
+        [`${process.env.ASSETS_BASE_URL}`]: path.join(PATHS.packages.assets.path, PATHS.dest)
       }
     }
   })
