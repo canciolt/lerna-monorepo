@@ -8,7 +8,7 @@
     "src/packages/modules/*"
   ],
   "scripts": {
-    "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src --fix",
+    "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src gulpfile.js --fix",
     "build:assets": "gulp build:assets",
     "build:components": "gulp build:components",
     "build:storybook": "build-storybook",

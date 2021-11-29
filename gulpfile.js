@@ -1,12 +1,12 @@
-const path = require('path');
-const fs = require('fs');
-const { task, series, parallel, watch, src, dest } = require('gulp');
-const exec = require('gulp-exec');
-const { build } = require('vite');
-const async = require('async');
+const path = require('path')
+const fs = require('fs')
+const { task, series, parallel, watch, src, dest } = require('gulp')
+const exec = require('gulp-exec')
+const { build } = require('vite')
+const async = require('async')
 
-const assetsServer = require('browser-sync').create();
-const storybookServer = require('browser-sync').create();
+const assetsServer = require('browser-sync').create()
+const storybookServer = require('browser-sync').create()
 const reloadStorybookServer = storybookServer.reload
 
 /**
@@ -25,7 +25,7 @@ const CONFIGS = {
       stdout: false
     }
   }
-};
+}
 
 /**
  * Paths
@@ -59,7 +59,7 @@ const PATHS = (() => {
       dest: 'storybook-static'
     }
   }
-})();
+})()
 
 /**
  * Utils
@@ -72,9 +72,9 @@ const getPackages = (dir) => fs
 
 const buildPackage = (path, cb) => build({ root: path }).then(() => cb())
 
-const getComponents = () => PATHS.packages.components.path.map((path) => [...getPackages(path)]).flat();
+const getComponents = () => PATHS.packages.components.path.map((path) => [...getPackages(path)]).flat()
 
-const copy = (assetsSrc, assetsDest) => src(assetsSrc).pipe(dest(assetsDest));
+const copy = (assetsSrc, assetsDest) => src(assetsSrc).pipe(dest(assetsDest))
 
 /**
  * Build
@@ -87,19 +87,19 @@ const copyAssets = () => {
 }
 
 const buildAssets = async (cb) => {
-  await build({ root: PATHS.packages.assets.path });
-  cb();
+  await build({ root: PATHS.packages.assets.path })
+  cb()
 }
 
-const buildComponents = (cb) => async.eachSeries(getComponents(), buildPackage, () => cb());
+const buildComponents = (cb) => async.eachSeries(getComponents(), buildPackage, () => cb())
 
 const buildStorybook = () => src('.')
-  .pipe(exec(file => 'npm run build:storybook', CONFIGS.storybook.options))
+  .pipe(exec(() => 'npm run build:storybook', CONFIGS.storybook.options))
   .pipe(exec.reporter(CONFIGS.storybook.reportOptions))
 
-task('build:assets', series(buildAssets, copyAssets));
-task('build:components', buildComponents);
-task('build:storybook', buildStorybook);
+task('build:assets', series(buildAssets, copyAssets))
+task('build:components', buildComponents)
+task('build:storybook', buildStorybook)
 
 /**
  *  WATCH
@@ -108,29 +108,29 @@ task('build:storybook', buildStorybook);
 const watchAssets = () => watch(
   [path.join(PATHS.packages.assets.path, `${PATHS.src}/**/*`)],
   series(buildAssets, copyAssets)
-);
+)
 
 const watchComponents = () => {
-  const componentPaths = getComponents().map((componentPath) => path.join(componentPath, `${PATHS.src}/**/*`));
+  const componentPaths = getComponents().map((componentPath) => path.join(componentPath, `${PATHS.src}/**/*`))
   return watch(componentPaths).on('change', (fileName) => {
-    const packagePath = fileName.split('/').slice(0, 4).join('/');
-    return build({ root: packagePath }).then(() => reloadStorybookServer());
-  });
+    const packagePath = fileName.split('/').slice(0, 4).join('/')
+    return build({ root: packagePath }).then(() => reloadStorybookServer())
+  })
 }
 
-task('build:assets:watch', watchAssets);
-task('build:components:watch', watchComponents);
+task('build:assets:watch', watchAssets)
+task('build:components:watch', watchComponents)
 
 /**
  * SERVE ASSETS
  */
 
-runAssetsServer = () => {
+const runAssetsServer = () => {
   assetsServer.init({
     startPath: process.env.BASE_URL,
     port: 8888,
     open: false,
-    logLevel: "silent",
+    logLevel: 'silent',
     ui: {
       port: 3001
     },
@@ -141,10 +141,10 @@ runAssetsServer = () => {
         [`${process.env.BASE_URL}`]: path.join(PATHS.packages.assets.path, PATHS.dest)
       }
     }
-  });
+  })
 }
 
-runStorybookServer = () => {
+const runStorybookServer = () => {
   storybookServer.init({
     startPath: process.env.STORYBOOK_BASE_URL,
     port: 8889,
@@ -159,11 +159,11 @@ runStorybookServer = () => {
         [`${process.env.STORYBOOK_BASE_URL}`]: PATHS.storybook.dest
       }
     }
-  });
+  })
 }
 
-task('serve:assets', runAssetsServer);
-task('serve:storybook', runStorybookServer);
+task('serve:assets', runAssetsServer)
+task('serve:storybook', runStorybookServer)
 
 /**
  * LIVE
@@ -174,4 +174,4 @@ task('live', series(
   buildComponents,
   buildStorybook,
   parallel(watchAssets, watchComponents, runAssetsServer, runStorybookServer)
-));
+))
