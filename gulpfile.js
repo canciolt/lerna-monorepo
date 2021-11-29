@@ -151,6 +151,10 @@ const runStorybookServer = () => {
     ui: {
       port: 3002
     },
+    socket: {
+      clientPath: '/browser-sync-v2',
+      namespace: '/browser-sync-v2'
+    },
     server: {
       baseDir: PATHS.storybook.dest,
       routes: {
