@@ -22,7 +22,7 @@ export default defineComponent({
   },
   setup (props) {
     const iconsBasePath = 'images/icons/'
-    const path = `https://${import.meta.env.HOST}${import.meta.env.ASSETS}${iconsBasePath}`
+    const path = `${import.meta.env.BASE_URL}${iconsBasePath}`
     const figureItemSrc = props.icon ? `${path}${props.icon}` : ''
 
     return { figureItemSrc }

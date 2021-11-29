@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import C57 from '../src/c57.vue'
-import '../src/c57.style.scss'
+import { C57 } from '../dist/c57.es'
 import { C57_MODEL, C57_LINKS_MODEL } from './c57.model'
+import '../dist/style.css'
 
 const c57Links: C57_LINKS_MODEL[]  = [
   { href: 'http://www.ncl.com/f', title: 'Norwegian Home' },

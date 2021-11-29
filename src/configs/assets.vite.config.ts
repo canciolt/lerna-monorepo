@@ -1,19 +1,31 @@
+/**
+ * Vite config for Assets package.
+ */
 import { defineConfig } from 'vite'
+import Utils from '../utils'
 
 export default defineConfig({
-  css: {
-    postcss: {
-      map: true
-    }
-  },
   build: {
+    sourcemap: true,
+    cssCodeSplit: false,
     rollupOptions: {
-      input: 'global.html',
+      input: {
+        scripts: '/main.ts'
+      },
       output: {
-        entryFileNames: `assets/[name].js`,
-        chunkFileNames: `assets[name].js`,
-        assetFileNames: `assets/[name].[ext]`
+        format: 'es',
+        sourcemap: true,
+        generatedCode: 'es2015',
+        entryFileNames: '[name].js',
+        assetFileNames: Utils.assetsHandler
       }
     }
-  }
+  },
+  css: {
+    postcss: {
+      map: true,
+      plugins: [require('autoprefixer')]
+    }
+  },
+  logLevel: 'error'
 })

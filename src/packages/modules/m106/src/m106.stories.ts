@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import M106 from '../src/m106.vue'
-import '../src/m106.style.scss'
+import { M106 } from '../dist/m106.es'
 import { M106_MODEL } from './m106.model'
+import '../dist/style.css'
 
 export default {
   component: M106,

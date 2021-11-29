@@ -1,6 +1,8 @@
+/**
+ * Vite config for Vue component packages.
+ */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import autoprefixer from 'autoprefixer'
 
 const ROOT_PATH = `${__dirname }/..`
 
@@ -32,12 +34,13 @@ export default defineConfig({
   css: {
     postcss: {
       map: true,
-      plugins: [autoprefixer]
+      plugins: [require('autoprefixer')]
     },
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "${ROOT_PATH}/packages/assets/styles/commons.scss";`
+        additionalData: `@import "${ROOT_PATH}/packages/assets/src/styles/commons.scss";`
       },
     }
-  }
+  },
+  logLevel: 'error',
 })

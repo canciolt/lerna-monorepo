@@ -2,8 +2,8 @@ import { Meta, Story } from '@storybook/vue3'
 import { E5_MODEL } from '../src/e5.model'
 
 /* Component */
-import E5 from '../src/e5.vue'
-import '../src/e5.style.scss'
+import { E5 } from '../dist/e5.es'
+import '../dist/style.css'
 
 const variants = [
   'default',

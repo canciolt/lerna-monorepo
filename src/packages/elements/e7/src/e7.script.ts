@@ -1,6 +1,6 @@
 import { defineComponent, PropType } from 'vue'
 import { E7_MESSAGES_MODEL } from './e7.model'
-import Utils from "../../../../utils";
+import Utils from '../../../../utils'
 
 export default defineComponent({
   name: 'E7',

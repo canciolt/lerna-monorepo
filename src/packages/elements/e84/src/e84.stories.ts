@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import E84 from '../src/e84.vue'
-import '../src/e84.style.scss'
+import { E84 } from '../dist/e84.es'
 import { E84_MODEL } from './e84.model'
+import '../dist/style.css'
 
 export default {
   component: E84,

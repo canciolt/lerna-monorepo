@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import C399 from '../src/c399.vue'
-import '../src/c399.style.scss'
+import { C399 } from '../dist/c399.es'
 import { C399_MODEL } from './c399.model'
+import '../dist/style.css'
 
 const variants = ['default', '-variant-1', '-variant-2']
 

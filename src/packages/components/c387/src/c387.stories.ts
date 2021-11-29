@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import C387 from '../src/c387.vue'
-import '../src/c387.style.scss'
+import { C387 } from '../dist/c387.es'
 import { C387_MODEL, C387_LINKS_MODEL } from './c387.model'
+import '../dist/style.css'
 
 const c387Links: C387_LINKS_MODEL[] = [
   { href: '#', title: 'Forgot Username or Password?' }

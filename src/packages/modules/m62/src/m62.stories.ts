@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import M62 from '../src/m62.vue'
+import { M62 } from '../dist/m62.es'
 import { M62_MODEL } from './m62.model'
-import '../src/m62.style.scss'
+import '../dist/style.css'
 
 const variants = ['default', '-padding-top']
 
