@@ -1,13 +1,12 @@
 const path = require('path')
 const fs = require('fs')
 const { task, series, parallel, watch, src, dest } = require('gulp')
-const exec = require('gulp-exec')
+const exec = require('child_process').exec
 const { build } = require('vite')
 const async = require('async')
 
 const assetsServer = require('browser-sync').create()
 const storybookServer = require('browser-sync').create()
-const reloadStorybookServer = storybookServer.reload
 
 /**
  * Configs
@@ -76,6 +75,8 @@ const getComponents = () => PATHS.packages.components.path.map((path) => [...get
 
 const copy = (assetsSrc, assetsDest) => src(assetsSrc).pipe(dest(assetsDest))
 
+const reloadStorybookServer = async () => await storybookServer.reload()
+
 /**
  * Build
  */
@@ -93,9 +94,7 @@ const buildAssets = async (cb) => {
 
 const buildComponents = (cb) => async.eachSeries(getComponents(), buildPackage, () => cb())
 
-const buildStorybook = () => src('.')
-  .pipe(exec(() => 'npm run build:storybook', CONFIGS.storybook.options))
-  .pipe(exec.reporter(CONFIGS.storybook.reportOptions))
+const buildStorybook = (cb) => exec('npm run build:storybook', (err, stdout, stderr) => cb(err))
 
 task('build:assets', series(buildAssets, copyAssets))
 task('build:components', buildComponents)
@@ -107,14 +106,14 @@ task('build:storybook', buildStorybook)
 
 const watchAssets = () => watch(
   [path.join(PATHS.packages.assets.path, `${PATHS.src}/**/*`)],
-  series(buildAssets, copyAssets)
+  series(buildAssets, copyAssets, reloadStorybookServer)
 )
 
 const watchComponents = () => {
   const componentPaths = getComponents().map((componentPath) => path.join(componentPath, `${PATHS.src}/**/*`))
   return watch(componentPaths).on('change', (fileName) => {
     const packagePath = fileName.split('/').slice(0, 4).join('/')
-    return build({ root: packagePath }).then(() => reloadStorybookServer())
+    return build({ root: packagePath }).then(series(buildStorybook, reloadStorybookServer))
   })
 }
 
