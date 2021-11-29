@@ -130,7 +130,6 @@ const runAssetsServer = () => {
     startPath: process.env.ASSETS_BASE_URL,
     port: 8888,
     open: false,
-    logLevel: 'silent',
     ui: {
       port: 3001
     },
@@ -148,7 +147,7 @@ const runStorybookServer = () => {
   storybookServer.init({
     startPath: process.env.STORYBOOK_BASE_URL,
     port: 8889,
-    open: false,
+    open: true,
     localOnly: true,
     ui: {
       port: 3002
@@ -157,6 +156,15 @@ const runStorybookServer = () => {
       baseDir: PATHS.storybook.dest,
       routes: {
         [`${process.env.STORYBOOK_BASE_URL}`]: PATHS.storybook.dest
+      }
+    },
+    middleware: function(req, res, next) {
+      if (req.headers.host === 'localhost:8889') {
+        res.statusCode = 302;
+        res.setHeader('Location', `//${process.env.HOST}${req.url}`);
+        res.end();
+      } else {
+        next()
       }
     }
   })
