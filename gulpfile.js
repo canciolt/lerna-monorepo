@@ -9,24 +9,6 @@ const assetsServer = require('browser-sync').create()
 const storybookServer = require('browser-sync').create()
 
 /**
- * Configs
- */
-
-const CONFIGS = {
-  storybook: {
-    options: {
-      continueOnError: false,
-      pipeStdout: false,
-    },
-    reportOptions: {
-      err: true,
-      stderr: false,
-      stdout: false
-    }
-  }
-}
-
-/**
  * Paths
  */
 
@@ -94,7 +76,7 @@ const buildAssets = async (cb) => {
 
 const buildComponents = (cb) => async.eachSeries(getComponents(), buildPackage, () => cb())
 
-const buildStorybook = (cb) => exec('npm run build:storybook', (err, stdout, stderr) => cb(err))
+const buildStorybook = (cb) => exec('npm run build:storybook', (err) => cb(err))
 
 task('build:assets', series(buildAssets, copyAssets))
 task('build:components', buildComponents)
@@ -163,9 +145,9 @@ const runStorybookServer = () => {
     },
     middleware: function(req, res, next) {
       if (req.headers.host === 'localhost:8889') {
-        res.statusCode = 302;
-        res.setHeader('Location', `//${process.env.HOST}${req.url}`);
-        res.end();
+        res.statusCode = 302
+        res.setHeader('Location', `//${process.env.HOST}${req.url}`)
+        res.end()
       } else {
         next()
       }
