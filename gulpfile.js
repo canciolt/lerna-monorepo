@@ -1,47 +1,28 @@
 const path = require('path')
 const fs = require('fs')
 const { task, series, parallel, watch, src, dest } = require('gulp')
-const exec = require('gulp-exec')
+const exec = require('child_process').exec
 const { build } = require('vite')
 const async = require('async')
 
 const assetsServer = require('browser-sync').create()
 const storybookServer = require('browser-sync').create()
-const reloadStorybookServer = storybookServer.reload
-
-/**
- * Configs
- */
-
-const CONFIGS = {
-  storybook: {
-    options: {
-      continueOnError: false,
-      pipeStdout: false,
-    },
-    reportOptions: {
-      err: true,
-      stderr: false,
-      stdout: false
-    }
-  }
-}
 
 /**
  * Paths
  */
 
 const PATHS = (() => {
-  const basePath = 'src/packages'
+  const appBasePath = 'src/packages'
   const src = 'src'
   const dest = 'dist'
   return {
-    basePath,
+    appBasePath,
     src,
     dest,
     packages: {
       assets: {
-        path: `${basePath}/assets`,
+        path: `${appBasePath}/assets`,
         images: {
           src: `${src}/images/**/*`,
           dest: `${dest}/images`
@@ -49,9 +30,9 @@ const PATHS = (() => {
       },
       components: {
         path: [
-          `${basePath}/elements`,
-          `${basePath}/components`,
-          `${basePath}/modules`
+          `${appBasePath}/elements`,
+          `${appBasePath}/components`,
+          `${appBasePath}/modules`
         ]
       }
     },
@@ -76,6 +57,8 @@ const getComponents = () => PATHS.packages.components.path.map((path) => [...get
 
 const copy = (assetsSrc, assetsDest) => src(assetsSrc).pipe(dest(assetsDest))
 
+const reloadStorybookServer = async () => await storybookServer.reload()
+
 /**
  * Build
  */
@@ -93,9 +76,7 @@ const buildAssets = async (cb) => {
 
 const buildComponents = (cb) => async.eachSeries(getComponents(), buildPackage, () => cb())
 
-const buildStorybook = () => src('.')
-  .pipe(exec(() => 'npm run build:storybook', CONFIGS.storybook.options))
-  .pipe(exec.reporter(CONFIGS.storybook.reportOptions))
+const buildStorybook = (cb) => exec('npm run build:storybook', (err) => cb(err))
 
 task('build:assets', series(buildAssets, copyAssets))
 task('build:components', buildComponents)
@@ -107,14 +88,14 @@ task('build:storybook', buildStorybook)
 
 const watchAssets = () => watch(
   [path.join(PATHS.packages.assets.path, `${PATHS.src}/**/*`)],
-  series(buildAssets, copyAssets)
+  series(buildAssets, copyAssets, reloadStorybookServer)
 )
 
 const watchComponents = () => {
   const componentPaths = getComponents().map((componentPath) => path.join(componentPath, `${PATHS.src}/**/*`))
   return watch(componentPaths).on('change', (fileName) => {
     const packagePath = fileName.split('/').slice(0, 4).join('/')
-    return build({ root: packagePath }).then(() => reloadStorybookServer())
+    return build({ root: packagePath }).then(series(buildStorybook, reloadStorybookServer))
   })
 }
 
@@ -127,10 +108,9 @@ task('build:components:watch', watchComponents)
 
 const runAssetsServer = () => {
   assetsServer.init({
-    startPath: process.env.BASE_URL,
+    startPath: process.env.ASSETS_BASE_URL,
     port: 8888,
     open: false,
-    logLevel: 'silent',
     ui: {
       port: 3001
     },
@@ -138,7 +118,7 @@ const runAssetsServer = () => {
       directory: true,
       baseDir: path.join(PATHS.packages.assets.path, PATHS.dest),
       routes: {
-        [`${process.env.BASE_URL}`]: path.join(PATHS.packages.assets.path, PATHS.dest)
+        [`${process.env.ASSETS_BASE_URL}`]: path.join(PATHS.packages.assets.path, PATHS.dest)
       }
     }
   })
@@ -148,15 +128,28 @@ const runStorybookServer = () => {
   storybookServer.init({
     startPath: process.env.STORYBOOK_BASE_URL,
     port: 8889,
-    open: false,
+    open: true,
     localOnly: true,
     ui: {
       port: 3002
+    },
+    socket: {
+      clientPath: '/browser-sync-design-system',
+      namespace: '/browser-sync-design-system'
     },
     server: {
       baseDir: PATHS.storybook.dest,
       routes: {
         [`${process.env.STORYBOOK_BASE_URL}`]: PATHS.storybook.dest
+      }
+    },
+    middleware: function(req, res, next) {
+      if (req.headers.host === 'localhost:8889') {
+        res.statusCode = 302
+        res.setHeader('Location', `//${process.env.HOST}${req.url}`)
+        res.end()
+      } else {
+        next()
       }
     }
   })
