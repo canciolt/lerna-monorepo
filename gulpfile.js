@@ -134,8 +134,8 @@ const runStorybookServer = () => {
       port: 3002
     },
     socket: {
-      clientPath: '/browser-sync-v2',
-      namespace: '/browser-sync-v2'
+      clientPath: '/browser-sync-design-system',
+      namespace: '/browser-sync-design-system'
     },
     server: {
       baseDir: PATHS.storybook.dest,
