@@ -9,7 +9,7 @@
     "url": "https://github.com/canciolt/lerna-monorepo.git"
   },
   "publishConfig": {
-    "@canciolt:registry": "https://npm.pkg.github.com/canciolt"
+    "@canciolt:registry": "https://npm.pkg.github.com"
   },
   "author": "",
   "license": "ISC"
