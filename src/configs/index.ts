@@ -47,7 +47,7 @@ function getConfig (config: Record<string, any> = {}, options: Record<string, an
     mode,
     base: env?.ASSETS_BASE_URL ? env.ASSETS_BASE_URL : '',
     build: {
-      minify: mode === 'production'
+      minify: mode !== 'development'
     }
   })
   return  merge.recursive(config, _customConfig)

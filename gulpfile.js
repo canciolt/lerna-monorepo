@@ -37,7 +37,8 @@ const PATHS = (() => {
       }
     },
     storybook: {
-      dest: 'storybook-static'
+      dest: 'storybook-static',
+      assets: 'assets'
     }
   }
 })()
@@ -51,16 +52,14 @@ const getPackages = (dir) => fs
   .filter((file) => fs.statSync(path.join(dir, file)).isDirectory())
   .map((file) => path.join(dir, file))
 
-const buildPackage = (path, cb) => build({ root: path }).then(() => cb())
-
 const getComponents = () => PATHS.packages.components.path.map((path) => [...getPackages(path)]).flat()
 
 const copy = (assetsSrc, assetsDest) => src(assetsSrc).pipe(dest(assetsDest))
 
 const reloadStorybookServer = async () => await storybookServer.reload()
 
-/**
- * Build
+/***
+ * Copy
  */
 
 const copyAssets = () => {
@@ -69,28 +68,54 @@ const copyAssets = () => {
   return copy(_src, _dest)
 }
 
-const buildAssets = async (cb) => {
-  await build({ root: PATHS.packages.assets.path })
+const copyAssetsToStoryBook = () => {
+  const _src = path.join(PATHS.packages.assets.path, PATHS.dest + '/**/*')
+  const _dest = path.join(PATHS.storybook.dest, PATHS.storybook.assets)
+  return copy(_src, _dest)
+}
+
+/**
+ * Build
+ */
+
+/* COMMONS */
+const buildPackage = (path, cb, mode) => build({ root: path, mode }).then(() => cb())
+
+/* ASSETS */
+const buildAssets = async (cb, mode) => {
+  await build({ root: PATHS.packages.assets.path, mode })
   cb()
 }
 
-const buildComponents = (cb) => async.eachSeries(getComponents(), buildPackage, () => cb())
+/* COMPONENTS */
+const buildComponents = (cb, mode) => async.eachSeries(getComponents(), (path, cb) => buildPackage(path, cb, mode), () => cb())
 
-const buildStorybook = (cb) => exec('npm run build:storybook', (err) => cb(err))
+/* STORYBOOK */
+const buildStorybook = (cb, mode) =>
+  exec(`${mode ? `NODE_ENV=${mode} ` : ''}npm run build:storybook`, (err) => cb(err))
+
+/* CHROMATIC */
+const buildAssetsChromatic = (cb) => buildAssets(cb, 'chromatic')
+const buildComponentsChromatic = (cb) => buildComponents(cb, 'chromatic')
+const buildStorybookChromatic = (cb) => buildStorybook(cb, 'chromatic')
+const buildChromatic = series(buildAssetsChromatic, copyAssets, buildComponentsChromatic, buildStorybookChromatic, copyAssetsToStoryBook)
 
 task('build:assets', series(buildAssets, copyAssets))
 task('build:components', buildComponents)
 task('build:storybook', buildStorybook)
+task('build:chromatic', buildChromatic)
 
 /**
  *  WATCH
  */
 
+/* ASSETS */
 const watchAssets = () => watch(
   [path.join(PATHS.packages.assets.path, `${PATHS.src}/**/*`)],
   series(buildAssets, copyAssets, reloadStorybookServer)
 )
 
+/* COMPONENTS */
 const watchComponents = () => {
   const componentPaths = getComponents().map((componentPath) => path.join(componentPath, `${PATHS.src}/**/*`))
   return watch(componentPaths).on('change', (fileName) => {
@@ -106,6 +131,7 @@ task('build:components:watch', watchComponents)
  * SERVE ASSETS
  */
 
+/* ASSETS */
 const runAssetsServer = () => {
   assetsServer.init({
     startPath: process.env.ASSETS_BASE_URL,
@@ -124,6 +150,7 @@ const runAssetsServer = () => {
   })
 }
 
+/* STORYBOOK */
 const runStorybookServer = () => {
   storybookServer.init({
     startPath: process.env.STORYBOOK_BASE_URL,
