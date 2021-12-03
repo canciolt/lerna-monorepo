@@ -1,0 +1,30 @@
+name: 'Chromatic'
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install dependencies and build Storybook
+        run: |
+          npm install
+          npm run build:chromatic
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: storybook-static
+          allowConsoleErrors: true
+          exitZeroOnChanges: true
+          exitOnceUploaded: true
