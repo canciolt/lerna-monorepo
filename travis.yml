@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 16
+jobs:
+  include:
+    - name: 'Chromatic'
+      if: branch != main
+      script:
+        - npm install
+        - npm run build:chromatic
+        - npm chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} -d storybook-static --allow-console-errors --exit-zero-on-changes --exit-once-uploaded
