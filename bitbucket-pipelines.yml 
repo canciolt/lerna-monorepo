@@ -1,0 +1,13 @@
+image: node:16.13.0
+
+pipelines:
+  pull-requests:
+    '**':
+      - step:
+          name: 'Publish to Chromatic'
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build:chromatic
+            - npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN -d storybook-static
