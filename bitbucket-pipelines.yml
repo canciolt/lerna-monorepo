@@ -10,4 +10,4 @@ pipelines:
           script:
             - npm install
             - npm run build:chromatic
-            - npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN -d storybook-static --allow-console-errors --exit-zero-on-changes --patch-build=$BITBUCKET_BRANCH...main
+            - npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN -d storybook-static --allow-console-errors --exit-zero-on-changes --patch-build=$your-branch...main
