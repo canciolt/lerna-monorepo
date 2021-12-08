@@ -3,16 +3,10 @@ image: node:16.13.0
 pipelines:
   default:
     - step:
-        name: Install dependencies
+        name: Lint and test
         script:
           - npm install
-    - step:
-        name: Lint
-        script:
           - npm run lint
-    - step:
-        name: Test
-        script:
           - npm run test
   pull-requests:
     '**':
