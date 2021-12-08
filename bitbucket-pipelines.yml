@@ -1,10 +1,23 @@
 image: node:16.13.0
 
 pipelines:
+  default:
+    - step:
+        name: Install dependencies
+        script:
+          - npm install
+    - step:
+        name: Lint
+        script:
+          - npm run lint
+    - step:
+        name: Test
+        script:
+          - npm run test
   pull-requests:
     '**':
       - step:
-          name: 'Publish to Chromatic'
+          name: Publish to Chromatic
           caches:
             - node
           script:

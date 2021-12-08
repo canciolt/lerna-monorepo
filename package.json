@@ -9,15 +9,14 @@
   ],
   "scripts": {
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src gulpfile.js --fix",
+    "test": "lerna run test",
     "build:assets": "gulp build:assets",
     "build:components": "gulp build:components",
     "build:storybook": "build-storybook",
     "build:chromatic": "gulp build:chromatic",
     "serve:assets": "gulp serve:assets",
     "serve:storybook": "gulp serve:storybook",
-    "live": "gulp live",
-    "bootstrap": "lerna bootstrap",
-    "publish": "build:pro && lerna publish"
+    "live": "gulp live"
   },
   "dependencies": {
     "vue": "^3.2.24"
