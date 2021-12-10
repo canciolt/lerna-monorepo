@@ -4,6 +4,9 @@
   "workspaces": [
     "src/packages/components/c1"
   ],
+  "publishConfig": {
+    "access": "restricted"
+  },
   "scripts": {
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src gulpfile.js --fix",
     "test": "lerna run test",

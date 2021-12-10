@@ -25,3 +25,16 @@ pipelines:
               --allow-console-errors 
               --exit-zero-on-changes 
               --exit-once-uploaded
+  custom:
+    publish-to-npm:
+      - step:
+          name: Publish to NPM
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build:monorepo
+            - npx lerna version --conventional-commits --yes
+            - npx lerna publish from-package --yes
+            variables:
+              NPM_TOKEN: $NPM_TOKEN
