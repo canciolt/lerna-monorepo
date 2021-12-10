@@ -2,10 +2,7 @@
   "name": "norwegian-design-system",
   "version": "0.0.0",
   "workspaces": [
-    "src/packages/assets",
-    "src/packages/elements/*",
-    "src/packages/components/*",
-    "src/packages/modules/*"
+    "src/packages/components/c1"
   ],
   "scripts": {
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src gulpfile.js --fix",
@@ -14,6 +11,7 @@
     "build:components": "gulp build:components",
     "build:storybook": "build-storybook",
     "build:chromatic": "gulp build:chromatic",
+    "build:lerna": "gulp build:lerna",
     "serve:assets": "gulp serve:assets",
     "serve:storybook": "gulp serve:storybook",
     "live": "gulp live"

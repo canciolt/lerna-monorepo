@@ -104,6 +104,7 @@ task('build:assets', series(buildAssets, copyAssets))
 task('build:components', buildComponents)
 task('build:storybook', buildStorybook)
 task('build:chromatic', buildChromatic)
+task('build:lerna', series(series(buildAssets, copyAssets), buildComponents))
 
 /**
  *  WATCH
