@@ -1,6 +1,6 @@
 {
   "name": "@ncl-design-system/c493",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/c493.es.js",
   "publishConfig": {
     "access": "restricted"

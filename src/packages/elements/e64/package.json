@@ -1,6 +1,6 @@
 {
   "name": "@ncl-design-system/e64",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/e64.es.js",
   "publishConfig": {
     "access": "restricted"

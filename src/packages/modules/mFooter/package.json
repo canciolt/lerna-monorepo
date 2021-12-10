@@ -1,6 +1,6 @@
 {
   "name": "@ncl-design-system/mFooter",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "dist/mFooter.es.js",
   "publishConfig": {
     "access": "restricted"
