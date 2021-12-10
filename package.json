@@ -2,7 +2,10 @@
   "name": "norwegian-design-system",
   "version": "0.0.0",
   "workspaces": [
-    "src/packages/components/c1"
+    "src/packages/assets",
+    "src/packages/elements/*",
+    "src/packages/components/*",
+    "src/packages/modules/*"
   ],
   "publishConfig": {
     "access": "restricted"

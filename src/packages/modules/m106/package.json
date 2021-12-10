@@ -1,9 +1,9 @@
 {
-  "name": "m106",
+  "name": "@ncl-design-system/m106",
   "version": "0.0.0",
   "main": "dist/m106.es.js",
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "directories": {
     "dist": "dist"

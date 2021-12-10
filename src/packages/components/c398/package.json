@@ -1,9 +1,9 @@
 {
-  "name": "c398",
+  "name": "@ncl-design-system/c398",
   "version": "0.0.0",
   "main": "dist/c398.es.js",
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "directories": {
     "dist": "dist"

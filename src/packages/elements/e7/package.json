@@ -1,9 +1,9 @@
 {
-  "name": "e7",
+  "name": "@ncl-design-system/e7",
   "version": "0.0.0",
   "main": "dist/e7.es.js",
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "directories": {
     "dist": "dist"

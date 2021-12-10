@@ -1,9 +1,9 @@
 {
-  "name": "e5",
+  "name": "@ncl-design-system/e5",
   "version": "0.0.0",
   "main": "dist/e5.es.js",
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "directories": {
     "dist": "dist"

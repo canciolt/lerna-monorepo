@@ -1,9 +1,9 @@
 {
-  "name": "mHeader",
+  "name": "@ncl-design-system/mHeader",
   "version": "0.0.0",
   "main": "dist/mHeader.es.js",
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "directories": {
     "dist": "dist"

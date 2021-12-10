@@ -1,7 +1,17 @@
 {
   "useWorkspaces": true,
   "packages": [
-    "src/packages/components/c1"
+    "src/packages/assets",
+    "src/packages/elements/*",
+    "src/packages/components/*",
+    "src/packages/modules/*"
   ],
+  "command": {
+    "version": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "message": "chore(release): publish to npm"
+    }
+  },
   "version": "independent"
 }
