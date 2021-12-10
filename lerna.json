@@ -9,8 +9,6 @@
   "command": {
     "version": {
       "allowBranch": "master",
-      "conventionalCommits": true,
-      "conventionalGraduate":true,
       "message": "chore(release): publish to npm"
     }
   },
