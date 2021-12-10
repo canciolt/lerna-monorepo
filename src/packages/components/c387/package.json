@@ -14,5 +14,5 @@
   "scripts": {
     "build": "vue-tsc && vite build"
   },
-  "gitHead": "dac5ff458d9b3f8ecdc994846e22509ee061f594"
+  "gitHead": "f153ddec53e12cab5ea4a70cc2e3db5fb89aa143"
 }
