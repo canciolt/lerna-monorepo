@@ -13,5 +13,6 @@
   ],
   "scripts": {
     "build": "vue-tsc && vite build"
-  }
+  },
+  "gitHead": "dac5ff458d9b3f8ecdc994846e22509ee061f594"
 }

@@ -15,5 +15,5 @@
     "build": "vue-tsc && vite build",
     "test": "echo 'C1 tests passed'"
   },
-  "gitHead": "9acea2519f594beca4a0a3021821e3807234f20a"
+  "gitHead": "dac5ff458d9b3f8ecdc994846e22509ee061f594"
 }

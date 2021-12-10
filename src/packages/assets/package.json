@@ -15,5 +15,6 @@
     "build": "vue-tsc && vite build",
     "build:dev": "vue-tsc && vite build --watch",
     "live": "vite preview --port 8888"
-  }
+  },
+  "gitHead": "dac5ff458d9b3f8ecdc994846e22509ee061f594"
 }
