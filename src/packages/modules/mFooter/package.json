@@ -1,5 +1,5 @@
 {
-  "name": "@ncl-design-system/mFooter",
+  "name": "@ncl-design-system/footer",
   "version": "0.0.1",
   "main": "dist/mFooter.es.js",
   "publishConfig": {
