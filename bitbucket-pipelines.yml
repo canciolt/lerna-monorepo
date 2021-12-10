@@ -35,6 +35,6 @@ pipelines:
             - npm install
             - npm run build:monorepo
             - npx lerna version --conventional-commits --yes
-            - npx lerna publish from-package --yes
+            - npx lerna publish from-git --yes
             variables:
               NPM_TOKEN: $NPM_TOKEN
