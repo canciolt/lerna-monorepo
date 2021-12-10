@@ -17,7 +17,7 @@
     "build:components": "gulp build:components",
     "build:storybook": "build-storybook",
     "build:chromatic": "gulp build:chromatic",
-    "build:lerna": "gulp build:lerna",
+    "build:monorepo": "gulp build:monorepo",
     "serve:assets": "gulp serve:assets",
     "serve:storybook": "gulp serve:storybook",
     "live": "gulp live"
