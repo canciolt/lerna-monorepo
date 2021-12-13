@@ -14,7 +14,7 @@ const c57Links: C57_LINKS_MODEL[]  = [
 
 export default {
   component: MFooter,
-  title: 'Modules/MFooter',
+  title: 'Modules/Footer',
   decorators: [() => ({ template: '<div style="position: absolute; bottom: 0; width: 100%;"><story /></div>' })],
   argTypes: {
     componentClass: {

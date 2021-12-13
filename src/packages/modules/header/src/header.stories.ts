@@ -2,10 +2,10 @@ import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
 import { MHeader } from '../dist/header.es'
-import { MHEADER_MODEL, MHEADER_LINKS_MODEL } from './mHeader.model'
+import { HEADER_MODEL, HEADER_LINKS_MODEL } from './header.model'
 import '../dist/style.css'
 
-const headerLinks: MHEADER_LINKS_MODEL[]  = [
+const headerLinks: HEADER_LINKS_MODEL[]  = [
   {
     title: 'Telephone Number',
     text: '1-866-234-7350',
@@ -17,7 +17,7 @@ const headerLinks: MHEADER_LINKS_MODEL[]  = [
 
 export default {
   component: MHeader,
-  title: 'Modules/MHeader',
+  title: 'Modules/Header',
   argTypes: {
     links: {
       table: { disable: true }
@@ -31,7 +31,7 @@ export default {
   }
 } as Meta
 
-const Template: Story<MHEADER_MODEL> = (args) => ({
+const Template: Story<HEADER_MODEL> = (args) => ({
   components: { MHeader },
   setup() {
     return { args }
