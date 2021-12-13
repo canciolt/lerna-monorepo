@@ -28,5 +28,5 @@ jobs:
           npm install
           npx lerna bootstrap
           npm run build:monorepo
-          npx lerna version --conventional-commits --conventional-graduate --yes
+          npx lerna version --conventional-commits --yes
           npx lerna publish from-git --yes
