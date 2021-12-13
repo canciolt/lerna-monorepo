@@ -1,7 +1,7 @@
 {
   "name": "@ncl-design-system/footer",
   "version": "0.0.1",
-  "main": "dist/mFooter.es.js",
+  "main": "dist/footer.es.js",
   "publishConfig": {
     "access": "restricted"
   },

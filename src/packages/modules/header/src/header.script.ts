@@ -6,7 +6,7 @@ import { M106_MODEL } from '../../m106/src/m106.model'
 import { HEADER_LINKS_MODEL } from './header.model'
 
 export default defineComponent({
-  name: 'MHeader',
+  name: 'Header',
   components: { C1, m106 },
   props: {
     componentClass: {

@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import { MFooter } from '../dist/mFooter.es'
+import { MFooter } from '../dist/footer.es'
 import { C57_LINKS_MODEL } from '../../../components/c57/src/c57.model'
 import '../dist/style.css'
 
