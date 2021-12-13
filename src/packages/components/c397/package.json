@@ -1,6 +1,6 @@
 {
   "name": "@ncl-design-system/c397",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/c397.es.js",
   "publishConfig": {
     "access": "restricted"

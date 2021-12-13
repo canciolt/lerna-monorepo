@@ -1,6 +1,6 @@
 {
   "name": "@ncl-design-system/m62",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/m62.es.js",
   "publishConfig": {
     "access": "restricted"

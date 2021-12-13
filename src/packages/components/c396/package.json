@@ -1,6 +1,6 @@
 {
   "name": "@ncl-design-system/c396",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/c396.es.js",
   "publishConfig": {
     "access": "restricted"

@@ -1,6 +1,6 @@
 {
   "name": "@ncl-design-system/assets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/global.html",
   "publishConfig": {
     "access": "restricted"
