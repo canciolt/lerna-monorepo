@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import { MHeader } from '../dist/mHeader.es'
+import { MHeader } from '../dist/header.es'
 import { MHEADER_MODEL, MHEADER_LINKS_MODEL } from './mHeader.model'
 import '../dist/style.css'
 

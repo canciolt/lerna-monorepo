@@ -1,6 +1,6 @@
 import { M106_MODEL } from '../../m106/src/m106.model'
 
-export declare interface MHEADER_LINKS_MODEL {
+export declare interface HEADER_LINKS_MODEL {
   linkClass?: string
   href: string
   title: string
@@ -10,8 +10,8 @@ export declare interface MHEADER_LINKS_MODEL {
   iconLG?: string
 }
 
-export declare interface MHEADER_MODEL {
+export declare interface HEADER_MODEL {
   componentClass?: string
-  links?: MHEADER_LINKS_MODEL[]
+  links?: HEADER_LINKS_MODEL[]
   m106Data?: M106_MODEL
 }

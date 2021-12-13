@@ -3,7 +3,7 @@ import m106 from '../../../modules/m106/src/m106.vue'
 import C1 from '../../../components/c1/src/c1.vue'
 import { C1_LOGO_MODEL } from '../../../components/c1/src/c1.model'
 import { M106_MODEL } from '../../m106/src/m106.model'
-import { MHEADER_LINKS_MODEL } from './mHeader.model'
+import { HEADER_LINKS_MODEL } from './header.model'
 
 export default defineComponent({
   name: 'MHeader',
@@ -14,7 +14,7 @@ export default defineComponent({
       default: ''
     },
     links: {
-      type: Array as PropType<MHEADER_LINKS_MODEL[]>,
+      type: Array as PropType<HEADER_LINKS_MODEL[]>,
       default: () => []
     },
     m106Data: {

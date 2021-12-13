@@ -1,7 +1,7 @@
 {
   "name": "@ncl-design-system/header",
   "version": "0.0.1",
-  "main": "dist/mHeader.es.js",
+  "main": "dist/header.es.js",
   "publishConfig": {
     "access": "restricted"
   },
