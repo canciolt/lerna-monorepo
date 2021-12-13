@@ -26,6 +26,7 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
           npm install
+          npx lerna bootstrap
           npm run build:monorepo
           npx lerna version --conventional-commits --conventional-graduate --yes
           npx lerna publish from-git --yes
