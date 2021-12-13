@@ -1,7 +1,8 @@
 name: Chromatic
 on:
-  pull_request:
-    types: [opened, synchronize]
+  push:
+    branches-ignore:
+      -'master'
 jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
