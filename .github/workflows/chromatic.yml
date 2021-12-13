@@ -1,8 +1,8 @@
 name: Chromatic
 on:
   push:
-    branches-ignore:
-      -'master'
+    branches:
+      -'!master'
 jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
