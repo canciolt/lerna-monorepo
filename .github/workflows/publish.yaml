@@ -1,11 +1,9 @@
 name: Node.js Package
-
 on:
   pull_request:
     types: [closed]
     branches:
       - master
-
 jobs:
   publish-gpr:
     if: github.event.pull_request.merged == true
@@ -18,12 +16,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-
       - name: "Use NodeJS 16"
         uses: actions/setup-node@v2
         with:
           node-version: 16
-
       - name: "Version and publish"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
