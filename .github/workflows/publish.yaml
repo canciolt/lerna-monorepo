@@ -35,5 +35,4 @@ jobs:
         run: |
           npx lerna version --conventional-commits --amend --yes
           npx lerna publish from-package --yes
-          git status
-          git push
+          git pull && git push
