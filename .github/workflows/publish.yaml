@@ -34,6 +34,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
-          npx lerna version --conventional-commits --no-push --yes
+          npx lerna version -m "chore(release): publish %s" --conventional-commits --no-push --yes
           npx lerna publish from-package --yes
           git push
