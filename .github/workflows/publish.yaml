@@ -1,24 +1,39 @@
 name: Publish to NPM
 on: [workflow_dispatch]
 jobs:
-  publish-gpr:
+  publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
-      - name: "Checkout"
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: "Use NodeJS 16"
+          ref: master
+      - name: Use NodeJS 16
         uses: actions/setup-node@v2
         with:
           node-version: 16
-      - name: "Version and publish"
+      - name: Git Identity
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build:monorepo
+      - name: Version and publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
-          npm install
-          npx lerna bootstrap
-          npm run build:monorepo
-          npx lerna version --conventional-commits --yes
-          npx lerna publish from-git --yes
+          npx lerna version --conventional-commits --no-git-tag-version --yes
+          git add . && git commit -m "chore(release): publish packages"
+          git push
+          npx lerna publish from-package --yes
