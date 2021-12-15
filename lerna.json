@@ -1,10 +1,7 @@
 {
   "useWorkspaces": true,
   "packages": [
-    "src/packages/assets",
-    "src/packages/elements/*",
-    "src/packages/components/*",
-    "src/packages/modules/*"
+    "src/packages/components/c1"
   ],
   "command": {
     "version": {
