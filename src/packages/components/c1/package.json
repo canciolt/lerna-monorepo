@@ -1,6 +1,6 @@
 {
   "name": "@lerna-monorepo-test/c1",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/c1.es.js",
   "publishConfig": {
     "access": "public"
