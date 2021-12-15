@@ -33,7 +33,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
         run: |
-          npx lerna version --conventional-commits --no-git-tag-version --yes
-          git add . && git commit -m "chore(release): publish packages"
-          git push
+          npx lerna version --conventional-commits --amend --yes
           npx lerna publish from-package --yes
+          git push
