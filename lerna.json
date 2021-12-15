@@ -6,7 +6,7 @@
   "command": {
     "version": {
       "allowBranch": "master",
-      "message": "chore(release): publish to npm"
+      "message": "chore(release): publish %s"
     }
   },
   "version": "independent"
