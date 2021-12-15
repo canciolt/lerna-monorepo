@@ -21,7 +21,6 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
-          git status
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install and build
@@ -36,4 +35,5 @@ jobs:
         run: |
           npx lerna version --conventional-commits --amend --yes
           npx lerna publish from-package --yes
+          git status
           git push
