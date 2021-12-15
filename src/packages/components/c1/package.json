@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "main": "dist/c1.es.js",
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "directories": {
     "dist": "dist"
