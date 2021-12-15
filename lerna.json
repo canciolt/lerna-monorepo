@@ -4,8 +4,17 @@
     "src/packages/components/c1"
   ],
   "command": {
+    "updated": {
+      "includeMergedTags": true
+    },
     "version": {
-      "allowBranch": "master"
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "noPush": true,
+      "message": "chore(release): publish to npm"
+    },
+    "publish": {
+      "fromPackage": true
     }
   },
   "version": "independent"
