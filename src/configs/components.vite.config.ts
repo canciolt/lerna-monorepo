@@ -35,11 +35,6 @@ export default defineConfig({
     postcss: {
       map: true,
       plugins: [require('autoprefixer')]
-    },
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "${ROOT_PATH}/packages/assets/src/styles/commons.scss";`
-      },
     }
   },
   logLevel: 'error',

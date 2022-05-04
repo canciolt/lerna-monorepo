@@ -30,9 +30,7 @@ const PATHS = (() => {
       },
       components: {
         path: [
-          `${appBasePath}/elements`,
-          `${appBasePath}/components`,
-          `${appBasePath}/modules`
+          `${appBasePath}/elements`
         ]
       }
     },
@@ -104,7 +102,7 @@ task('build:assets', series(buildAssets, copyAssets))
 task('build:components', buildComponents)
 task('build:storybook', buildStorybook)
 task('build:chromatic', buildChromatic)
-task('build:monorepo', series(series(buildAssets, copyAssets), buildComponents))
+task('build:monorepo', buildComponents)
 
 /**
  *  WATCH

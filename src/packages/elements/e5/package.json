@@ -1,9 +1,9 @@
 {
-  "name": "@ncl-design-system/e5",
-  "version": "0.0.2",
+  "name": "@lerna-monorepo-test/e5",
+  "version": "1.0.0",
   "main": "dist/e5.es.js",
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "directories": {
     "dist": "dist"
@@ -13,6 +13,5 @@
   ],
   "scripts": {
     "build": "vue-tsc && vite build"
-  },
-  "gitHead": "f153ddec53e12cab5ea4a70cc2e3db5fb89aa143"
+  }
 }

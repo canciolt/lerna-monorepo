@@ -1,11 +1,11 @@
 {
-  "name": "norwegian-design-system",
-  "version": "0.0.0",
+  "name": "lerna-monorepo-test",
+  "version": "1.0.0",
   "workspaces": [
     "src/packages/components/c1"
   ],
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "scripts": {
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore ./src gulpfile.js --fix",
@@ -29,7 +29,6 @@
     "@storybook/addon-links": "^6.4.8",
     "@storybook/preview-web": "^6.4.8",
     "@storybook/vue3": "^6.4.8",
-    "@types/lerna-alias": "^3.0.1",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "@vitejs/plugin-vue": "^1.9.3",
@@ -42,7 +41,6 @@
     "eslint": "^8.4.0",
     "eslint-plugin-vue": "^8.2.0",
     "gulp": "^4.0.2",
-    "lerna": "^4.0.0",
     "merge": "^2.1.1",
     "sass": "^1.44.0",
     "storybook-builder-vite": "^0.1.9",
