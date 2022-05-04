@@ -9,7 +9,7 @@
       @change="$emit('update:checked', $event.target.checked)"
     >
     <label class="custom-control-label" :for="e5ID">
-      <span v-if="labelText && showLabelText" class="e5_label" :class="labelClass">
+      <span v-if="labelText && showLabelText" :class="labelClass">
         {{ labelText }}
         <i v-if="hasLegend" class="icon-departure -inline" />
       </span>
