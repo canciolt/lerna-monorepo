@@ -2,7 +2,7 @@
   "name": "lerna-monorepo-test",
   "version": "1.0.0",
   "workspaces": [
-    "src/packages/components/c1"
+    "src/packages/elements/*"
   ],
   "publishConfig": {
     "access": "public"
@@ -17,13 +17,17 @@
     "build:monorepo": "gulp build:monorepo",
     "serve:assets": "gulp serve:assets",
     "serve:storybook": "gulp serve:storybook",
-    "live": "gulp live"
+    "live": "gulp live",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "publish": "changeset publish"
   },
   "dependencies": {
     "vue": "^3.2.24"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
+    "@changesets/cli": "^2.22.0",
     "@storybook/addon-actions": "^6.4.8",
     "@storybook/addon-essentials": "^6.4.8",
     "@storybook/addon-links": "^6.4.8",
