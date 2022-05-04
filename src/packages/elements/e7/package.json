@@ -1,6 +1,6 @@
 {
   "name": "@lerna-monorepo-test/e7",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/e7.es.js",
   "publishConfig": {
     "access": "public"
