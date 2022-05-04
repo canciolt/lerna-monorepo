@@ -33,8 +33,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-        run: |
-          npx lerna updated --include-merged-tags 
-          npx lerna version -m "chore(release): publish to npm" --conventional-commits --no-push --yes
-          npx lerna publish from-package --yes
-          git push
+        run: npm run publish
