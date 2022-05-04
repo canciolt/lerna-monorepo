@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue3'
 import { E5_MODEL } from '../src/e5.model'
 
 /* Component */
-import { E5 } from '../dist/e5.es'
+import { E5 } from '..'
 import '../dist/style.css'
 
 const variants = [

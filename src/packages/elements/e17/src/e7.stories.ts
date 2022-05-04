@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/vue3'
 
 /* Component */
-import { E7 } from '../dist/e7.es'
+import { E7 } from '..'
 import '../dist/style.css'
 
 export default {
